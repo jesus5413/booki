@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 /bin/
+=======
+.classpath
+.DS_Store
+bin/.DS_Store
+src/.DS_Store
+>>>>>>> branch 'master' of https://github.com/jesus5413/booki.git
