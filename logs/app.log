@@ -1,2 +1,4 @@
 16:17:26.403 DEBUG controller.ControllerTest : This is a debug log message
 16:17:26.407 ERROR controller.ControllerTest : This is an error log message
+16:22:00.532 DEBUG controller.ControllerTest : This is a debug log message
+16:22:00.534 ERROR controller.ControllerTest : This is an error log message
