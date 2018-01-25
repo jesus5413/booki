@@ -30,7 +30,7 @@ public class MainMenuController implements Initializable{
 	 */
 	@FXML private void handleMenuAction(ActionEvent event) throws IOException{
 		if(event.getSource() == authorList) {
-			System.out.println("author list\n");
+			System.out.println("author list\n"); // action to bring up author list view is here
 		}
 		if(event.getSource() == exit) {
 			System.exit(0);
