@@ -1,14 +1,54 @@
 package controller;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 
-public class MainMenuController {
-//	public static void main(String[] args) {
-//		//won't show because of the default logger config
-//		Logger logger = LogManager.getLogger(ControllerTest.class);
-//		logger.debug("This is a debug log message");
-//		
-//		//but this will
-//		logger.error("This is an error log message");
-//	}
+/**
+ * this is the main menu controller 
+ * for the menu. It gives it the actions and initials
+ * loads of the menu and view
+ * @author jesusnieto
+ *
+ */
+public class MainMenuController implements Initializable{
+	@FXML private MenuBar menuBar;
+	@FXML private MenuItem authorList;
+	@FXML private MenuItem exit;
+	
+	/**
+	 * function does the actions needed for the item choices
+	 * in the menu bar
+	 * @param event
+	 * @throws IOException
+	 */
+	@FXML private void handleMenuAction(ActionEvent event) throws IOException{
+		if(event.getSource() == authorList) {
+			System.out.println("author list\n");
+		}
+		if(event.getSource() == exit) {
+			System.exit(0);
+		}
+			
+	}
+	
+	/**
+	 * function loads what needs to be loaded first before
+	 * anything else
+	 * @param location
+	 * @param resources
+	 */
+	public void initialize(URL location, ResourceBundle resources) {
+		menuBar.setFocusTraversable(true);
+	}
+	
+	
+	
+	
 }
