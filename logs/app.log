@@ -2,3 +2,17 @@
 16:17:26.407 ERROR controller.ControllerTest : This is an error log message
 16:22:00.532 DEBUG controller.ControllerTest : This is a debug log message
 16:22:00.534 ERROR controller.ControllerTest : This is an error log message
+19:37:06.489 DEBUG view.MainLauncher : Opening window
+19:38:01.366 DEBUG view.MainLauncher : Opening main window
+19:39:29.962 DEBUG view.MainLauncher : Opening main window
+19:39:56.031 DEBUG controller.MainMenuController : Authorlist has been clicked
+19:41:28.160 DEBUG view.MainLauncher : Opening main window
+19:41:30.402 DEBUG controller.MainMenuController : Authorlist has been clicked
+19:41:31.801 DEBUG controller.MainMenuController : Application has closed
+19:46:25.989 DEBUG view.MainLauncher : Opening main window
+19:46:28.169 DEBUG controller.MainMenuController : Authorlist has been clicked
+19:46:30.040 DEBUG controller.MainMenuController : Application has closed
+20:14:56.168 DEBUG view.MainLauncher : Opening main window
+20:14:58.778 DEBUG controller.MainMenuController : Authorlist has been clicked
+20:15:56.790 DEBUG view.MainLauncher : Opening main window
+20:15:59.025 DEBUG controller.MainMenuController : Authorlist has been clicked

@@ -8,48 +8,28 @@ import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
-public class MainLauncher extends Application{
+public class AuthorListView extends Application{
 	private static Logger logger = LogManager.getLogger(MainLauncher.class);
 	public static Stage stage;
 	
 	/**
 	 * This function builds the scene to launch
-	 * the maineMunuPane.fxml file
-	 * 
+	 * the authorlistpane.fxml file
 	 */
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenuPane.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/fxml/authorListPane.fxml"));
 			primaryStage.setScene(new Scene(root, 500, 246));
-			primaryStage.setTitle("bookie");
+			primaryStage.setTitle("Authors");
 			primaryStage.show();
-			logger.debug("Opening main window");
-			
+			logger.debug("Opening author view");
 		}catch(Exception e) {
 			e.printStackTrace();
-			logger.debug("Error opening main window");
+			logger.debug("Error opening author view");
 		}
 		
 		this.stage = primaryStage;
 			
-	}
-	
-	/**
-	 * This function launches the application 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		launch(args);
-	}
-	
-	
-	/**
-	 * returns the stage
-	 * @return
-	 */
-	public static Stage getStage() {
-		return stage;
 	}
 	
 }
