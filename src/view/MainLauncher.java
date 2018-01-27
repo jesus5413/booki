@@ -14,9 +14,12 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class MainLauncher extends Application{
+	private static Logger logger = LogManager.getLogger(MainLauncher.class);
 	public static Stage stage;
 	public static BorderPane mainPane;
 	
@@ -32,7 +35,7 @@ public class MainLauncher extends Application{
 		primaryStage.setScene(new Scene(root, 1000, 600));
 		primaryStage.setTitle("Booki");
 		primaryStage.show();
-			
+
 		
 		this.stage = primaryStage;
 		this.mainPane = root;
@@ -48,9 +51,9 @@ public class MainLauncher extends Application{
 	 */
 	public static void main(String[] args) {
 		launch(args);
-		
 	}
 	
+
 	public static Stage getStage() {
 		return stage;
 	}

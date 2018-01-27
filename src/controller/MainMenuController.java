@@ -2,16 +2,18 @@ package controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import changeSingleton.ChangeViewsSingleton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.*;
 import javafx.scene.control.*;
-import javafx.scene.layout.BorderPane;
+import view.MainLauncher;
+import javafx.stage.Stage;
+
 
 /**
  * this is the main menu controller 
@@ -24,6 +26,7 @@ public class MainMenuController implements Initializable{
 	@FXML private MenuBar menuBar;
 	@FXML private MenuItem authorList;
 	@FXML private MenuItem exit;
+	private static Logger logger = LogManager.getLogger(MainMenuController.class);
 	
 	/**
 	 * function does the actions needed for the item choices
@@ -37,13 +40,14 @@ public class MainMenuController implements Initializable{
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			
 			singleton.changeViews("x");
-			
-			
+
+			logger.debug("Authorlist has been clicked");
 		}
+		
 		if(event.getSource() == exit) {
+			logger.debug("Application has closed");
 			System.exit(0);
 		}
-			
 	}
 	
 	/**
@@ -55,8 +59,5 @@ public class MainMenuController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		menuBar.setFocusTraversable(true);
 	}
-	
-	
-	
 	
 }
