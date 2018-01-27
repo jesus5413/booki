@@ -80,3 +80,16 @@
 15:24:09.593 DEBUG controller.MainMenuController : Authorlist has been clicked
 15:24:09.626 DEBUG controller.AuthorListController : Initializing authorlist
 15:24:11.942 DEBUG controller.AuthorListController$1 : Clicked Author 1
+15:39:08.080 DEBUG view.MainLauncher : Opening main window
+15:39:09.689 DEBUG controller.MainMenuController : Authorlist has been clicked
+15:39:09.718 DEBUG controller.AuthorListController : Initializing authorlist
+15:39:10.968 DEBUG controller.AuthorListController$1 : Clicked author 2
+15:41:47.621 DEBUG view.MainLauncher : Opening main window
+15:41:49.484 DEBUG controller.MainMenuController : Authorlist has been clicked
+15:41:49.506 DEBUG controller.AuthorListController : Initializing authorlist
+15:41:50.812 DEBUG controller.AuthorListController$1 : Clicked author 2
+15:42:05.733 DEBUG view.MainLauncher : Opening main window
+15:43:55.652 DEBUG view.MainLauncher : Opening main window
+15:43:57.413 DEBUG controller.MainMenuController : Authorlist has been clicked
+15:43:57.443 DEBUG controller.AuthorListController : Initializing authorlist
+15:43:58.882 DEBUG controller.AuthorListController$1 : Clicked author 2
