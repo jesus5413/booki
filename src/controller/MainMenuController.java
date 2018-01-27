@@ -5,6 +5,9 @@ import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
@@ -37,18 +40,17 @@ public class MainMenuController implements Initializable{
 		if(event.getSource() == authorList) {
 			System.out.println("author list\n"); // action to bring up author list view is here
 			logger.debug("Authorlist has been clicked");
-			// using for testing Author List view. Remove once singleton is finished
+			/* FOR TESTING AUTHORLISTVIEW. REMOVE ONCE SINGLETON IS IMPLEMENTED */
 			try {
 				Stage childScene = new Stage();
-				Parent root = FXMLLoader.load(getClass().getResource("/fxml/authorListPane.fxml"));
-				childScene.setScene(new Scene(root,1280,720));
+				Parent root = FXMLLoader.load(this.getClass().getResource("/fxml/authorListPane.fxml"));
+				childScene.setScene(new Scene(root,500,246));
 				childScene.show();
 				MainLauncher.stage.hide(); // closes the main menu
-				
-				
 				}catch(Exception e) {
 					e.printStackTrace();
 				}
+			/* FOR TESTING AUTHORLISTVIEW. REMOVE ONCE SINGLETON IS IMPLEMENTED */
 		}
 		if(event.getSource() == exit) {
 			logger.debug("Application has closed");

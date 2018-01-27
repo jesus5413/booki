@@ -16,3 +16,53 @@
 20:14:58.778 DEBUG controller.MainMenuController : Authorlist has been clicked
 20:15:56.790 DEBUG view.MainLauncher : Opening main window
 20:15:59.025 DEBUG controller.MainMenuController : Authorlist has been clicked
+20:31:35.931 DEBUG view.MainLauncher : Opening main window
+20:31:37.987 DEBUG controller.MainMenuController : Authorlist has been clicked
+20:33:50.628 DEBUG view.MainLauncher : Opening main window
+20:33:52.190 DEBUG controller.MainMenuController : Authorlist has been clicked
+20:34:37.275 DEBUG view.MainLauncher : Opening main window
+20:34:38.889 DEBUG controller.MainMenuController : Authorlist has been clicked
+20:36:58.770 DEBUG view.MainLauncher : Opening main window
+20:37:00.456 DEBUG controller.MainMenuController : Authorlist has been clicked
+13:35:38.728 DEBUG view.MainLauncher : Opening main window
+13:35:41.602 DEBUG controller.MainMenuController : Authorlist has been clicked
+13:38:04.406 DEBUG view.MainLauncher : Opening main window
+13:38:06.306 DEBUG controller.MainMenuController : Authorlist has been clicked
+13:41:07.737 DEBUG view.MainLauncher : Opening main window
+13:41:09.399 DEBUG controller.MainMenuController : Authorlist has been clicked
+13:44:38.498 DEBUG view.MainLauncher : Opening main window
+13:44:41.644 DEBUG controller.MainMenuController : Authorlist has been clicked
+13:49:11.308 DEBUG view.MainLauncher : Opening main window
+13:49:13.066 DEBUG controller.MainMenuController : Authorlist has been clicked
+13:58:20.112 DEBUG view.MainLauncher : Opening main window
+13:58:22.057 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:02:45.526 DEBUG view.MainLauncher : Opening main window
+14:02:51.435 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:03:09.965 DEBUG view.MainLauncher : Opening main window
+14:03:11.405 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:07:25.500 DEBUG view.MainLauncher : Opening main window
+14:07:27.303 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:17:21.831 DEBUG view.MainLauncher : Opening main window
+14:17:23.784 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:18:46.003 DEBUG view.MainLauncher : Opening main window
+14:18:47.523 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:18:47.542 DEBUG controller.MainMenuController : Initializing authorlist
+14:22:09.975 DEBUG view.MainLauncher : Opening main window
+14:22:11.605 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:24:48.172 DEBUG view.MainLauncher : Opening main window
+14:24:49.886 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:30:43.009 DEBUG view.MainLauncher : Opening main window
+14:30:44.532 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:31:10.016 DEBUG view.MainLauncher : Opening main window
+14:31:11.654 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:36:33.068 DEBUG view.MainLauncher : Opening main window
+14:36:34.413 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:36:59.574 DEBUG view.MainLauncher : Opening main window
+14:37:03.400 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:39:52.765 DEBUG view.MainLauncher : Opening main window
+14:39:54.509 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:40:34.861 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:40:34.877 DEBUG controller.AuthorListController : Initializing authorlist
+14:40:57.488 DEBUG view.MainLauncher : Opening main window
+14:40:59.185 DEBUG controller.MainMenuController : Authorlist has been clicked
+14:40:59.205 DEBUG controller.AuthorListController : Initializing authorlist
