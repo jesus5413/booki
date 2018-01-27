@@ -26,5 +26,8 @@ public class AuthorDetailViewController implements Initializable {
 		// TODO Auto-generated method stub
 		System.out.println("you clicked save button");
 	}
-
+	
+	public void openAuthorDetails() {
+		
+	}
 }
