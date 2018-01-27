@@ -5,10 +5,13 @@ import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import changeSingleton.ChangeViewsSingleton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
 
 /**
  * this is the main menu controller 
@@ -31,6 +34,11 @@ public class MainMenuController implements Initializable{
 	@FXML private void handleMenuAction(ActionEvent event) throws IOException{
 		if(event.getSource() == authorList) {
 			System.out.println("author list\n"); // action to bring up author list view is here
+			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+			
+			singleton.changeViews("x");
+			
+			
 		}
 		if(event.getSource() == exit) {
 			System.exit(0);
