@@ -298,3 +298,50 @@
 19:05:52.963 DEBUG controller.AuthorListController$1 : Clicked author3
 19:05:55.950 DEBUG controller.AuthorListController : Initializing authorlist
 19:05:58.860 ERROR controller.MainMenuController : Application has closed
+19:06:41.547 DEBUG controller.AuthorListController : Initializing authorlist
+19:06:43.893 DEBUG controller.AuthorListController$1 : Clicked author 2
+19:06:44.945 DEBUG controller.AuthorListController : Initializing authorlist
+19:06:45.963 DEBUG controller.AuthorListController$1 : Clicked author3
+19:06:47.960 DEBUG controller.AuthorListController : Initializing authorlist
+19:06:49.147 DEBUG controller.AuthorListController$1 : Clicked Author 1
+19:06:50.282 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+19:06:52.178 DEBUG controller.AuthorListController : Initializing authorlist
+19:06:53.331 DEBUG controller.AuthorListController$1 : Clicked Author 1
+15:45:31.516 DEBUG controller.AuthorListController : Initializing authorlist
+15:45:32.893 DEBUG controller.AuthorListController$1 : Clicked author3
+15:45:36.420 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+15:45:40.342 DEBUG controller.AuthorListController : Initializing authorlist
+15:45:41.621 DEBUG controller.AuthorListController$1 : Clicked author 2
+15:45:44.194 ERROR controller.MainMenuController : Application has closed
+15:52:07.795 DEBUG controller.AuthorListController : Initializing authorlist
+15:52:13.598 DEBUG controller.AuthorListController$1 : Clicked Author 1
+15:52:15.279 DEBUG controller.AuthorListController : Initializing authorlist
+15:52:16.490 DEBUG controller.AuthorListController$1 : Clicked author3
+15:52:18.948 DEBUG controller.AuthorListController : Initializing authorlist
+15:52:20.148 DEBUG controller.AuthorListController$1 : Clicked author 2
+15:52:21.712 DEBUG controller.AuthorListController : Initializing authorlist
+15:52:22.829 DEBUG controller.AuthorListController$1 : Clicked Author 1
+15:52:24.122 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+15:52:24.376 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+15:52:24.623 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+15:52:24.822 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+15:52:30.841 DEBUG controller.AuthorListController : Initializing authorlist
+15:52:32.661 DEBUG controller.AuthorListController$1 : Clicked Author 1
+15:52:35.280 DEBUG controller.AuthorListController : Initializing authorlist
+15:52:36.730 DEBUG controller.AuthorListController$1 : Clicked author 2
+15:59:27.826 DEBUG controller.AuthorListController : Initializing authorlist
+15:59:29.142 DEBUG controller.AuthorListController$1 : Clicked author 2
+15:59:30.491 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+15:59:30.682 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+15:59:30.898 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+15:59:32.885 ERROR controller.MainMenuController : Application has closed
+16:00:40.141 DEBUG controller.AuthorListController : Initializing authorlist
+16:00:41.896 DEBUG controller.AuthorListController$1 : Clicked author 2
+16:00:49.184 DEBUG controller.AuthorListController : Initializing authorlist
+16:00:52.694 DEBUG controller.AuthorListController$1 : Clicked author3
+16:00:57.029 DEBUG controller.AuthorListController : Initializing authorlist
+16:00:58.554 DEBUG controller.AuthorListController$1 : Clicked Author 1
+16:01:00.728 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+16:01:01.238 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+16:01:01.493 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+16:01:03.759 ERROR controller.MainMenuController : Application has closed
