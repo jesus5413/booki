@@ -36,16 +36,13 @@ public class MainMenuController implements Initializable{
 	 */
 	@FXML private void handleMenuAction(ActionEvent event) throws IOException{
 		if(event.getSource() == authorList) {
-			System.out.println("author list\n"); // action to bring up author list view is here
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			
 			singleton.changeViews("x");
-
-			logger.debug("Authorlist has been clicked");
 		}
 		
 		if(event.getSource() == exit) {
-			logger.debug("Application has closed");
+			logger.error("Application has closed");
 			System.exit(0);
 		}
 	}
