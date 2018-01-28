@@ -6,13 +6,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import changeSingleton.ChangeViewsSingleton;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.*;
 import javafx.scene.control.*;
-import view.MainLauncher;
-import javafx.stage.Stage;
 
 
 /**
@@ -23,10 +19,11 @@ import javafx.stage.Stage;
  *
  */
 public class MainMenuController implements Initializable{
+	private static Logger logger = LogManager.getLogger(MainMenuController.class);
+	
 	@FXML private MenuBar menuBar;
 	@FXML private MenuItem authorList;
 	@FXML private MenuItem exit;
-	private static Logger logger = LogManager.getLogger(MainMenuController.class);
 	
 	/**
 	 * function does the actions needed for the item choices

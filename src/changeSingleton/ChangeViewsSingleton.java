@@ -7,11 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import controller.MainMenuController;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 import view.MainLauncher;
 
 public class ChangeViewsSingleton {
