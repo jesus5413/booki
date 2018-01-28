@@ -36,14 +36,10 @@ public class MainLauncher extends Application{
 		primaryStage.setTitle("Booki");
 		primaryStage.show();
 
-		
 		this.stage = primaryStage;
 		this.mainPane = root;
-		
-			
+				
 	}
-	
-	
 	
 	/**
 	 * This function launches the application 
