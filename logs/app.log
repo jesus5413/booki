@@ -159,6 +159,7 @@
 16:30:59.688 DEBUG controller.MainMenuController : Authorlist has been clicked
 16:31:00.878 DEBUG controller.AuthorListController$1 : Clicked author 2
 16:31:08.608 DEBUG controller.MainMenuController : Application has closed
+<<<<<<< HEAD
 16:32:30.099 DEBUG controller.AuthorListController : Initializing authorlist
 16:32:30.102 DEBUG controller.MainMenuController : Authorlist has been clicked
 16:32:33.000 DEBUG controller.AuthorListController$1 : Clicked author3
@@ -266,3 +267,34 @@
 18:18:12.942 DEBUG controller.AuthorListController : Initializing authorlist
 18:18:12.943 DEBUG controller.MainMenuController : Authorlist has been clicked
 18:18:13.938 DEBUG controller.AuthorListController$1 : Clicked Author 1
+=======
+17:23:03.191 DEBUG controller.AuthorListController : Initializing authorlist
+17:23:03.195 DEBUG controller.MainMenuController : Authorlist has been clicked
+17:23:09.376 DEBUG controller.AuthorListController$1 : Clicked author 2
+18:41:19.015 DEBUG controller.AuthorListController : Initializing authorlist
+18:41:23.591 DEBUG controller.AuthorListController$1 : Clicked Author 1
+18:41:27.438 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+18:41:30.836 DEBUG controller.AuthorListController : Initializing authorlist
+18:41:32.231 DEBUG controller.AuthorListController$1 : Clicked Author 1
+18:41:37.497 ERROR controller.MainMenuController : Application has closed
+18:44:40.409 DEBUG controller.AuthorListController : Initializing authorlist
+18:44:43.961 DEBUG controller.AuthorListController$1 : Clicked author 2
+18:44:44.797 DEBUG controller.AuthorListController$1 : Clicked author3
+18:44:45.607 DEBUG controller.AuthorListController$1 : Clicked Author 1
+18:44:47.128 DEBUG controller.AuthorListController$1 : Clicked author3
+18:44:48.106 DEBUG controller.AuthorListController$1 : Clicked Author 1
+18:44:49.366 DEBUG controller.AuthorListController$1 : Clicked author 2
+18:44:50.465 DEBUG controller.AuthorListController$1 : Clicked author3
+18:44:53.607 DEBUG controller.AuthorListController : Initializing authorlist
+18:44:54.561 DEBUG controller.AuthorListController$1 : Clicked Author 1
+18:45:58.836 DEBUG controller.AuthorListController : Initializing authorlist
+18:46:02.188 DEBUG controller.AuthorListController$1 : Clicked author3
+18:46:53.653 DEBUG controller.AuthorListController : Initializing authorlist
+18:46:57.833 DEBUG controller.AuthorListController$1 : Clicked author 2
+>>>>>>> branch 'test1' of https://github.com/jesus5413/booki.git
+19:05:47.558 DEBUG controller.AuthorListController : Initializing authorlist
+19:05:48.960 DEBUG controller.AuthorListController$1 : Clicked author 2
+19:05:51.940 DEBUG controller.AuthorListController : Initializing authorlist
+19:05:52.963 DEBUG controller.AuthorListController$1 : Clicked author3
+19:05:55.950 DEBUG controller.AuthorListController : Initializing authorlist
+19:05:58.860 ERROR controller.MainMenuController : Application has closed

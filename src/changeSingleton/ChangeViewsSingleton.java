@@ -2,17 +2,17 @@ package changeSingleton;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import controller.MainMenuController;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 import view.MainLauncher;
 
 public class ChangeViewsSingleton {
 	private static ChangeViewsSingleton singleton = null;
+	private static Logger logger = LogManager.getLogger(MainMenuController.class);
 	
 	
 	private ChangeViewsSingleton() {
@@ -43,6 +43,7 @@ public class ChangeViewsSingleton {
 			test.setCenter(root);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			logger.error("Error when trying to change views");
 			e.printStackTrace();
 		}
 		
