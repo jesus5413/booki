@@ -345,3 +345,5 @@
 16:01:01.238 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
 16:01:01.493 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
 16:01:03.759 ERROR controller.MainMenuController : Application has closed
+16:05:41.445 DEBUG controller.AuthorListController : Initializing authorlist
+16:05:42.593 DEBUG controller.AuthorListController$1 : Clicked author3
