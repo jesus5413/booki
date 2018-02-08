@@ -8,6 +8,7 @@ import java.net.URL;
 import com.sun.glass.ui.TouchInputSupport;
 
 import controller.AuthorListController;
+import dataBase.AuthorTableGateWay;
 import javafx.application.Application;
 import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
@@ -48,7 +49,9 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		AuthorTableGateWay db = new AuthorTableGateWay();
 		launch(args);
+		
 	}
 	
 
