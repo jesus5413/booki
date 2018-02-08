@@ -49,7 +49,7 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		AuthorTableGateWay db = new AuthorTableGateWay();
+		//AuthorTableGateWay db = new AuthorTableGateWay();
 		launch(args);
 		
 	}
