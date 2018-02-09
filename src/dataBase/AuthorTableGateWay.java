@@ -21,6 +21,10 @@ public class AuthorTableGateWay {
 	
 	
 	public AuthorTableGateWay() {
+		
+	}
+	
+	public static void setConnection() {
 		try {
 			MysqlDataSource ds = new MysqlDataSource();
 			ds.setURL("jdbc:mysql://easel2.fulgentcorp.com:3306/authorInfo");
@@ -33,18 +37,19 @@ public class AuthorTableGateWay {
 			System.out.println(ex);// error checking for connection	
 		}
 		
+		
 	}
 	
-	public static ObservableList<AuthorModel> getAuthors(){
-		ObservableList<AuthorModel> authors = null;
-		
-
-		
-		return authors;
-		
-		
-		
-	}
+//	public static ObservableList<AuthorModel> getAuthors(){
+//		ObservableList<AuthorModel> authors = null;
+//		
+//
+//		
+//		return authors;
+//		
+//		
+//		
+//	}
 	
 	
 
