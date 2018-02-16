@@ -10,6 +10,7 @@ import com.sun.glass.ui.TouchInputSupport;
 import controller.AuthorListController;
 import dataBase.AuthorTableGateWay;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +18,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import model.AuthorModel;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -49,8 +52,18 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		AuthorTableGateWay test = new AuthorTableGateWay();
+		test.setConnection();
+//		ObservableList<AuthorModel> authorList = test.getAuthors();
+//		for(AuthorModel model : authorList) {
+//			System.out.println(model.getFirstName());
+//		}
+		
+		test.closeConnection();
 		launch(args);
 		//AuthorTableGateWay.setConnection();
+		
 		
 	}
 	
