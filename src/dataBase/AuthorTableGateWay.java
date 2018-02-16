@@ -75,11 +75,19 @@ public class AuthorTableGateWay {
 	}
 	
 	public void deleteAuthor(int ID) {
+		try {
+			myStmt = conn.prepareStatement("delete from authorDetail where ID = ?");
+			myStmt.setInt(1, ID);
+			myStmt.execute();
+			System.out.println("deletion successful \n");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
-	
-
-	
+		
 	
 
 }

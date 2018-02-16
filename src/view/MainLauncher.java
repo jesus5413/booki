@@ -59,7 +59,7 @@ public class MainLauncher extends Application{
 //		for(AuthorModel model : authorList) {
 //			System.out.println(model.getFirstName());
 //		}
-		
+		//test.deleteAuthor(2);
 		test.closeConnection();
 		launch(args);
 		//AuthorTableGateWay.setConnection();
