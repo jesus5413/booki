@@ -20,11 +20,6 @@ public class AuthorDetailViewController implements Initializable {
     @FXML private GridPane authorGrid;
     @FXML private Button saveButton;
     
-	public void start(Stage arg0) throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub

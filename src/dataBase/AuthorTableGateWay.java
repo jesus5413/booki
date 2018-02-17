@@ -18,6 +18,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.AuthorModel;
 
+/**
+ * this class connects to the database but as well does the necessary function to update and delete rows
+ * @author jesusnieto
+ *
+ */
 public class AuthorTableGateWay {
 	
 	private Connection conn = null;
@@ -28,6 +33,9 @@ public class AuthorTableGateWay {
 		
 	}
 	
+	/**
+	 * opens connection
+	 */
 	public void setConnection() {
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://easel2.fulgentcorp.com:3306/wwh124?useSSL=false","wwh124","sanAntonio1234");
@@ -41,6 +49,9 @@ public class AuthorTableGateWay {
 		
 	}
 	
+	/**
+	 * closes connection
+	 */
 	public void closeConnection() {
 		try{
 			conn.close();
@@ -50,6 +61,11 @@ public class AuthorTableGateWay {
 		}
 	}
 	
+	/**
+	 * 
+	 * returns the database info as an observablelist <authormodel> collection
+	 * @return
+	 */
 	public ObservableList<AuthorModel> getAuthors(){
 		ObservableList<AuthorModel> authorList = FXCollections.observableArrayList();
 		try {
@@ -74,6 +90,12 @@ public class AuthorTableGateWay {
 		return authorList;
 	}
 	
+	/**
+	 * 
+	 * deletes row from database using ID
+	 * must pass the int ID value of the author we want to delete
+	 * @param ID
+	 */
 	public void deleteAuthor(int ID) {
 		try {
 			myStmt = conn.prepareStatement("delete from authorDetail where ID = ?");
@@ -83,8 +105,30 @@ public class AuthorTableGateWay {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}	
+	}
+	
+	/**
+	 * 
+	 * function updates rows in the server
+	 * - most pass an author model
+	 * @param author
+	 */
+	public void updateAuthor(AuthorModel author) {
+		try {
+			myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
+			myStmt.setString(1, author.getFirstName());
+			myStmt.setString(2, author.getLastName());
+			myStmt.setString(3, author.getDateOfBirth());
+			myStmt.setString(4, author.getGender());
+			myStmt.setString(5, author.getWebSite());
+			myStmt.setInt(6, author.getID());
+			myStmt.executeUpdate();
+			System.out.println("update successful\n");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
 		
 	}
 		
