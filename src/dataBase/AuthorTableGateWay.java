@@ -124,6 +124,7 @@ public class AuthorTableGateWay {
 		}else if(author.getWebSite().length() > 100) {
 			System.out.println("Website is too long. Please shorten the URL");
 		}else {
+			// at this point we will assume that all input is valid, and try to update the author
 			try {
 				myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
 				myStmt.setString(1, author.getFirstName());
