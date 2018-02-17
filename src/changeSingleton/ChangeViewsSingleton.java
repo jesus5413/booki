@@ -38,6 +38,10 @@ public class ChangeViewsSingleton {
 			if(x == "y") {
 				fxmlPath = "/fxml/AuthorDetailView.fxml";
 			}	
+			if(x == "z") {
+				fxmlPath = "/fxml/authorsTableView.fxml";
+				System.out.println("table\n");
+			}
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource(fxmlPath));
 			test.setCenter(null); 
 			test.setCenter(root);

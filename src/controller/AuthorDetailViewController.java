@@ -14,14 +14,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 
-public class AuthorDetailViewController implements Initializable {
+public class AuthorDetailViewController{
 	private static Logger logger = LogManager.getLogger(MainMenuController.class);
 	
     @FXML private GridPane authorGrid;
     @FXML private Button saveButton;
     
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void initialize() {
 		// TODO Auto-generated method stub
         saveButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override

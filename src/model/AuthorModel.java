@@ -12,6 +12,7 @@ public class AuthorModel {
 	
 	
 	public AuthorModel() {
+		this.ID = 0;
 		this.firstName = new SimpleStringProperty();
 		this.lastName = new SimpleStringProperty();
 		this.dateOfBirth = new SimpleStringProperty();

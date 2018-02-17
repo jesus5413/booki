@@ -18,12 +18,13 @@ import javafx.scene.control.*;
  * @author jesusnieto
  *
  */
-public class MainMenuController implements Initializable{
+public class MainMenuController{
 	private static Logger logger = LogManager.getLogger(MainMenuController.class);
 	
 	@FXML private MenuBar menuBar;
 	@FXML private MenuItem authorList;
 	@FXML private MenuItem exit;
+	@FXML private MenuItem authorTable;
 	
 	/**
 	 * function does the actions needed for the item choices
@@ -34,14 +35,19 @@ public class MainMenuController implements Initializable{
 	@FXML private void handleMenuAction(ActionEvent event) throws IOException{
 		if(event.getSource() == authorList) {
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
-			
 			singleton.changeViews("x");
+		}
+		
+		if(event.getSource() == authorTable) {
+			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+			singleton.changeViews("z");
 		}
 		
 		if(event.getSource() == exit) {
 			logger.error("Application has closed");
 			System.exit(0);
 		}
+		
 	}
 	
 	/**
@@ -50,7 +56,7 @@ public class MainMenuController implements Initializable{
 	 * @param location
 	 * @param resources
 	 */
-	public void initialize(URL location, ResourceBundle resources) {
+	public void initialize() {
 		menuBar.setFocusTraversable(true);
 	}
 	

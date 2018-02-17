@@ -4,6 +4,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,20 +14,23 @@ import javafx.scene.control.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.input.MouseEvent;
+import model.AuthorModel;
 import changeSingleton.ChangeViewsSingleton;
+import dataBase.AuthorTableGateWay;
 
 
-public class AuthorListController implements Initializable{
-	final ObservableList<String> listItems = FXCollections.observableArrayList("Author 1", "author 2", "author3"); 
-	private static Logger logger = LogManager.getLogger(AuthorListController.class);
+public class AuthorListController {
 	
-    @FXML private ListView<String> authorListView;
- 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	private static Logger logger = LogManager.getLogger(AuthorListController.class);
+	AuthorTableGateWay autherInfo = new AuthorTableGateWay();
+	ObservableList<AuthorModel> authorList = FXCollections.observableArrayList();
+	@FXML private ListView<String> authorListView;
+	
+	
+	public void initialize() {
 		// TODO Auto-generated method stub
 		logger.debug("Initializing authorlist");
-		authorListView.setItems(listItems);
+		populateListView();
 		
 		authorListView.setOnMouseClicked(new EventHandler<MouseEvent>(){
 		    @Override
@@ -41,5 +47,24 @@ public class AuthorListController implements Initializable{
 		    }
 		});
 	}
+	
+	
+	
+	
+	public void populateListView() {
+		autherInfo.setConnection();
+		authorList = autherInfo.getAuthors();
+		autherInfo.closeConnection();
+		ObservableList<String> stringAuthor = FXCollections.observableArrayList();
+		for(int i = 0; i < authorList.size() ; i++) {
+			
+			stringAuthor.add(authorList.get(i).getFirstName() +" "+ authorList.get(i).getLastName());
+		}
+		authorListView.setItems(stringAuthor);
+		
+	}
+	
+	
+	
 	
 }

@@ -433,3 +433,87 @@
 20:32:06.841 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
 03:24:40.035 ERROR controller.MainMenuController : Application has closed
 03:32:42.905 ERROR controller.MainMenuController : Application has closed
+04:34:02.366 ERROR controller.MainMenuController : Application has closed
+04:41:53.906 DEBUG controller.AuthorListController : Initializing authorlist
+04:41:55.444 DEBUG controller.AuthorListController$1 : Clicked author3
+04:41:57.865 DEBUG controller.AuthorListController : Initializing authorlist
+04:42:00.114 DEBUG controller.AuthorListController$1 : Clicked author 2
+04:42:04.157 DEBUG controller.AuthorListController : Initializing authorlist
+04:42:05.629 DEBUG controller.AuthorListController$1 : Clicked Author 1
+04:42:08.340 DEBUG controller.AuthorListController : Initializing authorlist
+04:42:09.539 DEBUG controller.AuthorListController$1 : Clicked author3
+04:42:11.295 ERROR controller.MainMenuController : Application has closed
+04:55:06.102 DEBUG controller.AuthorListController : Initializing authorlist
+04:55:15.219 ERROR controller.MainMenuController : Application has closed
+04:58:53.755 ERROR controller.MainMenuController : Application has closed
+05:02:14.538 DEBUG controller.AuthorListController : Initializing authorlist
+05:02:18.752 ERROR controller.MainMenuController : Application has closed
+05:03:15.125 DEBUG controller.AuthorListController : Initializing authorlist
+05:03:20.400 ERROR controller.MainMenuController : Application has closed
+05:07:29.092 ERROR controller.MainMenuController : Application has closed
+05:13:21.435 ERROR controller.MainMenuController : Application has closed
+05:14:19.417 ERROR controller.MainMenuController : Application has closed
+05:15:30.218 ERROR controller.MainMenuController : Application has closed
+05:17:57.089 ERROR controller.MainMenuController : Application has closed
+05:29:17.888 ERROR controller.MainMenuController : Application has closed
+05:31:53.846 ERROR controller.MainMenuController : Application has closed
+05:32:54.811 ERROR controller.MainMenuController : Application has closed
+05:33:25.550 ERROR controller.MainMenuController : Application has closed
+05:37:31.082 ERROR controller.MainMenuController : Application has closed
+05:38:55.031 ERROR controller.MainMenuController : Application has closed
+05:43:16.194 DEBUG controller.AuthorListController : Initializing authorlist
+05:43:19.811 DEBUG controller.AuthorListController : Initializing authorlist
+05:43:22.999 DEBUG controller.AuthorListController : Initializing authorlist
+05:43:25.772 DEBUG controller.AuthorListController : Initializing authorlist
+05:43:28.318 DEBUG controller.AuthorListController : Initializing authorlist
+05:43:30.679 DEBUG controller.AuthorListController : Initializing authorlist
+05:43:33.182 DEBUG controller.AuthorListController : Initializing authorlist
+05:43:35.590 DEBUG controller.AuthorListController : Initializing authorlist
+05:43:38.188 DEBUG controller.AuthorListController : Initializing authorlist
+05:50:45.205 DEBUG controller.AuthorListController : Initializing authorlist
+05:50:50.366 ERROR controller.MainMenuController : Application has closed
+05:51:14.515 DEBUG controller.AuthorListController : Initializing authorlist
+05:51:19.315 DEBUG controller.AuthorListController$1 : Clicked aaroon nieto
+05:51:25.532 DEBUG controller.AuthorListController : Initializing authorlist
+05:51:27.316 DEBUG controller.AuthorListController$1 : Clicked asfga adfgadfg
+05:51:30.735 DEBUG controller.AuthorListController : Initializing authorlist
+05:51:31.956 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+05:51:35.212 DEBUG controller.AuthorListController : Initializing authorlist
+05:51:36.469 DEBUG controller.AuthorListController$1 : Clicked fasfa gadfg
+05:51:39.743 DEBUG controller.AuthorListController : Initializing authorlist
+05:51:41.568 DEBUG controller.AuthorListController$1 : Clicked asfga adfgadfg
+05:51:46.411 ERROR controller.MainMenuController : Application has closed
+05:53:34.280 ERROR controller.MainMenuController : Application has closed
+05:53:40.647 DEBUG controller.AuthorListController : Initializing authorlist
+05:53:41.999 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+05:53:44.359 DEBUG controller.AuthorListController : Initializing authorlist
+05:53:45.379 DEBUG controller.AuthorListController$1 : Clicked fasfa gadfg
+05:53:48.005 DEBUG controller.AuthorListController : Initializing authorlist
+05:53:49.060 DEBUG controller.AuthorListController$1 : Clicked asfga adfgadfg
+05:53:50.986 DEBUG controller.AuthorListController : Initializing authorlist
+05:53:52.160 DEBUG controller.AuthorListController$1 : Clicked aaroon nieto
+05:53:54.306 ERROR controller.MainMenuController : Application has closed
+05:55:38.854 DEBUG controller.AuthorListController : Initializing authorlist
+05:55:41.134 DEBUG controller.AuthorListController$1 : Clicked fasfa gadfg
+05:55:43.426 DEBUG controller.AuthorListController : Initializing authorlist
+05:55:44.973 DEBUG controller.AuthorListController$1 : Clicked asfga adfgadfg
+05:55:47.002 ERROR controller.MainMenuController : Application has closed
+05:58:06.541 DEBUG controller.AuthorListController : Initializing authorlist
+05:58:08.364 DEBUG controller.AuthorListController$1 : Clicked asfga adfgadfg
+05:58:12.068 DEBUG controller.AuthorListController : Initializing authorlist
+05:58:13.387 DEBUG controller.AuthorListController$1 : Clicked aaroon nieto
+05:58:16.569 DEBUG controller.AuthorListController : Initializing authorlist
+05:58:18.345 DEBUG controller.AuthorListController$1 : Clicked fasfa gadfg
+05:58:22.818 ERROR controller.MainMenuController : Application has closed
+05:59:17.388 DEBUG controller.AuthorListController : Initializing authorlist
+05:59:21.982 DEBUG controller.AuthorListController : Initializing authorlist
+05:59:25.475 DEBUG controller.AuthorListController : Initializing authorlist
+05:59:27.160 ERROR controller.MainMenuController : Application has closed
+06:00:37.701 DEBUG controller.AuthorListController : Initializing authorlist
+06:00:39.136 DEBUG controller.AuthorListController$1 : Clicked fasfa gadfg
+06:00:40.611 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+06:00:41.127 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+06:00:41.496 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+06:00:41.697 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+06:00:41.849 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+06:00:44.248 ERROR controller.MainMenuController : Application has closed
