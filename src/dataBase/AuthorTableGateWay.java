@@ -115,21 +115,47 @@ public class AuthorTableGateWay {
 	 * @param author
 	 */
 	public void updateAuthor(AuthorModel author) {
+		// check if updated author is valid
+		if(author.getFirstName().isEmpty() || author.getLastName().isEmpty()
+				&& author.getFirstName().length() + author.getLastName().length() > 100) {
+			System.out.println("Neither name fields can be empty, and must be less than 100 characters");
+		}else if(author.getGender() != "Male" || author.getGender() != "Female" || author.getGender() != "Unknown") {
+			System.out.println("Please input male, female, or unknown gender");
+		}else if(author.getWebSite().length() > 100) {
+			System.out.println("Website is too long. Please shorten the URL");
+		}else {
+			try {
+				myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
+				myStmt.setString(1, author.getFirstName());
+				myStmt.setString(2, author.getLastName());
+				myStmt.setString(3, author.getDateOfBirth());
+				myStmt.setString(4, author.getGender());
+				myStmt.setString(5, author.getWebSite());
+				myStmt.setInt(6, author.getID());
+				myStmt.executeUpdate();
+				System.out.println("update successful\n");
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
+		}
+	}
+	
+	/**
+	 * when a user requests author information, read form database
+	 * @param author - author that was double clicked on
+	 */
+	public void readAuthor(AuthorModel author) {
 		try {
-			myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
-			myStmt.setString(1, author.getFirstName());
-			myStmt.setString(2, author.getLastName());
-			myStmt.setString(3, author.getDateOfBirth());
-			myStmt.setString(4, author.getGender());
-			myStmt.setString(5, author.getWebSite());
-			myStmt.setInt(6, author.getID());
-			myStmt.executeUpdate();
-			System.out.println("update successful\n");
+			// IDs are unique, thus we select the record where it matches
+			myStmt = conn.prepareStatement("select * from authorDetail where ID = ?");
+			myStmt.setInt(1, author.getID());
+			myStmt.executeQuery();
+			System.out.println("read successful\n");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 		
 	

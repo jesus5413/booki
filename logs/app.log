@@ -517,3 +517,29 @@
 06:00:41.697 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
 06:00:41.849 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
 06:00:44.248 ERROR controller.MainMenuController : Application has closed
+10:55:55.557 DEBUG controller.AuthorListController : Initializing authorlist
+10:57:59.546 DEBUG controller.AuthorListController : Initializing authorlist
+10:58:02.211 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+11:01:53.906 DEBUG controller.AuthorListController : Initializing authorlist
+11:26:11.830 DEBUG controller.AuthorListController : Initializing authorlist
+11:26:15.131 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+11:26:47.090 DEBUG controller.AuthorListController : Initializing authorlist
+11:26:49.837 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+13:22:01.536 DEBUG controller.AuthorListController : Initializing authorlist
+13:22:06.828 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+13:22:06.868 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+13:25:39.596 DEBUG controller.AuthorListController : Initializing authorlist
+13:25:40.966 DEBUG controller.AuthorListController$1 : Clicked aaroon nieto
+13:50:22.683 DEBUG controller.AuthorListController : Initializing authorlist
+13:50:24.507 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+13:50:24.511 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+13:52:29.641 DEBUG controller.AuthorListController : Initializing authorlist
+13:52:31.187 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+13:52:31.190 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+13:54:53.737 DEBUG controller.AuthorListController : Initializing authorlist
+13:54:55.396 DEBUG controller.AuthorListController$1 : Clicked fasfa gadfg
+13:54:55.401 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+13:56:32.581 DEBUG controller.AuthorListController : Initializing authorlist
+13:56:34.017 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+13:56:34.019 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+14:44:14.595 DEBUG controller.AuthorListController : Initializing authorlist
