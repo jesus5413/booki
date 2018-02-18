@@ -2,28 +2,33 @@ package validators;
 
 import java.util.Date;
 
+import exception.InvalidDoBException;
+import exception.InvalidGenderException;
+import exception.InvalidNameException;
+import exception.InvalidSiteException;
+
 public class Validator {
 
-	public static boolean validName(String fName, String lName) {
+	public static boolean validName(String fName, String lName) throws InvalidNameException{
 		if(fName.isEmpty() || fName.isEmpty() && fName.length() + fName.length() > 100) {
-			return false;
+			throw new InvalidNameException("Name fields can't be empty, and can't be over 100 characters!");
 		}
 		
 		return true;
 	}
 	
-	public static boolean validGender(String gender) {
+	public static boolean validGender(String gender) throws InvalidGenderException{
 		if(gender.equalsIgnoreCase("m") || gender.equalsIgnoreCase("f") ||  
 				gender.equalsIgnoreCase("u")) {
 			return true;	
 		}
 		
-		return false;
+		throw new InvalidGenderException("Gender can only be 'm', 'f', or 'u'");
 	}
 	
-	public static boolean validSiteLength(String site) {
+	public static boolean validSiteLength(String site) throws InvalidSiteException{
 		if(site.length() > 100) {
-			return false;
+			throw new InvalidSiteException("Website can't be more than 100 characters");
 		}
 		
 		return true;
@@ -35,9 +40,13 @@ public class Validator {
 	 * @param dbDate
 	 * @return
 	 */
-	public static boolean validDate(Date dbDate) {
+	public static boolean validDate(Date dbDate) throws InvalidDoBException{
 		Date today = new Date();
 		
-		return dbDate.before(today);
+		if(dbDate.before(today)) {
+			return true;
+		}else {
+			throw new InvalidDoBException("Person can't be born in that time!");
+		}
 	}
 }

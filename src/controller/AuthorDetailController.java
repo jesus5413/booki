@@ -18,7 +18,6 @@ public class AuthorDetailController {
 	public Label ID;
 	public TextField firstName;
 	public TextField lastName;
-	//public TextField dob;
 	public DatePicker dob;
 	public TextField gender;
 	public TextField website;

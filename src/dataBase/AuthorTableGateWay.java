@@ -15,6 +15,8 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 import exception.AppException;
+import exception.InvalidDoBException;
+import exception.InvalidNameException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.AuthorModel;
@@ -113,33 +115,39 @@ public class AuthorTableGateWay {
 	 * - most pass an author model
 	 * @param author
 	 */
-	public void updateAuthor(AuthorModel author) throws AppException {
+	public void updateAuthor(AuthorModel author) {
 		// check if updated author is valid
-		if(!Validator.validName(author.getFirstName(), author.getLastName())) {
-			System.out.println("Neither name fields can be empty, and must be less than 100 characters");
-		}else if(!Validator.validGender(author.getGender())) {
-			System.out.println("Please input m, f, u for gender");	
-		}
-		else if(!Validator.validSiteLength(author.getWebSite())) {
-			System.out.println("Website is too long. Please shorten the URL");		
-		}else if(!Validator.validDate(author.getDateOfBirth())){
-			System.out.println("Author can't be born on that date");
-		}else {
-			// at this point we will assume that all input is valid, and try to update the author
-			try {
-				myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
-				myStmt.setString(1, author.getFirstName());
-				myStmt.setString(2, author.getLastName());
-				myStmt.setDate(3, author.getDateOfBirth());
-				myStmt.setString(4, author.getGender());
-				myStmt.setString(5, author.getWebSite());
-				myStmt.setInt(6, author.getID());
-				myStmt.executeUpdate();
-				System.out.println("update successful\n");
-			} catch (SQLException e) {
-				throw new AppException(e);
-			}	
-		}
+//		try {
+//			if(!Validator.validName(author.getFirstName(), author.getLastName())) {
+//				System.out.println("Neither name fields can be empty, and must be less than 100 characters");
+//			}else if(!Validator.validGender(author.getGender())) {
+//				System.out.println("Please input m, f, u for gender");	
+//			}
+//			else if(!Validator.validSiteLength(author.getWebSite())) {
+//				System.out.println("Website is too long. Please shorten the URL");		
+//			}else if(!Validator.validDate(author.getDateOfBirth())){
+//				System.out.println("Author can't be born on that date");
+//			}else {
+				// at this point we will assume that all input is valid, and try to update the author
+				try {
+					myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
+					myStmt.setString(1, author.getFirstName());
+					myStmt.setString(2, author.getLastName());
+					myStmt.setDate(3, author.getDateOfBirth());
+					myStmt.setString(4, author.getGender());
+					myStmt.setString(5, author.getWebSite());
+					myStmt.setInt(6, author.getID());
+					myStmt.executeUpdate();
+					System.out.println("update successful\n");
+				} catch (SQLException e) {
+					throw new AppException(e);
+				}	
+//			}
+//		} catch (InvalidNameException e) {
+//			e.printStackTrace();
+//		} catch (InvalidDoBException e) {
+//			e.printStackTrace();
+//		}
 	}
 	
 	/**

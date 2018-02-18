@@ -2,7 +2,13 @@ package model;
 
 import java.sql.Date;
 
+import alert.AlertHelper;
+import exception.InvalidDoBException;
+import exception.InvalidGenderException;
+import exception.InvalidNameException;
+import exception.InvalidSiteException;
 import javafx.beans.property.SimpleStringProperty;
+import validators.Validator;
 
 public class AuthorModel {
 	private SimpleStringProperty firstName;
@@ -17,7 +23,6 @@ public class AuthorModel {
 		this.ID = 0;
 		this.firstName = new SimpleStringProperty();
 		this.lastName = new SimpleStringProperty();
-		//this.dateOfBirth = new SimpleStringProperty();
 		this.dateOfBirth = new Date(1);
 		this.gender = new SimpleStringProperty();
 		this.webSite = new SimpleStringProperty();
@@ -36,7 +41,16 @@ public class AuthorModel {
 	}
 
 	public void setFirstName(String firstName) {
-		this.firstName.set(firstName);
+		try {
+			if(Validator.validName(firstName, lastName.getName())) {
+				this.firstName.set(firstName);
+			}
+		} catch (InvalidNameException e) {
+			AlertHelper.showWarningMessage("Name Error", 
+					"Invalid Author Name",
+					"1: Name fields can't be empty, and can't be over 100 characters!");
+			e.printStackTrace();
+		}
 	}
 
 	public String getLastName() {
@@ -44,7 +58,16 @@ public class AuthorModel {
 	}
 
 	public void setLastName(String lastName) {
-		this.lastName.set(lastName);
+		try {
+			if(Validator.validName(firstName.getName(), lastName)) {
+				this.lastName.set(lastName);
+			}
+		} catch (InvalidNameException e) {
+			AlertHelper.showWarningMessage("Name Error", 
+					"Invalid Author Name",
+					"1: Name fields can't be empty, and can't be over 100 characters!");
+			e.printStackTrace();
+		}
 	}
 
 	public Date getDateOfBirth() {
@@ -52,7 +75,16 @@ public class AuthorModel {
 	}
 
 	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
+		try {
+			if(Validator.validDate(dateOfBirth)) {
+				this.dateOfBirth = dateOfBirth;
+			}
+		} catch (InvalidDoBException e) {
+			AlertHelper.showWarningMessage("Birthdate Error", 
+					"Invalid Date of Birth",
+					"1: Author can't be born on that date!");
+			e.printStackTrace();
+		}
 	}
 
 	public String getGender() {
@@ -61,6 +93,17 @@ public class AuthorModel {
 
 	public void setGender(String gender) {
 		this.gender.set(gender);
+		
+		try {
+			if(Validator.validGender(gender)) {
+				
+			}
+		} catch (InvalidGenderException e) {
+			AlertHelper.showWarningMessage("Gender Error", 
+					"Invalid Gender",
+					"1: Author can only be M, F, or U!");
+			e.printStackTrace();
+		}
 	}
 
 	public String getWebSite() {
@@ -68,10 +111,15 @@ public class AuthorModel {
 	}
 
 	public void setWebSite(String webSite) {
-		this.webSite.set(webSite);
+		try {
+			if(Validator.validSiteLength(webSite)) {
+				this.webSite.set(webSite);	
+			}
+		} catch (InvalidSiteException e) {
+			AlertHelper.showWarningMessage("Website Error", 
+					"Invalid Website Length",
+					"1: Website must be less than 100 characters");
+			e.printStackTrace();
+		}	
 	}
-	
-	
-	
-	
 }
