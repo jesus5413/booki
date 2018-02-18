@@ -14,6 +14,7 @@ import com.mysql.jdbc.exceptions.jdbc4.MySQLDataException;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
+import exception.AppException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.AuthorModel;
@@ -114,7 +115,7 @@ public class AuthorTableGateWay {
 	 * - most pass an author model
 	 * @param author
 	 */
-	public void updateAuthor(AuthorModel author) {
+	public void updateAuthor(AuthorModel author) throws AppException {
 		// check if updated author is valid
 		if(author.getFirstName().isEmpty() || author.getLastName().isEmpty()
 				&& author.getFirstName().length() + author.getLastName().length() > 100) {
@@ -142,7 +143,7 @@ public class AuthorTableGateWay {
 				System.out.println("update successful\n");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new AppException(e);
 			}	
 		}
 	}

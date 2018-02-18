@@ -62,7 +62,7 @@ public class AuthorDetailViewController{
 	public void initialize() {
 		gate = new AuthorTableGateWay();
 		copyModel();
-		// TODO Auto-generated method stub
+
         saveButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
