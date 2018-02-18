@@ -41,16 +41,16 @@ public class AuthorModel {
 	}
 
 	public void setFirstName(String firstName) {
-//		try {
-//			if(Validator.validName(firstName, lastName.getName())) {
+		try {
+			if(Validator.validName(firstName)) {
 				this.firstName.set(firstName);
-//			}
-//		} catch (InvalidNameException e) {
-//			AlertHelper.showWarningMessage("Name Error", 
-//					"Invalid Author Name",
-//					"1: Name fields can't be empty, and can't be over 100 characters!");
-//			e.printStackTrace();
-//		}
+			}
+		} catch (InvalidNameException e) {
+			AlertHelper.showWarningMessage("Name Error", 
+					"Invalid Author Name",
+					"1: Name fields can't be empty!");
+			e.printStackTrace();
+		}
 	}
 
 	public String getLastName() {
@@ -58,16 +58,17 @@ public class AuthorModel {
 	}
 
 	public void setLastName(String lastName) {
-//		try {
-//			if(Validator.validName(firstName.getName(), lastName)) {
+		try {
+			if(Validator.validName(lastName)) {
+
 				this.lastName.set(lastName);
-//			}
-//		} catch (InvalidNameException e) {
-//			AlertHelper.showWarningMessage("Name Error", 
-//					"Invalid Author Name",
-//					"1: Name fields can't be empty, and can't be over 100 characters!");
-//			e.printStackTrace();
-//		}
+			}
+		} catch (InvalidNameException e) {
+			AlertHelper.showWarningMessage("Name Error", 
+					"Invalid Author Name",
+					"2: Name fields can't be empty!");
+			e.printStackTrace();
+		}
 	}
 
 	public Date getDateOfBirth() {
@@ -82,7 +83,7 @@ public class AuthorModel {
 		} catch (InvalidDoBException e) {
 			AlertHelper.showWarningMessage("Birthdate Error", 
 					"Invalid Date of Birth",
-					"1: Author can't be born on that date!");
+					"3: Author can't be born on that date!");
 			e.printStackTrace();
 		}
 	}
@@ -99,7 +100,7 @@ public class AuthorModel {
 		} catch (InvalidGenderException e) {
 			AlertHelper.showWarningMessage("Gender Error", 
 					"Invalid Gender",
-					"1: Author can only be M, F, or U!");
+					"4: Author can only be M, F, or U!");
 			e.printStackTrace();
 		}
 	}
@@ -116,7 +117,7 @@ public class AuthorModel {
 		} catch (InvalidSiteException e) {
 			AlertHelper.showWarningMessage("Website Error", 
 					"Invalid Website Length",
-					"1: Website must be less than 100 characters");
+					"5: Website must be less than 100 characters");
 			e.printStackTrace();
 		}	
 	}
