@@ -5,4 +5,5 @@
 .DS_Store
 bin/.DS_Store
 src/.DS_Store
+logs/
 >>>>>>> branch 'master' of https://github.com/jesus5413/booki.git

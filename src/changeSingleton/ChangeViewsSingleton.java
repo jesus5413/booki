@@ -46,7 +46,7 @@ public class ChangeViewsSingleton {
 			}
 			
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource(fxmlPath));
-			test.setCenter(null); 
+			test.setCenter(null);
 			test.setCenter(root);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

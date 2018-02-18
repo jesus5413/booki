@@ -39,6 +39,8 @@ public class AuthorListController {
 		        if (event.getClickCount() == 2) {
 		           //Use ListView's getSelected Item
 		           String currentItemSelected = authorListView.getSelectionModel().getSelectedItem();
+		           
+		          // getSingleAuthor(currentItemSelected);
 		           //use this to do whatever you want to. Open Link etc.
 		           logger.debug("Clicked " + currentItemSelected);
 		           ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
@@ -48,7 +50,15 @@ public class AuthorListController {
 		});
 	}
 	
-	
+	private void getSingleAuthor(String selected) {
+		AuthorModel author = new AuthorModel();
+		
+		// make an Author Model based on the selected name
+		author.setFirstName(selected.substring(0, selected.indexOf(" ")));
+		author.setLastName(selected.substring(selected.indexOf(" "), selected.length()));
+		
+		
+	}
 	
 	
 	public void populateListView() {
