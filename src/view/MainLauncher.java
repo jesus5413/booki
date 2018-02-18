@@ -35,16 +35,13 @@ public class MainLauncher extends Application{
 	 * 
 	 */
 	public void start(Stage primaryStage) throws Exception{
-		
-		
 		BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("/fxml/mainMenuPane.fxml"));
 		primaryStage.setScene(new Scene(root, 1000, 600));
 		primaryStage.setTitle("Booki");
 		primaryStage.show();
 
 		this.stage = primaryStage;
-		this.mainPane = root;
-				
+		this.mainPane = root;		
 	}
 	
 	/**
@@ -72,9 +69,6 @@ public class MainLauncher extends Application{
 		//test.deleteAuthor(2);
 		//test.closeConnection();
 		launch(args);
-		
-		
-		
 	}
 	
 
@@ -85,9 +79,5 @@ public class MainLauncher extends Application{
 	public static BorderPane getMainPane() {
 		return mainPane;
 	}
-	
-	
-	
-	
 }
 

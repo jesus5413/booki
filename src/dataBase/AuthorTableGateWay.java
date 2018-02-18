@@ -8,12 +8,16 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Observable;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.mysql.jdbc.*;
 import com.mysql.jdbc.exceptions.MySQLStatementCancelledException;
 import com.mysql.jdbc.exceptions.jdbc4.MySQLDataException;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
+import controller.AuthorListController;
 import exception.AppException;
 import exception.InvalidDoBException;
 import exception.InvalidNameException;
@@ -28,7 +32,7 @@ import validators.Validator;
  *
  */
 public class AuthorTableGateWay {
-	
+	private static Logger logger = LogManager.getLogger(AuthorListController.class);
 	private Connection conn = null;
 	private PreparedStatement myStmt = null;
 	private ResultSet rs = null;
@@ -43,13 +47,12 @@ public class AuthorTableGateWay {
 	public void setConnection() {
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://easel2.fulgentcorp.com:3306/wwh124?useSSL=false","wwh124","sanAntonio1234");
-			System.out.println("connection success\n");
+			logger.debug("connection success\n");
 			//conn.close();
 		}catch (Exception e) {
-			System.out.println("some erroe\n");
-			System.out.println(e);
+			logger.debug("some error\n");
+			logger.debug(e);
 		}
-		
 	}
 	
 	/**
@@ -58,9 +61,9 @@ public class AuthorTableGateWay {
 	public void closeConnection() {
 		try{
 			conn.close();
-			System.out.println("connection closed! \n");
+			logger.debug("connection closed! \n");
 		}catch (Exception e) {
-			System.out.println(e);
+			logger.debug(e);
 		}
 	}
 	
@@ -83,12 +86,11 @@ public class AuthorTableGateWay {
 				authorDetail.setGender(rs.getString("gender"));
 				authorDetail.setWebSite(rs.getString("web_site"));
 				authorList.add(authorDetail);
-			}
-			
-		} catch (SQLException e) {
-			
+			}		
+		} catch (SQLException e) {	
 			e.printStackTrace();
 		}
+		
 		return authorList;
 	}
 	
@@ -103,7 +105,7 @@ public class AuthorTableGateWay {
 			myStmt = conn.prepareStatement("delete from authorDetail where ID = ?");
 			myStmt.setInt(1, ID);
 			myStmt.execute();
-			System.out.println("deletion successful \n");
+			logger.debug("deletion successful \n");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}	
@@ -125,7 +127,7 @@ public class AuthorTableGateWay {
 			myStmt.setString(5, author.getWebSite());
 			myStmt.setInt(6, author.getID());
 			myStmt.executeUpdate();
-			System.out.println("update successful\n");
+			logger.debug("update successful\n");
 		} catch (SQLException e) {
 			throw new AppException(e);
 		}	
@@ -141,7 +143,7 @@ public class AuthorTableGateWay {
 			myStmt = conn.prepareStatement("select * from authorDetail where ID = ?");
 			myStmt.setInt(1, author.getID());
 			myStmt.executeQuery();
-			System.out.println("read successful\n");
+			logger.debug("read successful\n");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

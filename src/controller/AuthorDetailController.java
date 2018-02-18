@@ -35,9 +35,6 @@ public class AuthorDetailController {
 			update.setVisible(false);
 			
 		}
-		
-		
-		
 	}
 	
 	public void textFieldPlaceHolder() {
@@ -95,11 +92,4 @@ public class AuthorDetailController {
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 		singleton.changeViews("z");
 	}
-	
-	
-	
-	
-	
-	
-
 }

@@ -44,11 +44,11 @@ public class MainMenuController{
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			singleton.changeViews("z");
 		}
+		
 		if(event.getSource() == addAuthor) {
 			TempStorage.oneAuthor = null;
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
-			singleton.changeViews("b");
-			
+			singleton.changeViews("b");		
 		}
 		
 		if(event.getSource() == exit) {
@@ -67,5 +67,4 @@ public class MainMenuController{
 	public void initialize() {
 		menuBar.setFocusTraversable(true);
 	}
-	
 }
