@@ -119,11 +119,15 @@ public class AuthorTableGateWay {
 		if(author.getFirstName().isEmpty() || author.getLastName().isEmpty()
 				&& author.getFirstName().length() + author.getLastName().length() > 100) {
 			System.out.println("Neither name fields can be empty, and must be less than 100 characters");
-		}//else if(author.getGender() != "m" || author.getGender() != "f" || author.getGender() != "u") {
-		//	System.out.println("Please input m, f, u for gender");
-	//	}
+			
+		}else if(!author.getGender().equalsIgnoreCase("m") && !author.getGender().equalsIgnoreCase("f") &&  
+				!author.getGender().equalsIgnoreCase("u")) {
+			System.out.println("Please input m, f, u for gender");
+			
+		}
 		else if(author.getWebSite().length() > 100) {
 			System.out.println("Website is too long. Please shorten the URL");
+			
 		}else {
 			// at this point we will assume that all input is valid, and try to update the author
 			try {
