@@ -27,14 +27,14 @@ public class AuthorDetailViewController{
     @FXML private GridPane authorGrid;
     @FXML private Button saveButton;
     
-    public AuthorDetailViewController() {
-    		System.out.println("sdfsdf");
-    }
-    
-    // set and bind controller's AuthorModel to the model user double clicked on
-    public AuthorDetailViewController(AuthorModel mod) {
-    		this.authMod = mod;
-    }
+//    public AuthorDetailViewController() {
+//    		System.out.println("sdfsdf");
+//    }
+//    
+//    // set and bind controller's AuthorModel to the model user double clicked on
+//    public AuthorDetailViewController(AuthorModel mod) {
+//    		this.authMod = mod;
+//    }
     
     public void copyModel() {
     		authMod = new AuthorModel();
@@ -82,13 +82,6 @@ public class AuthorDetailViewController{
 		authMod.setDateOfBirth(((TextField)children.get(7)).getText());
 		authMod.setGender(((TextField)children.get(8)).getText());
 		authMod.setWebSite(((TextField)children.get(9)).getText());
-		
-//		TextField firstN = (TextField) children.get(5);
-//		TextField lastN = (TextField) children.get(6);
-//		TextField dob = (TextField) children.get(7);
-//		TextField gender = (TextField) children.get(8);
-//		TextField site = (TextField) children.get(9);
-		
 		
 		gate.setConnection();
 		gate.updateAuthor(authMod);

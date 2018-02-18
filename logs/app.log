@@ -588,3 +588,19 @@
 19:19:37.572 DEBUG controller.AuthorListController$1 : Clicked First Last
 19:19:52.562 DEBUG controller.AuthorDetailViewController : Save button has been clicked
 19:20:35.578 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:38:01.657 DEBUG controller.AuthorListController : Initializing authorlist
+19:38:03.652 DEBUG controller.AuthorListController$1 : Clicked Fernando Renteria
+19:38:25.556 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:40:26.687 DEBUG controller.AuthorListController : Initializing authorlist
+19:40:28.028 DEBUG controller.AuthorListController$1 : Clicked Fernando Renteria
+19:40:41.065 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:41:27.357 DEBUG controller.AuthorListController : Initializing authorlist
+19:41:28.948 DEBUG controller.AuthorListController$1 : Clicked pepe pepito
+19:41:42.758 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:42:23.919 DEBUG controller.AuthorListController : Initializing authorlist
+19:42:25.236 DEBUG controller.AuthorListController$1 : Clicked pepe pepito
+19:42:41.201 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:42:53.379 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:43:45.615 DEBUG controller.AuthorListController : Initializing authorlist
+19:43:47.563 DEBUG controller.AuthorListController$1 : Clicked fernando retna
+19:44:00.219 DEBUG controller.AuthorDetailViewController : Save button has been clicked
