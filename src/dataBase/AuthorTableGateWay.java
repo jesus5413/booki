@@ -44,7 +44,6 @@ public class AuthorTableGateWay {
 			System.out.println("connection success\n");
 			//conn.close();
 		}catch (Exception e) {
-			// TODO: handle exception
 			System.out.println("some erroe\n");
 			System.out.println(e);
 		}
@@ -78,11 +77,10 @@ public class AuthorTableGateWay {
 				authorDetail.setID(rs.getInt("ID"));
 				authorDetail.setFirstName(rs.getString("first_name"));
 				authorDetail.setLastName(rs.getString("last_name"));
-				authorDetail.setDateOfBirth(rs.getString("dob"));
+				authorDetail.setDateOfBirth(rs.getDate("dob"));
 				authorDetail.setGender(rs.getString("gender"));
 				authorDetail.setWebSite(rs.getString("web_site"));
 				authorList.add(authorDetail);
-				//System.out.println(authorDetail.getDateOfBirth());
 			}
 			
 		} catch (SQLException e) {
@@ -105,7 +103,6 @@ public class AuthorTableGateWay {
 			myStmt.execute();
 			System.out.println("deletion successful \n");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 	}
@@ -125,20 +122,21 @@ public class AuthorTableGateWay {
 		}
 		else if(!Validator.validSiteLength(author.getWebSite())) {
 			System.out.println("Website is too long. Please shorten the URL");		
+		}else if(!Validator.validDate(author.getDateOfBirth())){
+			System.out.println("Author can't be born on that date");
 		}else {
 			// at this point we will assume that all input is valid, and try to update the author
 			try {
 				myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
 				myStmt.setString(1, author.getFirstName());
 				myStmt.setString(2, author.getLastName());
-				myStmt.setString(3, author.getDateOfBirth());
+				myStmt.setDate(3, author.getDateOfBirth());
 				myStmt.setString(4, author.getGender());
 				myStmt.setString(5, author.getWebSite());
 				myStmt.setInt(6, author.getID());
 				myStmt.executeUpdate();
 				System.out.println("update successful\n");
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				throw new AppException(e);
 			}	
 		}
@@ -167,17 +165,11 @@ public class AuthorTableGateWay {
 			myStmt = conn.prepareStatement(query);
 			myStmt.setString(1, author.getFirstName());
 			myStmt.setString(2, author.getLastName());
-			myStmt.setString(3, author.getDateOfBirth());
 			myStmt.setString(4, author.getGender());
 			myStmt.setString(5, author.getWebSite());
 			myStmt.execute();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
-		
-	
-
 }

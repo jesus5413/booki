@@ -1,5 +1,7 @@
 package validators;
 
+import java.util.Date;
+
 public class Validator {
 
 	public static boolean validName(String fName, String lName) {
@@ -25,5 +27,17 @@ public class Validator {
 		}
 		
 		return true;
+	}
+	
+	/**
+	 * Checks database date against current date. Most currently living people are generally born before
+	 * the future
+	 * @param dbDate
+	 * @return
+	 */
+	public static boolean validDate(Date dbDate) {
+		Date today = new Date();
+		
+		return dbDate.before(today);
 	}
 }

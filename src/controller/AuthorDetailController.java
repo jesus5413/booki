@@ -4,6 +4,10 @@ package controller;
 import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import model.AuthorModel;
+
+import java.sql.Date;
+import java.time.ZoneId;
+
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
 import dataBase.TempStorage;
@@ -14,7 +18,8 @@ public class AuthorDetailController {
 	public Label ID;
 	public TextField firstName;
 	public TextField lastName;
-	public TextField dob;
+	//public TextField dob;
+	public DatePicker dob;
 	public TextField gender;
 	public TextField website;
 	public Button update;
@@ -40,7 +45,7 @@ public class AuthorDetailController {
 			ID.setText(Integer.toString(TempStorage.oneAuthor.getID()));
 			firstName.setText(TempStorage.oneAuthor.getFirstName());
 			lastName.setText(TempStorage.oneAuthor.getLastName());
-			dob.setText(TempStorage.oneAuthor.getDateOfBirth());
+			dob.setValue(TempStorage.oneAuthor.getDateOfBirth().toLocalDate());
 			gender.setText(TempStorage.oneAuthor.getGender());
 			website.setText(TempStorage.oneAuthor.getWebSite());
 	}
@@ -49,7 +54,7 @@ public class AuthorDetailController {
 	public void updateButtonHandle() {
 		TempStorage.oneAuthor.setFirstName(firstName.getText());
 		TempStorage.oneAuthor.setLastName(lastName.getText());
-		TempStorage.oneAuthor.setDateOfBirth(dob.getText());
+		TempStorage.oneAuthor.setDateOfBirth(Date.valueOf(dob.getValue()));
 		TempStorage.oneAuthor.setGender(gender.getText());
 		TempStorage.oneAuthor.setWebSite(website.getText());
 		AuthorTableGateWay connection = new AuthorTableGateWay();
@@ -64,7 +69,7 @@ public class AuthorDetailController {
 		AuthorModel test = new AuthorModel();
 		test.setFirstName(firstName.getText());
 		test.setLastName(lastName.getText());
-		test.setDateOfBirth(dob.getText());
+		test.setDateOfBirth(Date.valueOf(dob.getValue()));
 		test.setGender(gender.getText());
 		test.setWebSite(website.getText());
 //		TempStorage.oneAuthor.setFirstName(firstName.getText());

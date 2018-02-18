@@ -46,7 +46,7 @@ public class AuthorDetailViewController{
     		authMod.setID(1);
     		authMod.setFirstName("First");
     		authMod.setLastName("Last");
-    		authMod.setDateOfBirth("2018-02-15");
+    		//authMod.setDateOfBirth("2018-02-15");
     		authMod.setGender("m");
     		authMod.setWebSite("www.site.com");
     		/*************
@@ -79,7 +79,7 @@ public class AuthorDetailViewController{
 		ObservableList<Node> children = authorGrid.getChildren();
 		authMod.setFirstName(((TextField)children.get(5)).getText());
 		authMod.setLastName(((TextField)children.get(6)).getText());
-		authMod.setDateOfBirth(((TextField)children.get(7)).getText());
+		//authMod.setDateOfBirth(((TextField)children.get(7)).getText());
 		authMod.setGender(((TextField)children.get(8)).getText());
 		authMod.setWebSite(((TextField)children.get(9)).getText());
 		

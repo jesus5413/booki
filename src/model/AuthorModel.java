@@ -1,11 +1,13 @@
 package model;
 
+import java.sql.Date;
+
 import javafx.beans.property.SimpleStringProperty;
 
 public class AuthorModel {
 	private SimpleStringProperty firstName;
 	private SimpleStringProperty lastName;
-	private SimpleStringProperty dateOfBirth;
+	private Date dateOfBirth;
 	private SimpleStringProperty gender;
 	private SimpleStringProperty webSite;
 	private int ID;
@@ -15,7 +17,8 @@ public class AuthorModel {
 		this.ID = 0;
 		this.firstName = new SimpleStringProperty();
 		this.lastName = new SimpleStringProperty();
-		this.dateOfBirth = new SimpleStringProperty();
+		//this.dateOfBirth = new SimpleStringProperty();
+		this.dateOfBirth = new Date(1);
 		this.gender = new SimpleStringProperty();
 		this.webSite = new SimpleStringProperty();
 	}
@@ -44,12 +47,12 @@ public class AuthorModel {
 		this.lastName.set(lastName);
 	}
 
-	public String getDateOfBirth() {
-		return dateOfBirth.get();
+	public Date getDateOfBirth() {
+		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
-		this.dateOfBirth.set(dateOfBirth);
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
 	public String getGender() {
