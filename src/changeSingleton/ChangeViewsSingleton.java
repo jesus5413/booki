@@ -23,8 +23,8 @@ public class ChangeViewsSingleton {
 		if(singleton == null) {
 			singleton = new ChangeViewsSingleton();
 		}
-		return singleton;
 		
+		return singleton;
 	}
 	
 	public void changeViews(String x) {
@@ -46,12 +46,8 @@ public class ChangeViewsSingleton {
 			test.setCenter(null);
 			test.setCenter(root);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			logger.error("Error when trying to change views");
 			e.printStackTrace();
 		}
-		
 	}
-	
-	
 }

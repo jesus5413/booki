@@ -28,7 +28,6 @@ public class AuthorListController {
 	
 	
 	public void initialize() {
-		// TODO Auto-generated method stub
 		logger.debug("Initializing authorlist");
 		populateListView();
 		
@@ -56,8 +55,6 @@ public class AuthorListController {
 		// make an Author Model based on the selected name
 		author.setFirstName(selected.substring(0, selected.indexOf(" ")));
 		author.setLastName(selected.substring(selected.indexOf(" "), selected.length()));
-		
-		
 	}
 	
 	
@@ -66,15 +63,12 @@ public class AuthorListController {
 		authorList = autherInfo.getAuthors();
 		autherInfo.closeConnection();
 		ObservableList<String> stringAuthor = FXCollections.observableArrayList();
+		
 		for(int i = 0; i < authorList.size() ; i++) {
 			
 			stringAuthor.add(authorList.get(i).getFirstName() +" "+ authorList.get(i).getLastName());
 		}
-		authorListView.setItems(stringAuthor);
 		
+		authorListView.setItems(stringAuthor);
 	}
-	
-	
-	
-	
 }
