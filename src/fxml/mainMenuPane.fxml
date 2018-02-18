@@ -16,7 +16,6 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Views">
               <items>
-                <MenuItem fx:id="authorList" mnemonicParsing="false" onAction="#handleMenuAction" text="Author List" />
                   <MenuItem fx:id="authorTable" mnemonicParsing="false" onAction="#handleMenuAction" text="Author Table" />
                   <MenuItem fx:id="addAuthor" mnemonicParsing="false" onAction="#handleMenuAction" text="Add Author" />
               </items>

@@ -32,9 +32,6 @@ public class ChangeViewsSingleton {
 			String fxmlPath = "";
 			BorderPane test = MainLauncher.getMainPane();
 			
-			if(x == "x"){
-				fxmlPath = "/fxml/authorListPane.fxml";
-			}
 			if(x == "y") {
 				fxmlPath = "/fxml/AuthorDetailView.fxml";
 			}	
