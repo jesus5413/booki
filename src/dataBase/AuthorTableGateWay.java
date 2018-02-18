@@ -18,6 +18,7 @@ import exception.AppException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.AuthorModel;
+import validators.Validator;
 
 /**
  * this class connects to the database but as well does the necessary function to update and delete rows
@@ -117,10 +118,8 @@ public class AuthorTableGateWay {
 	 */
 	public void updateAuthor(AuthorModel author) throws AppException {
 		// check if updated author is valid
-		if(author.getFirstName().isEmpty() || author.getLastName().isEmpty()
-				&& author.getFirstName().length() + author.getLastName().length() > 100) {
+		if(Validator.invalidName(author.getFirstName(), author.getLastName())) {
 			System.out.println("Neither name fields can be empty, and must be less than 100 characters");
-			
 		}else if(!author.getGender().equalsIgnoreCase("m") && !author.getGender().equalsIgnoreCase("f") &&  
 				!author.getGender().equalsIgnoreCase("u")) {
 			System.out.println("Please input m, f, u for gender");
