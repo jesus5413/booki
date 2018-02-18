@@ -8,18 +8,8 @@ import exception.InvalidNameException;
 import exception.InvalidSiteException;
 
 public class Validator {
-
-//	public static boolean validName(String fName, String lName) throws InvalidNameException{
-//		if(fName.isEmpty() || fName.isEmpty() && fName.length() + lName.length() > 100) {
-//			
-//			throw new InvalidNameException("Name fields can't be empty, and can't be over 100 characters!");
-//		}
-//		System.out.println("first: " + fName.length() + lName.length());
-//		return true;
-//	}
-	
 	public static boolean validName(String name) throws InvalidNameException{
-		if(name.isEmpty()) {
+		if(name.isEmpty() || name.length() > 100) {
 			throw new InvalidNameException("Name fields can't be empty");
 		}
 		

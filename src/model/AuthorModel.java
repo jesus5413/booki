@@ -48,7 +48,7 @@ public class AuthorModel {
 		} catch (InvalidNameException e) {
 			AlertHelper.showWarningMessage("Name Error", 
 					"Invalid Author Name",
-					"1: Name fields can't be empty!");
+					"1: Name fields can't be empty or be greater than 100 characters!");
 			e.printStackTrace();
 		}
 	}
@@ -66,7 +66,7 @@ public class AuthorModel {
 		} catch (InvalidNameException e) {
 			AlertHelper.showWarningMessage("Name Error", 
 					"Invalid Author Name",
-					"2: Name fields can't be empty!");
+					"2: Name fields can't be empty or be greater than 100 characters!");
 			e.printStackTrace();
 		}
 	}
