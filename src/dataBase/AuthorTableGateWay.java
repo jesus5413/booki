@@ -118,12 +118,10 @@ public class AuthorTableGateWay {
 	 */
 	public void updateAuthor(AuthorModel author) throws AppException {
 		// check if updated author is valid
-		if(Validator.invalidName(author.getFirstName(), author.getLastName())) {
+		if(!Validator.validName(author.getFirstName(), author.getLastName())) {
 			System.out.println("Neither name fields can be empty, and must be less than 100 characters");
-		}else if(!author.getGender().equalsIgnoreCase("m") && !author.getGender().equalsIgnoreCase("f") &&  
-				!author.getGender().equalsIgnoreCase("u")) {
-			System.out.println("Please input m, f, u for gender");
-			
+		}else if(!Validator.validGender(author.getGender())) {
+			System.out.println("Please input m, f, u for gender");	
 		}
 		else if(author.getWebSite().length() > 100) {
 			System.out.println("Website is too long. Please shorten the URL");
