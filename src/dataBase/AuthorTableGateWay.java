@@ -164,6 +164,23 @@ public class AuthorTableGateWay {
 			e.printStackTrace();
 		}
 	}
+	
+	public void saveAuthor(AuthorModel author) {
+		try {
+			String query = " insert into authorDetail (first_name, last_name, dob, gender, web_site) values (? , ? , ? , ? , ?)";
+			myStmt = conn.prepareStatement(query);
+			myStmt.setString(1, author.getFirstName());
+			myStmt.setString(2, author.getLastName());
+			myStmt.setString(3, author.getDateOfBirth());
+			myStmt.setString(4, author.getGender());
+			myStmt.setString(5, author.getWebSite());
+			myStmt.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
 		
 	
 
