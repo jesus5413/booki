@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import changeSingleton.ChangeViewsSingleton;
+import dataBase.TempStorage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -25,6 +26,7 @@ public class MainMenuController{
 	@FXML private MenuItem authorList;
 	@FXML private MenuItem exit;
 	@FXML private MenuItem authorTable;
+	@FXML private MenuItem addAuthor;
 	
 	/**
 	 * function does the actions needed for the item choices
@@ -41,6 +43,12 @@ public class MainMenuController{
 		if(event.getSource() == authorTable) {
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			singleton.changeViews("z");
+		}
+		if(event.getSource() == addAuthor) {
+			TempStorage.oneAuthor = null;
+			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+			singleton.changeViews("b");
+			
 		}
 		
 		if(event.getSource() == exit) {

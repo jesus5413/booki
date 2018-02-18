@@ -54,7 +54,7 @@ public class MainLauncher extends Application{
 	public static void main(String[] args) {
 		
 		AuthorTableGateWay test = new AuthorTableGateWay();
-		test.setConnection();
+		//test.setConnection();
 		
 		//testing of the functions
 //		AuthorModel updateTest = new AuthorModel();
@@ -70,9 +70,9 @@ public class MainLauncher extends Application{
 //			System.out.println(model.getFirstName());
 //		}
 		//test.deleteAuthor(2);
-		test.closeConnection();
+		//test.closeConnection();
 		launch(args);
-		//AuthorTableGateWay.setConnection();
+		
 		
 		
 	}

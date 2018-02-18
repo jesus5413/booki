@@ -517,3 +517,140 @@
 06:00:41.697 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
 06:00:41.849 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
 06:00:44.248 ERROR controller.MainMenuController : Application has closed
+06:11:17.248 ERROR controller.MainMenuController : Application has closed
+13:38:50.326 DEBUG controller.AuthorListController : Initializing authorlist
+13:38:51.977 ERROR controller.MainMenuController : Application has closed
+14:13:29.841 DEBUG controller.AuthorListController : Initializing authorlist
+14:13:44.251 ERROR controller.MainMenuController : Application has closed
+14:21:25.362 DEBUG controller.AuthorListController : Initializing authorlist
+14:21:45.341 ERROR controller.MainMenuController : Application has closed
+15:04:47.098 DEBUG controller.AuthorListController : Initializing authorlist
+15:04:52.629 DEBUG controller.AuthorListController : Initializing authorlist
+15:04:57.446 ERROR controller.MainMenuController : Application has closed
+18:45:58.701 ERROR controller.MainMenuController : Application has closed
+18:46:57.535 ERROR controller.MainMenuController : Application has closed
+18:47:40.369 ERROR controller.MainMenuController : Application has closed
+18:54:08.143 ERROR controller.MainMenuController : Application has closed
+18:55:28.615 ERROR controller.MainMenuController : Application has closed
+18:56:35.991 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+18:56:36.742 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+18:56:36.910 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+18:56:42.346 ERROR controller.MainMenuController : Application has closed
+19:00:10.770 DEBUG controller.AuthorTableViewController : Clicked fasfagadfg
+19:00:20.453 DEBUG controller.AuthorTableViewController : Clicked aaroonnieto
+19:00:33.932 ERROR controller.MainMenuController : Application has closed
+19:00:49.549 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:01:39.219 ERROR controller.MainMenuController : Application has closed
+19:01:42.360 ERROR controller.MainMenuController : Application has closed
+19:01:44.625 ERROR controller.MainMenuController : Application has closed
+19:01:54.666 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:02:01.886 DEBUG controller.AuthorTableViewController : Clicked aaroon nieto
+19:02:05.475 ERROR controller.MainMenuController : Application has closed
+19:18:21.990 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:18:40.979 ERROR controller.MainMenuController : Application has closed
+19:19:32.101 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:21:04.364 ERROR controller.MainMenuController : Application has closed
+19:26:37.518 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:26:37.549 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+19:26:40.001 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:26:40.012 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+19:26:46.056 ERROR controller.MainMenuController : Application has closed
+19:28:15.025 DEBUG controller.AuthorTableViewController : Clicked aaroon nieto
+19:28:15.053 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+19:28:16.879 ERROR controller.MainMenuController : Application has closed
+19:32:40.386 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:32:40.419 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+19:32:49.438 ERROR controller.MainMenuController : Application has closed
+19:33:37.421 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:33:40.177 ERROR controller.MainMenuController : Application has closed
+19:35:10.810 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:35:19.988 ERROR controller.MainMenuController : Application has closed
+19:36:07.534 DEBUG controller.AuthorTableViewController : Clicked aaroon nieto
+19:36:14.079 ERROR controller.MainMenuController : Application has closed
+19:39:36.045 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:39:40.228 ERROR controller.MainMenuController : Application has closed
+19:42:10.679 DEBUG controller.AuthorTableViewController : Clicked pepe pepito
+19:42:16.334 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:42:22.533 DEBUG controller.AuthorListController : Initializing authorlist
+19:42:27.719 DEBUG controller.AuthorTableViewController : Clicked aaroon nieto
+19:42:36.418 ERROR controller.MainMenuController : Application has closed
+19:52:47.183 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:52:50.676 DEBUG controller.AuthorListController : Initializing authorlist
+19:52:51.961 DEBUG controller.AuthorListController$1 : Clicked fernando retna
+19:53:00.825 DEBUG controller.AuthorTableViewController : Clicked aaroon nieto
+19:53:03.739 DEBUG controller.AuthorTableViewController : Clicked fernando retna
+19:53:06.687 DEBUG controller.AuthorTableViewController : Clicked asfga adfgadfg
+19:53:09.319 DEBUG controller.AuthorTableViewController : Clicked aaroon nieto
+19:53:12.402 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+19:53:17.410 ERROR controller.MainMenuController : Application has closed
+19:57:21.519 DEBUG controller.AuthorTableViewController : Clicked asfga adfgadfg
+19:59:45.477 DEBUG controller.AuthorTableViewController : Clicked aaroon nieto
+20:32:14.362 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+20:32:19.026 DEBUG controller.AuthorTableViewController : Clicked fasfa gadfg
+20:32:43.834 DEBUG controller.AuthorTableViewController : Clicked Jesus Nieto
+20:33:19.508 DEBUG controller.AuthorTableViewController : Clicked John Wick
+20:33:23.469 ERROR controller.MainMenuController : Application has closed
+20:41:55.342 ERROR controller.MainMenuController : Application has closed
+20:49:48.280 ERROR controller.MainMenuController : Application has closed
+20:50:13.042 ERROR controller.MainMenuController : Application has closed
+20:52:37.135 ERROR controller.MainMenuController : Application has closed
+20:53:48.596 ERROR controller.MainMenuController : Application has closed
+20:55:00.253 DEBUG controller.AuthorListController : Initializing authorlist
+20:55:20.979 ERROR controller.MainMenuController : Application has closed
+20:59:27.611 ERROR controller.MainMenuController : Application has closed
+21:00:54.058 ERROR controller.MainMenuController : Application has closed
+21:02:44.725 ERROR controller.MainMenuController : Application has closed
+21:03:35.169 DEBUG controller.AuthorListController : Initializing authorlist
+21:03:41.444 ERROR controller.MainMenuController : Application has closed
+21:06:03.921 ERROR controller.MainMenuController : Application has closed
+21:17:24.242 ERROR controller.MainMenuController : Application has closed
+21:18:05.373 ERROR controller.MainMenuController : Application has closed
+21:18:37.081 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+21:18:39.577 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+21:18:49.706 ERROR controller.MainMenuController : Application has closed
+21:19:24.948 DEBUG controller.AuthorListController : Initializing authorlist
+21:19:35.865 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+21:19:51.796 ERROR controller.MainMenuController : Application has closed
+21:22:02.410 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+21:22:15.847 DEBUG controller.AuthorListController : Initializing authorlist
+21:22:27.051 ERROR controller.MainMenuController : Application has closed
+21:22:47.517 DEBUG controller.AuthorTableViewController : Clicked Aaron Nieto
+21:22:58.417 ERROR controller.MainMenuController : Application has closed
+21:27:01.221 ERROR controller.MainMenuController : Application has closed
+21:33:31.447 ERROR controller.MainMenuController : Application has closed
+21:43:11.313 ERROR controller.MainMenuController : Application has closed
+21:43:32.136 DEBUG controller.AuthorTableViewController : Clicked Aaron Nieto
+21:43:44.530 DEBUG controller.AuthorTableViewController : Clicked John Wick
+21:43:47.265 ERROR controller.MainMenuController : Application has closed
+21:44:21.401 DEBUG controller.AuthorTableViewController : Clicked John Wick
+21:44:30.554 DEBUG controller.AuthorTableViewController : Clicked John Wick
+21:44:34.018 DEBUG controller.AuthorListController : Initializing authorlist
+21:44:35.145 DEBUG controller.AuthorListController$1 : Clicked John Wick
+21:44:42.975 ERROR controller.MainMenuController : Application has closed
+21:50:39.688 DEBUG controller.AuthorTableViewController : Clicked fernando retna
+21:50:55.436 ERROR controller.MainMenuController : Application has closed
+21:51:47.391 DEBUG controller.AuthorTableViewController : Clicked Aaron Nieto
+21:51:58.211 DEBUG controller.AuthorTableViewController : Clicked John Wick
+21:52:16.684 DEBUG controller.AuthorTableViewController : Clicked John2 Wick
+21:52:24.155 ERROR controller.MainMenuController : Application has closed
+21:54:38.090 DEBUG controller.AuthorTableViewController : Clicked Aaron2 Nieto
+21:55:00.319 ERROR controller.MainMenuController : Application has closed
+21:55:30.359 DEBUG controller.AuthorTableViewController : Clicked Aaron2 Nieto
+21:55:42.764 DEBUG controller.AuthorTableViewController : Clicked Aaron2 Nieto
+21:55:56.401 ERROR controller.MainMenuController : Application has closed
+21:56:15.190 DEBUG controller.AuthorTableViewController : Clicked Aaron2 Nieto
+21:58:38.044 ERROR controller.MainMenuController : Application has closed
+22:05:00.525 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+22:06:02.920 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+22:07:00.223 ERROR controller.MainMenuController : Application has closed
+22:07:05.513 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+22:07:07.740 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+22:07:09.671 ERROR controller.MainMenuController : Application has closed
+22:07:22.316 DEBUG controller.AuthorTableViewController : Clicked Aaron2 Nieto
+22:07:26.556 ERROR controller.MainMenuController : Application has closed
+22:08:08.115 DEBUG controller.AuthorTableViewController : Clicked Aaron2 Nieto
+22:08:13.638 ERROR controller.MainMenuController : Application has closed
+22:09:21.839 DEBUG controller.AuthorTableViewController : Clicked Aaron2 Nieto
+22:09:36.202 DEBUG controller.AuthorTableViewController : Clicked fernando retna
+22:12:28.446 DEBUG controller.AuthorTableViewController : Clicked Aaron2 Nieto
+22:17:35.792 ERROR controller.MainMenuController : Application has closed
