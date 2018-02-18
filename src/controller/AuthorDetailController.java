@@ -8,6 +8,7 @@ import model.AuthorModel;
 import java.sql.Date;
 import java.time.ZoneId;
 
+import alert.AlertHelper;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
 import dataBase.TempStorage;
@@ -64,10 +65,20 @@ public class AuthorDetailController {
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 		singleton.changeViews("z");
 	}
-	public void saveButtonHandle() {
+	public void saveButtonHandle(){
 		AuthorModel test = new AuthorModel();
 		test.setFirstName(firstName.getText());
 		test.setLastName(lastName.getText());
+		
+		// Meant to check if User has picked a value
+		if(dob.getValue() == null) {
+			AlertHelper.showWarningMessage("Birthdate Error", 
+					"Invalid Date of Birth",
+					"3: Author can't be born on that date!");
+			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+			singleton.changeViews("z");
+		}
+		
 		test.setDateOfBirth(Date.valueOf(dob.getValue()));
 		test.setGender(gender.getText());
 		test.setWebSite(website.getText());
