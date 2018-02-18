@@ -41,16 +41,16 @@ public class AuthorModel {
 	}
 
 	public void setFirstName(String firstName) {
-		try {
-			if(Validator.validName(firstName, lastName.getName())) {
+//		try {
+//			if(Validator.validName(firstName, lastName.getName())) {
 				this.firstName.set(firstName);
-			}
-		} catch (InvalidNameException e) {
-			AlertHelper.showWarningMessage("Name Error", 
-					"Invalid Author Name",
-					"1: Name fields can't be empty, and can't be over 100 characters!");
-			e.printStackTrace();
-		}
+//			}
+//		} catch (InvalidNameException e) {
+//			AlertHelper.showWarningMessage("Name Error", 
+//					"Invalid Author Name",
+//					"1: Name fields can't be empty, and can't be over 100 characters!");
+//			e.printStackTrace();
+//		}
 	}
 
 	public String getLastName() {
@@ -58,16 +58,16 @@ public class AuthorModel {
 	}
 
 	public void setLastName(String lastName) {
-		try {
-			if(Validator.validName(firstName.getName(), lastName)) {
+//		try {
+//			if(Validator.validName(firstName.getName(), lastName)) {
 				this.lastName.set(lastName);
-			}
-		} catch (InvalidNameException e) {
-			AlertHelper.showWarningMessage("Name Error", 
-					"Invalid Author Name",
-					"1: Name fields can't be empty, and can't be over 100 characters!");
-			e.printStackTrace();
-		}
+//			}
+//		} catch (InvalidNameException e) {
+//			AlertHelper.showWarningMessage("Name Error", 
+//					"Invalid Author Name",
+//					"1: Name fields can't be empty, and can't be over 100 characters!");
+//			e.printStackTrace();
+//		}
 	}
 
 	public Date getDateOfBirth() {
@@ -92,11 +92,9 @@ public class AuthorModel {
 	}
 
 	public void setGender(String gender) {
-		this.gender.set(gender);
-		
 		try {
 			if(Validator.validGender(gender)) {
-				
+				this.gender.set(gender);
 			}
 		} catch (InvalidGenderException e) {
 			AlertHelper.showWarningMessage("Gender Error", 

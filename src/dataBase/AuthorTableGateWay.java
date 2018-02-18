@@ -116,38 +116,19 @@ public class AuthorTableGateWay {
 	 * @param author
 	 */
 	public void updateAuthor(AuthorModel author) {
-		// check if updated author is valid
-//		try {
-//			if(!Validator.validName(author.getFirstName(), author.getLastName())) {
-//				System.out.println("Neither name fields can be empty, and must be less than 100 characters");
-//			}else if(!Validator.validGender(author.getGender())) {
-//				System.out.println("Please input m, f, u for gender");	
-//			}
-//			else if(!Validator.validSiteLength(author.getWebSite())) {
-//				System.out.println("Website is too long. Please shorten the URL");		
-//			}else if(!Validator.validDate(author.getDateOfBirth())){
-//				System.out.println("Author can't be born on that date");
-//			}else {
-				// at this point we will assume that all input is valid, and try to update the author
-				try {
-					myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
-					myStmt.setString(1, author.getFirstName());
-					myStmt.setString(2, author.getLastName());
-					myStmt.setDate(3, author.getDateOfBirth());
-					myStmt.setString(4, author.getGender());
-					myStmt.setString(5, author.getWebSite());
-					myStmt.setInt(6, author.getID());
-					myStmt.executeUpdate();
-					System.out.println("update successful\n");
-				} catch (SQLException e) {
-					throw new AppException(e);
-				}	
-//			}
-//		} catch (InvalidNameException e) {
-//			e.printStackTrace();
-//		} catch (InvalidDoBException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
+			myStmt.setString(1, author.getFirstName());
+			myStmt.setString(2, author.getLastName());
+			myStmt.setDate(3, author.getDateOfBirth());
+			myStmt.setString(4, author.getGender());
+			myStmt.setString(5, author.getWebSite());
+			myStmt.setInt(6, author.getID());
+			myStmt.executeUpdate();
+			System.out.println("update successful\n");
+		} catch (SQLException e) {
+			throw new AppException(e);
+		}	
 	}
 	
 	/**
