@@ -123,9 +123,8 @@ public class AuthorTableGateWay {
 		}else if(!Validator.validGender(author.getGender())) {
 			System.out.println("Please input m, f, u for gender");	
 		}
-		else if(author.getWebSite().length() > 100) {
-			System.out.println("Website is too long. Please shorten the URL");
-			
+		else if(!Validator.validSiteLength(author.getWebSite())) {
+			System.out.println("Website is too long. Please shorten the URL");		
 		}else {
 			// at this point we will assume that all input is valid, and try to update the author
 			try {

@@ -18,4 +18,12 @@ public class Validator {
 		
 		return false;
 	}
+	
+	public static boolean validSiteLength(String site) {
+		if(site.length() > 100) {
+			return false;
+		}
+		
+		return true;
+	}
 }
