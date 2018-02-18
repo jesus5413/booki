@@ -543,3 +543,48 @@
 13:56:34.017 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
 13:56:34.019 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
 14:44:14.595 DEBUG controller.AuthorListController : Initializing authorlist
+18:19:24.336 DEBUG controller.AuthorListController : Initializing authorlist
+18:19:27.597 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+18:19:27.601 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+18:23:38.654 DEBUG controller.AuthorListController : Initializing authorlist
+18:23:40.389 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+18:23:40.391 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+18:23:54.555 DEBUG controller.AuthorListController : Initializing authorlist
+18:23:55.439 DEBUG controller.AuthorListController$1 : Clicked asfga adfgadfg
+18:23:55.441 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+18:25:53.078 DEBUG controller.AuthorListController : Initializing authorlist
+18:25:54.380 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+18:28:16.985 DEBUG controller.AuthorListController : Initializing authorlist
+18:28:18.420 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+18:28:20.199 DEBUG controller.AuthorDetailViewController$1 : Save button has been clicked
+18:28:20.200 DEBUG controller.AuthorDetailViewController : click
+18:43:58.485 DEBUG controller.AuthorListController : Initializing authorlist
+18:44:00.224 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+18:44:05.975 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+18:44:57.590 DEBUG controller.AuthorListController : Initializing authorlist
+18:44:59.688 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+18:45:00.923 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+18:48:02.552 DEBUG controller.AuthorListController : Initializing authorlist
+18:48:04.298 DEBUG controller.AuthorListController$1 : Clicked afarfr fqefr
+18:48:05.717 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+18:57:51.977 DEBUG controller.AuthorListController : Initializing authorlist
+18:57:53.798 DEBUG controller.AuthorListController$1 : Clicked First Last
+18:57:57.397 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+18:59:26.160 DEBUG controller.AuthorListController : Initializing authorlist
+18:59:27.636 DEBUG controller.AuthorListController$1 : Clicked First Last
+18:59:30.332 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:00:45.220 DEBUG controller.AuthorListController : Initializing authorlist
+19:00:46.585 DEBUG controller.AuthorListController$1 : Clicked First Last
+19:00:49.704 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:00:49.714 DEBUG controller.AuthorDetailViewController : TextField@717cc79e[styleClass=text-input text-field]
+19:01:39.587 DEBUG controller.AuthorListController : Initializing authorlist
+19:01:41.259 DEBUG controller.AuthorListController$1 : Clicked First Last
+19:01:44.221 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:01:44.222 DEBUG controller.AuthorDetailViewController : second
+19:18:37.764 DEBUG controller.AuthorListController : Initializing authorlist
+19:18:39.148 DEBUG controller.AuthorListController$1 : Clicked First Last
+19:19:01.383 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:19:35.832 DEBUG controller.AuthorListController : Initializing authorlist
+19:19:37.572 DEBUG controller.AuthorListController$1 : Clicked First Last
+19:19:52.562 DEBUG controller.AuthorDetailViewController : Save button has been clicked
+19:20:35.578 DEBUG controller.AuthorDetailViewController : Save button has been clicked

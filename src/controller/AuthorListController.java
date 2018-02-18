@@ -51,9 +51,13 @@ public class AuthorListController {
 	}
 	
 	private void getSingleAuthor(String selected) {
-		//AuthorModel author = new AuthorModel();
+		AuthorModel author = new AuthorModel();
 		
-		//author.setFirstName(selected);
+		// make an Author Model based on the selected name
+		author.setFirstName(selected.substring(0, selected.indexOf(" ")));
+		author.setLastName(selected.substring(selected.indexOf(" "), selected.length()));
+		
+		
 	}
 	
 	

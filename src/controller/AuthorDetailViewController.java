@@ -11,14 +11,18 @@ import javafx.stage.Stage;
 import model.AuthorModel;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
 public class AuthorDetailViewController{
 	private static Logger logger = LogManager.getLogger(MainMenuController.class);
 	private AuthorModel authMod;
+	private AuthorTableGateWay gate;
 	
     @FXML private GridPane authorGrid;
     @FXML private Button saveButton;
@@ -35,19 +39,59 @@ public class AuthorDetailViewController{
     public void copyModel() {
     		authMod = new AuthorModel();
     		
-    		AuthorTableGateWay connection = new AuthorTableGateWay();
-    		connection.readAuthor(authMod);
-    		connection.closeConnection();
+    		/*************
+    		 * START TESTING
+    		 *************/
+    		authMod = new AuthorModel();
+    		authMod.setID(1);
+    		authMod.setFirstName("First");
+    		authMod.setLastName("Last");
+    		authMod.setDateOfBirth("2018-02-15");
+    		authMod.setGender("m");
+    		authMod.setWebSite("www.site.com");
+    		/*************
+    		 * END TESTING
+    		 *************/
+    		
+    		// read author
+//    		gate.setConnection();
+//    		gate.readAuthor(authMod);
+//    		gate.closeConnection();
     }
     
 	public void initialize() {
-		//copyModel();
+		gate = new AuthorTableGateWay();
+		copyModel();
 		// TODO Auto-generated method stub
         saveButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                logger.debug("Save button has been clicked");
+                saveUpdate();
             }
         });
+	}
+	
+	// when user clicks button, retrieve all fields, save them to copied model, and update database
+	private void saveUpdate() {
+		logger.debug("Save button has been clicked");
+		
+		// get all text fields to update
+		ObservableList<Node> children = authorGrid.getChildren();
+		authMod.setFirstName(((TextField)children.get(5)).getText());
+		authMod.setLastName(((TextField)children.get(6)).getText());
+		authMod.setDateOfBirth(((TextField)children.get(7)).getText());
+		authMod.setGender(((TextField)children.get(8)).getText());
+		authMod.setWebSite(((TextField)children.get(9)).getText());
+		
+//		TextField firstN = (TextField) children.get(5);
+//		TextField lastN = (TextField) children.get(6);
+//		TextField dob = (TextField) children.get(7);
+//		TextField gender = (TextField) children.get(8);
+//		TextField site = (TextField) children.get(9);
+		
+		
+		gate.setConnection();
+		gate.updateAuthor(authMod);
+		gate.closeConnection();
 	}
 }
