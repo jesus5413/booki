@@ -3,6 +3,7 @@ package controller;
 
 import javafx.scene.control.*;
 import javafx.scene.control.Label;
+import model.AuthorModel;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
 import dataBase.TempStorage;
@@ -60,14 +61,20 @@ public class AuthorDetailController {
 		singleton.changeViews("z");
 	}
 	public void saveButtonHandle() {
-		TempStorage.oneAuthor.setFirstName(firstName.getText());
-		TempStorage.oneAuthor.setLastName(lastName.getText());
-		TempStorage.oneAuthor.setDateOfBirth(dob.getText());
-		TempStorage.oneAuthor.setGender(gender.getText());
-		TempStorage.oneAuthor.setWebSite(website.getText());
+		AuthorModel test = new AuthorModel();
+		test.setFirstName(firstName.getText());
+		test.setLastName(lastName.getText());
+		test.setDateOfBirth(dob.getText());
+		test.setGender(gender.getText());
+		test.setWebSite(website.getText());
+//		TempStorage.oneAuthor.setFirstName(firstName.getText());
+//		TempStorage.oneAuthor.setLastName(lastName.getText());
+//		TempStorage.oneAuthor.setDateOfBirth(dob.getText());
+//		TempStorage.oneAuthor.setGender(gender.getText());
+//		TempStorage.oneAuthor.setWebSite(website.getText());
 		AuthorTableGateWay connection = new AuthorTableGateWay();
 		connection.setConnection();
-		connection.saveAuthor(TempStorage.oneAuthor);
+		connection.saveAuthor(test);
 		connection.closeConnection();
 		TempStorage.oneAuthor = null;
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();

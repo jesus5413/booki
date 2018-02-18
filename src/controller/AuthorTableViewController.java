@@ -88,7 +88,7 @@ public class AuthorTableViewController {
 		
 			AuthorTableGateWay connection = new AuthorTableGateWay();
 			connection.setConnection();
-			//connection.deleteAuthor(selectedAuthor.getID()); <-- comment this out when we're done with the assignment 
+			connection.deleteAuthor(selectedAuthor.getID());  
 			connection.closeConnection();
 		}
 		
