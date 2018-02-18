@@ -154,6 +154,7 @@ public class AuthorTableGateWay {
 			myStmt = conn.prepareStatement(query);
 			myStmt.setString(1, author.getFirstName());
 			myStmt.setString(2, author.getLastName());
+			myStmt.setDate(3, author.getDateOfBirth());
 			myStmt.setString(4, author.getGender());
 			myStmt.setString(5, author.getWebSite());
 			myStmt.execute();

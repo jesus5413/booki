@@ -42,6 +42,10 @@ public class Validator {
 	public static boolean validDate(Date dbDate) throws InvalidDoBException{
 		Date today = new Date();
 		
+		if(dbDate == null) {
+			throw new InvalidDoBException("Person can't be born in that time!");
+		}
+		
 		if(dbDate.before(today)) {
 			return true;
 		}else {
