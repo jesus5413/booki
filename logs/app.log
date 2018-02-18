@@ -664,3 +664,5 @@
 02:23:26.964 DEBUG controller.AuthorTableViewController : Clicked John2 Wick
 02:23:31.614 DEBUG controller.AuthorListController : Initializing authorlist
 02:41:23.567 ERROR controller.MainMenuController : Application has closed
+13:12:36.185 DEBUG controller.AuthorTableViewController : Clicked George Marting
+13:12:41.843 ERROR controller.MainMenuController : Application has closed
