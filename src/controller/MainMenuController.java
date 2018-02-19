@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import changeSingleton.ChangeViewsSingleton;
+import dataBase.TempStorage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,12 +19,14 @@ import javafx.scene.control.*;
  * @author jesusnieto
  *
  */
-public class MainMenuController implements Initializable{
+public class MainMenuController{
 	private static Logger logger = LogManager.getLogger(MainMenuController.class);
 	
 	@FXML private MenuBar menuBar;
 	@FXML private MenuItem authorList;
 	@FXML private MenuItem exit;
+	@FXML private MenuItem authorTable;
+	@FXML private MenuItem addAuthor;
 	
 	/**
 	 * function does the actions needed for the item choices
@@ -34,14 +37,25 @@ public class MainMenuController implements Initializable{
 	@FXML private void handleMenuAction(ActionEvent event) throws IOException{
 		if(event.getSource() == authorList) {
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
-			
 			singleton.changeViews("x");
+		}
+		
+		if(event.getSource() == authorTable) {
+			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+			singleton.changeViews("z");
+		}
+		
+		if(event.getSource() == addAuthor) {
+			TempStorage.oneAuthor = null;
+			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+			singleton.changeViews("b");		
 		}
 		
 		if(event.getSource() == exit) {
 			logger.error("Application has closed");
 			System.exit(0);
 		}
+		
 	}
 	
 	/**
@@ -50,8 +64,7 @@ public class MainMenuController implements Initializable{
 	 * @param location
 	 * @param resources
 	 */
-	public void initialize(URL location, ResourceBundle resources) {
+	public void initialize() {
 		menuBar.setFocusTraversable(true);
 	}
-	
 }

@@ -23,31 +23,27 @@ public class ChangeViewsSingleton {
 		if(singleton == null) {
 			singleton = new ChangeViewsSingleton();
 		}
-		return singleton;
 		
+		return singleton;
 	}
 	
 	public void changeViews(String x) {
 		try {
 			String fxmlPath = "";
 			BorderPane test = MainLauncher.getMainPane();
-			
-			if(x == "x"){
-				fxmlPath = "/fxml/authorListPane.fxml";
+			if(x == "z") {
+				fxmlPath = "/fxml/authorsTableView.fxml";
 			}
-			if(x == "y") {
-				fxmlPath = "/fxml/AuthorDetailView.fxml";
-			}	
+			if(x == "b") {
+				fxmlPath = "/fxml/authorDetail.fxml";
+			}
+			
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource(fxmlPath));
-			test.setCenter(null); 
+			test.setCenter(null);
 			test.setCenter(root);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			logger.error("Error when trying to change views");
 			e.printStackTrace();
 		}
-		
 	}
-	
-	
 }
