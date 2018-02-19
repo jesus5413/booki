@@ -24,7 +24,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class AuthorTableViewController {
-	private static Logger logger = LogManager.getLogger(AuthorListController.class);
+	private static Logger logger = LogManager.getLogger(AuthorTableViewController.class);
 	@FXML TableView<AuthorModel> authorTable;
 	@FXML TableColumn<AuthorModel, Integer> ID;
 	@FXML TableColumn<AuthorModel, String> firstName;

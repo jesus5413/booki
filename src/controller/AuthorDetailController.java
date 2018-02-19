@@ -107,12 +107,7 @@ public class AuthorDetailController {
 		if(!test.setWebSite(website.getText())) {
 			return;
 		}
-		
-//		TempStorage.oneAuthor.setFirstName(firstName.getText());
-//		TempStorage.oneAuthor.setLastName(lastName.getText());
-//		TempStorage.oneAuthor.setDateOfBirth(dob.getText());
-//		TempStorage.oneAuthor.setGender(gender.getText());
-//		TempStorage.oneAuthor.setWebSite(website.getText());
+
 		AuthorTableGateWay connection = new AuthorTableGateWay();
 		connection.setConnection();
 		connection.saveAuthor(test);
