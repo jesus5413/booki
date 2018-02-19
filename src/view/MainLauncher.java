@@ -22,6 +22,12 @@ import model.AuthorModel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * 
+ * Assignment 2 by Jesus Nieto and Fernando Renteria 
+ * @author jesusnieto
+ *
+ */
 
 public class MainLauncher extends Application{
 	private static Logger logger = LogManager.getLogger(MainLauncher.class);

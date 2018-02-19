@@ -666,3 +666,37 @@
 02:41:23.567 ERROR controller.MainMenuController : Application has closed
 13:12:36.185 DEBUG controller.AuthorTableViewController : Clicked George Marting
 13:12:41.843 ERROR controller.MainMenuController : Application has closed
+18:15:34.026 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:15:34.077 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:15:35.433 DEBUG controller.AuthorTableViewController : Clicked sdf sdf
+18:15:47.866 ERROR controller.MainMenuController : Application has closed
+18:16:05.656 ERROR controller.MainMenuController : Application has closed
+19:11:59.139 DEBUG dataBase.AuthorTableGateWay : connection success
+
+19:11:59.189 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+19:12:00.432 DEBUG controller.AuthorTableViewController : Clicked ONE ONE
+19:12:09.322 ERROR controller.MainMenuController : Application has closed
+19:12:50.929 DEBUG dataBase.AuthorTableGateWay : connection success
+
+19:12:50.974 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+19:12:53.151 DEBUG controller.AuthorTableViewController : Clicked Aaron Nieto
+19:13:09.442 DEBUG dataBase.AuthorTableGateWay : connection success
+
+19:13:09.485 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+19:13:14.174 DEBUG dataBase.AuthorTableGateWay : connection success
+
+19:13:14.260 DEBUG dataBase.AuthorTableGateWay : deletion successful 
+
+19:13:14.261 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+19:13:18.474 DEBUG dataBase.AuthorTableGateWay : connection success
+
+19:13:18.506 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+19:13:19.657 DEBUG controller.AuthorTableViewController : Clicked Aaron Nieto
+19:13:22.189 ERROR controller.MainMenuController : Application has closed
