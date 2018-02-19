@@ -49,11 +49,26 @@ public class AuthorDetailController {
 
 
 	public void updateButtonHandle() {
-		TempStorage.oneAuthor.setFirstName(firstName.getText());
-		TempStorage.oneAuthor.setLastName(lastName.getText());
-		TempStorage.oneAuthor.setDateOfBirth(Date.valueOf(dob.getValue()));
-		TempStorage.oneAuthor.setGender(gender.getText());
-		TempStorage.oneAuthor.setWebSite(website.getText());
+		if(!TempStorage.oneAuthor.setFirstName(firstName.getText())) {
+			return;
+		}
+		
+		if(!TempStorage.oneAuthor.setLastName(lastName.getText())) {
+			return;
+		}
+		
+		if(!TempStorage.oneAuthor.setDateOfBirth(Date.valueOf(dob.getValue()))) {
+			return;
+		}
+		
+		if(!TempStorage.oneAuthor.setGender(gender.getText())) {
+			return;
+		}
+		
+		if(!TempStorage.oneAuthor.setWebSite(website.getText())) {
+			return;
+		}
+		
 		AuthorTableGateWay connection = new AuthorTableGateWay();
 		connection.setConnection();
 		connection.updateAuthor(TempStorage.oneAuthor);
@@ -64,21 +79,35 @@ public class AuthorDetailController {
 	}
 	public void saveButtonHandle(){
 		AuthorModel test = new AuthorModel();
-		test.setFirstName(firstName.getText());
-		test.setLastName(lastName.getText());
+		if(!test.setFirstName(firstName.getText())) {
+			return;
+		}
+		
+		if(!test.setLastName(lastName.getText())) {
+			return;
+		}
 		
 		// Meant to check if User has picked a value
 		if(dob.getValue() == null) {
 			AlertHelper.showWarningMessage("Birthdate Error", 
 					"Invalid Date of Birth",
 					"3: Author can't be born on that date!");
-			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
-			singleton.changeViews("z");
+			
+			return;
 		}
 		
-		test.setDateOfBirth(Date.valueOf(dob.getValue()));
-		test.setGender(gender.getText());
-		test.setWebSite(website.getText());
+		if(!test.setDateOfBirth(Date.valueOf(dob.getValue()))) {
+			return;
+		}
+		
+		if(!test.setGender(gender.getText())) {
+			return;
+		}
+		
+		if(!test.setWebSite(website.getText())) {
+			return;
+		}
+		
 //		TempStorage.oneAuthor.setFirstName(firstName.getText());
 //		TempStorage.oneAuthor.setLastName(lastName.getText());
 //		TempStorage.oneAuthor.setDateOfBirth(dob.getText());
