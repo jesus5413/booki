@@ -24,7 +24,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
- * Assignment 2 by Jesus Nieto and Fernando Renteria 
+ * “CS 4743 Assignment 2 by Jesus Nieto and Fernando Renteria 
  * @author jesusnieto
  *
  */
