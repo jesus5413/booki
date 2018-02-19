@@ -54,25 +54,6 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		AuthorTableGateWay test = new AuthorTableGateWay();
-		//test.setConnection();
-		
-		//testing of the functions
-//		AuthorModel updateTest = new AuthorModel();
-//		updateTest.setDateOfBirth("2018-02-01");
-//		updateTest.setFirstName("aaroon");
-//		updateTest.setGender("f");
-//		updateTest.setID(2);
-//		updateTest.setLastName("nieto");
-//		updateTest.setWebSite("asdgadgad.com");
-//		test.updateAuthor(updateTest);
-//		ObservableList<AuthorModel> authorList = test.getAuthors();
-//		for(AuthorModel model : authorList) {
-//			System.out.println(model.getFirstName());
-//		}
-		//test.deleteAuthor(2);
-		//test.closeConnection();
 		launch(args);
 	}
 	

@@ -700,3 +700,9 @@
 
 19:13:19.657 DEBUG controller.AuthorTableViewController : Clicked Aaron Nieto
 19:13:22.189 ERROR controller.MainMenuController : Application has closed
+19:15:05.848 DEBUG dataBase.AuthorTableGateWay : connection success
+
+19:15:05.893 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+19:15:08.695 DEBUG controller.AuthorTableViewController : Clicked ONE ONE
+19:15:13.466 ERROR controller.MainMenuController : Application has closed
