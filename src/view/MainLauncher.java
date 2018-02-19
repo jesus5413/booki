@@ -7,7 +7,6 @@ import java.net.URL;
 
 import com.sun.glass.ui.TouchInputSupport;
 
-import controller.AuthorListController;
 import dataBase.AuthorTableGateWay;
 import javafx.application.Application;
 import javafx.collections.ObservableList;

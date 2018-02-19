@@ -16,8 +16,6 @@ import com.mysql.jdbc.exceptions.MySQLStatementCancelledException;
 import com.mysql.jdbc.exceptions.jdbc4.MySQLDataException;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
-
-import controller.AuthorListController;
 import exception.AppException;
 import exception.InvalidDoBException;
 import exception.InvalidNameException;
@@ -32,7 +30,7 @@ import validators.Validator;
  *
  */
 public class AuthorTableGateWay {
-	private static Logger logger = LogManager.getLogger(AuthorListController.class);
+	private static Logger logger = LogManager.getLogger(AuthorTableGateWay.class);
 	private Connection conn = null;
 	private PreparedStatement myStmt = null;
 	private ResultSet rs = null;
