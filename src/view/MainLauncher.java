@@ -22,6 +22,12 @@ import model.AuthorModel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * 
+ * Assignment 2 by Jesus Nieto and Fernando Renteria 
+ * @author jesusnieto
+ *
+ */
 
 public class MainLauncher extends Application{
 	private static Logger logger = LogManager.getLogger(MainLauncher.class);
@@ -47,8 +53,7 @@ public class MainLauncher extends Application{
 	 * This function launches the application 
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {		
 		AuthorTableGateWay test = new AuthorTableGateWay();
 		launch(args);
 	}

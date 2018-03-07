@@ -31,15 +31,17 @@ public class ChangeViewsSingleton {
 		try {
 			String fxmlPath = "";
 			BorderPane test = MainLauncher.getMainPane();
-			
-			if(x == "y") {
-				fxmlPath = "/fxml/AuthorDetailView.fxml";
-			}	
 			if(x == "z") {
 				fxmlPath = "/fxml/authorsTableView.fxml";
 			}
 			if(x == "b") {
 				fxmlPath = "/fxml/authorDetail.fxml";
+			}
+			if(x == "y") {
+				fxmlPath = "/fxml/bookDetail.fxml";
+			}
+			if(x == "t") {
+				fxmlPath = "/fxml/bookTableView.fxml";
 			}
 			
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource(fxmlPath));
