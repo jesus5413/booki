@@ -50,7 +50,7 @@ public class BookTableGateWay {
 		}
 	}
 	
-	public ObservableList<BookModel> getBook(){
+	public ObservableList<BookModel> getBooks(){
 		ObservableList<BookModel> bookList = FXCollections.observableArrayList();
 		
 		try {
@@ -66,7 +66,7 @@ public class BookTableGateWay {
 			book.setYearPublished(rs.getInt("year_published"));
 			//book.setPublisher(rs.getString("gender"));
 			book.setIsbn(rs.getString("isbn"));
-			//book.setDateAdded(rs.getDate("date_Added"));
+			book.setDateAdded(rs.getDate("date_Added"));
 			bookList.add(book);
 			
 			logger.debug(book.getTitle());
@@ -96,7 +96,7 @@ public class BookTableGateWay {
 			myStmt.setInt(3, book.getYearPublished());
 			//myStmt.setString(4, book.getPublisher());
 			myStmt.setString(5, book.getIsbn());
-			//myStmt.setInt(6, book.getDateAdded());
+			myStmt.setDate(6, book.getDateAdded());
 			myStmt.executeUpdate();
 			logger.debug("update successful\n");
 		} catch (SQLException e) {

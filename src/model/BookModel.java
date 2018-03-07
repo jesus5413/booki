@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDate;
+import java.sql.Date;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -13,7 +14,9 @@ public class BookModel {
 	private SimpleIntegerProperty yearPublished;
 	private SimpleObjectProperty<Publisher> publisher;
 	private SimpleStringProperty isbn;
-	private SimpleObjectProperty<LocalDate> dateAdded;
+	//private SimpleObjectProperty<LocalDate> dateAdded;
+	private Date dateAdded;
+	
 	public int getId() {
 		return id;
 	}
@@ -50,13 +53,19 @@ public class BookModel {
 	public void setIsbn(String isbn) {
 		this.isbn.set(isbn);
 	}
-	public SimpleObjectProperty<LocalDate> getDateAdded() {
+//	public SimpleObjectProperty<LocalDate> getDateAdded() {
+//		return dateAdded;
+//	}
+//	public void setDateAdded(SimpleObjectProperty<LocalDate> dateAdded) {
+//		this.dateAdded = dateAdded;
+//	}
+	
+	public Date getDateAdded() {
 		return dateAdded;
 	}
-	public void setDateAdded(SimpleObjectProperty<LocalDate> dateAdded) {
+	
+	public void setDateAdded(Date dateAdded) {
 		this.dateAdded = dateAdded;
 	}
-	
-	
 	
 }
