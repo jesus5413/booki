@@ -12,7 +12,6 @@ import org.apache.logging.log4j.Logger;
 import exception.AppException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import model.AuthorModel;
 import model.BookModel;
 
 public class BookTableGateWay {
@@ -64,9 +63,10 @@ public class BookTableGateWay {
 			book.setTitle(rs.getString("title"));
 			book.setSummary(rs.getString("summary"));
 			book.setYearPublished(rs.getInt("year_published"));
-			//book.setPublisher(rs.getString("gender"));
+			book.setPublisherId(rs.getInt("publisher_id"));
 			book.setIsbn(rs.getString("isbn"));
 			book.setDateAdded(rs.getDate("date_Added"));
+			
 			bookList.add(book);
 			
 			logger.debug(book.getTitle());
@@ -94,7 +94,7 @@ public class BookTableGateWay {
 			myStmt.setString(1, book.getTitle());
 			myStmt.setString(2, book.getSummary());
 			myStmt.setInt(3, book.getYearPublished());
-			//myStmt.setString(4, book.getPublisher());
+			myStmt.setInt(4, book.getPublisherId());
 			myStmt.setString(5, book.getIsbn());
 			myStmt.setDate(6, book.getDateAdded());
 			myStmt.executeUpdate();
@@ -123,7 +123,7 @@ public class BookTableGateWay {
 			myStmt.setString(1, book.getTitle());
 			myStmt.setString(2, book.getSummary());
 			myStmt.setInt(3, book.getYearPublished());
-			//myStmt.setString(4, book.getPublisher());
+			myStmt.setInt(4, book.getPublisherId());
 			myStmt.setString(5, book.getIsbn());
 			myStmt.execute();
 		} catch (SQLException e) {
