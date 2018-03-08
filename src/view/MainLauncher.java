@@ -8,7 +8,10 @@ import java.net.URL;
 import com.sun.glass.ui.TouchInputSupport;
 
 import dataBase.AuthorTableGateWay;
+import dataBase.BookTableGateWay;
+import dataBase.PublisherTableGateWay;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +21,8 @@ import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.AuthorModel;
+import model.BookModel;
+import model.Publisher;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -53,8 +58,13 @@ public class MainLauncher extends Application{
 	 * This function launches the application 
 	 * @param args
 	 */
-	public static void main(String[] args) {		
-		AuthorTableGateWay test = new AuthorTableGateWay();
+	public static void main(String[] args) {	
+		ObservableList<BookModel> list = FXCollections.observableArrayList();
+		BookTableGateWay test =  new BookTableGateWay();
+		test.setConnection();
+		list = test.getBooks();
+		test.closeConnection();
+		System.out.println(list.get(1).getId());
 		launch(args);
 	}
 	

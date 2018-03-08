@@ -52,35 +52,22 @@ public class BookTableGateWay {
 	
 	public ObservableList<BookModel> getBooks(){
 		ObservableList<BookModel> bookList = FXCollections.observableArrayList();
-		
 		try {
 			myStmt = conn.prepareStatement("select * from book");
 			rs = myStmt.executeQuery();
-			
+			while(rs.next()) {
 			// we'll make a new model and add it onto our list
-			BookModel book = new BookModel();
+				BookModel book = new BookModel();
+				book.setId(rs.getInt("ID"));
+				book.setTitle(rs.getString("title"));
+//				book.setSummary(rs.getString("summary"));
+//				book.setYearPublished(rs.getInt("year_published"));
+//				book.setPublisherId(rs.getInt("publisher_id"));
+//				book.setIsbn(rs.getString("isbn"));
+				//book.setDateAdded(rs.getTimestamp("date_added"));
+				bookList.add(book);	
+			}
 			
-			book.setId(rs.getInt("ID"));
-			book.setTitle(rs.getString("title"));
-			book.setSummary(rs.getString("summary"));
-			book.setYearPublished(rs.getInt("year_published"));
-			book.setPublisherId(rs.getInt("publisher_id"));
-			book.setIsbn(rs.getString("isbn"));
-			book.setDateAdded(rs.getDate("date_Added"));
-			
-			// Get corresponding publisher name and add to book
-			myStmt = conn.prepareStatement("select * from publishers where ID = ?");
-			myStmt.setInt(1,  book.getId());
-			rs = myStmt.executeQuery();
-			
-			Publisher pub = new Publisher();
-			pub.setID(rs.getInt("ID"));
-			pub.setPublisherName(rs.getString("publisher_name"));		
-			book.setPublisher(pub);
-			
-			bookList.add(book);
-			
-			logger.debug(book.getTitle());
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}
@@ -107,7 +94,7 @@ public class BookTableGateWay {
 			myStmt.setInt(3, book.getYearPublished());
 			myStmt.setInt(4, book.getPublisherId());
 			myStmt.setString(5, book.getIsbn());
-			myStmt.setDate(6, book.getDateAdded());
+			myStmt.setTimestamp(6, book.getDateAdded());
 			myStmt.executeUpdate();
 			logger.debug("update successful\n");
 		} catch (SQLException e) {

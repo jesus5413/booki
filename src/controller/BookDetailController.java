@@ -27,9 +27,10 @@ public class BookDetailController {
 			
 		}else {
 			save.setVisible(true);
+			update.setVisible(false);
 			ID.setText("");
 			dateAdded.setText(java.time.LocalDate.now().toString());
-			update.setVisible(false);
+			
 			
 		}
 		
