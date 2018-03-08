@@ -88,6 +88,24 @@ public class BookTableGateWay {
 	
 	public void updateBook(BookModel book) {
 		try {
+			// get book from books table and save that into a local variable to compare differences
+			myStmt = conn.prepareStatement("select * from book where ID = ?");
+			myStmt.setInt(1,  book.getId());
+			rs = myStmt.executeQuery();
+			rs.next();
+			
+			BookModel temp = new BookModel();
+			temp.setId(rs.getInt("ID"));
+			temp.setTitle(rs.getString("title"));
+			temp.setSummary(rs.getString("summary"));
+			temp.setYearPublished(rs.getInt("year_published"));
+			temp.setPublisherId(rs.getInt("publisher_id"));
+			temp.setIsbn(rs.getString("isbn"));
+			temp.setDateAdded(rs.getTimestamp("date_added"));
+			
+			// here we will check our book for differences and build the message
+			String msg = temp.compare(book);
+					
 			myStmt = conn.prepareStatement("update book set title = ? , summary = ? , year_published = ? , publisher_id = ? , isbn = ? where ID = ?");
 			myStmt.setString(1, book.getTitle());
 			myStmt.setString(2, book.getSummary());
@@ -96,6 +114,14 @@ public class BookTableGateWay {
 			myStmt.setString(5, book.getIsbn());
 			myStmt.setTimestamp(6, book.getDateAdded());
 			myStmt.executeUpdate();
+			
+			// we will also insert a record into audit_book_trail with the previous changes along with the new ones
+			myStmt = conn.prepareStatement("insert into book_audit_trail (book_id, date_added, entry_msg) values (?, ?, ?)");
+			myStmt.setInt(1, book.getId());
+			myStmt.setTimestamp(2, book.getDateAdded());
+			myStmt.setString(3, msg);
+			myStmt.execute();
+			
 			logger.debug("update successful\n");
 		} catch (SQLException e) {
 			throw new AppException(e);

@@ -63,6 +63,21 @@ public class MainLauncher extends Application{
 		BookTableGateWay test =  new BookTableGateWay();
 		test.setConnection();
 		list = test.getBooks();
+		
+		// *********************************************************************
+		// TESTING BOOK AUDIT TRIAL
+		
+		BookModel temp = new BookModel();
+		temp.setId(2);
+		temp.setTitle("gsggwrtg");
+		temp.setSummary("gwrtghwgwerfgwegw");
+		temp.setYearPublished(1998);
+		temp.setPublisherId(1);
+		temp.setIsbn("dfghefhefhg");
+		test.updateBook(temp);
+		
+		//
+		// *********************************************************************
 		test.closeConnection();
 		System.out.println(list.get(1).getPublisherId());
 		launch(args);
