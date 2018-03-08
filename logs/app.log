@@ -2424,3 +2424,34 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 16:48:26.575 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
+16:54:11.528 DEBUG dataBase.BookTableGateWay : connection success
+
+16:54:11.564 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:54:14.560 DEBUG dataBase.BookTableGateWay : connection success
+
+16:54:14.566 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:54:14.593 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:54:14.602 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+16:54:16.612 DEBUG controller.BookTableViewController : Clicked Harry potter DH pt.2
+16:54:16.756 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:54:16.760 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+16:54:22.273 DEBUG dataBase.BookTableGateWay : connection success
+
+16:54:22.340 DEBUG dataBase.BookTableGateWay : update successful
+
+16:54:22.342 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:54:22.380 DEBUG dataBase.BookTableGateWay : connection success
+
+16:54:22.384 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:54:22.419 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:54:22.426 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
