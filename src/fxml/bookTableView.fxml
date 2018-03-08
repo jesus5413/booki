@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookTableViewController">
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="bookTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="54.0" text="ID" />
-          <TableColumn prefWidth="119.0" text="Title" />
-            <TableColumn prefWidth="91.0" text="Summary" />
-            <TableColumn prefWidth="103.0" text="Year Published" />
-            <TableColumn prefWidth="74.0" text="Publisher" />
-            <TableColumn prefWidth="71.0" text="ISBN" />
-            <TableColumn prefWidth="87.0" text="Date Added" />
+          <TableColumn fx:id="id" prefWidth="54.0" text="ID" />
+          <TableColumn fx:id="title" prefWidth="119.0" text="Title" />
+            <TableColumn fx:id="summary" prefWidth="91.0" text="Summary" />
+            <TableColumn fx:id="yearPublished" prefWidth="103.0" text="Year Published" />
+            <TableColumn fx:id="publisher" prefWidth="74.0" text="Publisher" />
+            <TableColumn fx:id="ISBN" prefWidth="71.0" text="ISBN" />
+            <TableColumn fx:id="dateAdded" prefWidth="87.0" text="Date Added" />
         </columns>
       </TableView>
    </center>
+   <bottom>
+      <Button fx:id="delete" mnemonicParsing="false" text="delete" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>

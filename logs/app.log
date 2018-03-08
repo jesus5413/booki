@@ -726,3 +726,33 @@
 14:18:36.070 ERROR controller.MainMenuController : Application has closed
 14:18:55.285 ERROR controller.MainMenuController : Application has closed
 14:29:48.154 ERROR controller.MainMenuController : Application has closed
+15:06:57.052 ERROR controller.MainMenuController : Application has closed
+15:22:13.221 ERROR controller.MainMenuController : Application has closed
+15:24:21.661 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:24:21.964 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:24:27.657 DEBUG controller.AuthorTableViewController : Clicked zsdf sdzf
+15:24:39.547 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:24:39.668 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:25:29.927 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:25:30.043 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:25:34.302 DEBUG controller.AuthorTableViewController : Clicked zsdf sdzf
+15:28:31.225 ERROR controller.MainMenuController : Application has closed
+15:37:03.977 ERROR controller.MainMenuController : Application has closed
+17:38:30.194 DEBUG dataBase.AuthorTableGateWay : connection success
+
+17:38:30.243 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+17:38:35.363 DEBUG dataBase.AuthorTableGateWay : connection success
+
+17:38:35.394 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+17:38:36.522 DEBUG controller.AuthorTableViewController : Clicked zsdf sdzf
+17:38:39.572 ERROR controller.MainMenuController : Application has closed
+18:04:20.011 ERROR controller.MainMenuController : Application has closed
+18:04:54.152 ERROR controller.MainMenuController : Application has closed
