@@ -20,6 +20,6 @@
       </TableView>
    </center>
    <bottom>
-      <Button fx:id="delete" mnemonicParsing="false" text="delete" BorderPane.alignment="CENTER" />
+      <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteHandle" text="delete" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>
