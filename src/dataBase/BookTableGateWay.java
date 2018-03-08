@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 import exception.AppException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import model.BookModel;
 import model.Publisher;
 
@@ -128,6 +129,8 @@ public class BookTableGateWay {
 			e.printStackTrace();
 		}
 	}
+	
+	
 }
 
 

@@ -13,6 +13,7 @@ import dataBase.TempStorage;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.TableColumn.CellDataFeatures;
@@ -31,17 +32,20 @@ public class BookTableViewController {
 	@FXML TableColumn<BookModel, String> publisher;
 	@FXML TableColumn<BookModel, String> ISBN;
 	@FXML TableColumn<BookModel, String> dateAdded;
+	ObservableList<BookModel> bookList = FXCollections.observableArrayList();
 	@FXML public Button delete;
+	@FXML public TextField search;
 	
 	public void initialize() {
 		getBook();
 		populateTable();
+
 	}
 	
 	public void populateTable() {
 		BookTableGateWay bookCon = new BookTableGateWay();
 		bookCon.setConnection();
-		ObservableList<BookModel> bookList = bookCon.getBooks(); 
+		bookList = bookCon.getBooks(); 
 		bookCon.closeConnection();
 		
 		PublisherTableGateWay pubCon = new PublisherTableGateWay();
@@ -66,7 +70,7 @@ public class BookTableViewController {
 					return data.getValue().getPublisher().getPublisherName();  
 				}  
 		}); 
-		//publisher.setCellValueFactory(new PropertyValueFactory<>("publisher"));
+		
 		ISBN.setCellValueFactory(new PropertyValueFactory<>("isbn"));
 		dateAdded.setCellValueFactory(new PropertyValueFactory<>("dateAdded"));
 		
@@ -104,6 +108,8 @@ public class BookTableViewController {
 		connection.closeConnection();
 		
 	}
+	
+	
 
 }
 
