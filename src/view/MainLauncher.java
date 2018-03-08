@@ -69,14 +69,14 @@ public class MainLauncher extends Application{
 		// *********************************************************************
 		// TESTING BOOK AUDIT TRIAL
 		
-		BookModel temp = new BookModel();
-		temp.setId(2);
-		temp.setTitle("gsggwrtg");
-		temp.setSummary("gwrtghwgwerfgwegw");
-		temp.setYearPublished(1998);
-		temp.setPublisherId(1);
-		temp.setIsbn("dfghefhefhg");
-		test.updateBook(temp);
+//		BookModel temp = new BookModel();
+//		temp.setId(2);
+//		temp.setTitle("gsggwrtg");
+//		temp.setSummary("gwrtghwgwerfgwegw");
+//		temp.setYearPublished(1998);
+//		temp.setPublisherId(1);
+//		temp.setIsbn("dfghefhefhg");
+//		test.updateBook(temp);
 		
 		//
 		// *********************************************************************

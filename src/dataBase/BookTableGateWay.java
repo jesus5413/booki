@@ -150,6 +150,13 @@ public class BookTableGateWay {
 			myStmt.setInt(4, book.getPublisherId());
 			myStmt.setString(5, book.getIsbn());
 			myStmt.execute();
+			
+			// we will add a record to audit trail after successfully inserting book
+			myStmt = conn.prepareStatement("insert into book_audit_trail (book_id, date_added, entry_msg +"
+					+ "values (?, ?, ?)");
+			myStmt.setInt(1, book.getId());
+			myStmt.setTimestamp(2, book.getDateAdded());
+			myStmt.setString(3, "Book added");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

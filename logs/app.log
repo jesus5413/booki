@@ -2406,3 +2406,21 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 15:15:59.483 ERROR controller.MainMenuController : Application has closed
 >>>>>>> branch 'Jesus_Test' of git@github.com:jesus5413/booki.git
+16:48:06.730 DEBUG dataBase.BookTableGateWay : connection success
+
+16:48:19.602 DEBUG dataBase.BookTableGateWay : connection success
+
+16:48:19.630 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:48:22.990 DEBUG dataBase.BookTableGateWay : connection success
+
+16:48:22.995 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:48:23.025 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:48:23.032 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+16:48:26.571 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:48:26.575 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
