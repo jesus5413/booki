@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 import changeSingleton.ChangeViewsSingleton;
+import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
 import dataBase.TempStorage;
@@ -88,6 +89,19 @@ public class BookTableViewController {
 			return row;
 		});
 		
+		
+	}
+	
+	public void deleteHandle() {
+		BookModel book = new BookModel();
+		
+		book = bookTable.getSelectionModel().getSelectedItem();
+		bookTable.getItems().removeAll(bookTable.getSelectionModel().getSelectedItem());
+		
+		BookTableGateWay connection = new BookTableGateWay();
+		connection.setConnection();
+		connection.deleteBook(book.getId());  
+		connection.closeConnection();
 		
 	}
 
