@@ -158,6 +158,7 @@ public class BookTableGateWay {
 			myStmt.setInt(1, book.getId());
 			myStmt.setTimestamp(2, book.getDateAdded());
 			myStmt.setString(3, "Book added");
+			myStmt.execute();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
