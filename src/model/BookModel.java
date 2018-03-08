@@ -163,4 +163,65 @@ public class BookModel {
 	public void setDateAdded(java.sql.Timestamp timestamp) {
 		this.dateAdded = timestamp;
 	}
+	
+	// Returns field name that has been changed
+	public String compare(BookModel book) {
+		String msg;
+		String field;
+		String strVal1 = "";
+		String strVal2 = "";
+		int numVal1 = -1;
+		int numVal2 = -1;
+		
+		// first we check for value that is different
+		if(!this.getTitle().equals(book.getTitle())) {
+			field =  "title";
+		}else if(!this.getSummary().equals(book.getSummary())) {
+			field =  "summary";
+		}else if(this.getYearPublished() != book.getYearPublished()) {
+			field =  "year_published";
+		}else if(this.getPublisherId() != book.getPublisherId()) {
+			field =  "publisher_id";
+		}else if(!this.getIsbn().equals(book.getIsbn())) {
+			field =  "isbn";
+		}else {
+			// assume nothing was changed
+			return null;
+		}
+		
+		// Next, we will save both old and new values of specified field
+		switch(field) {
+		case "title":
+			strVal1 = this.getTitle();
+			strVal2 = book.getTitle();
+			break;
+		case "summary":
+			strVal1 = this.getSummary();
+			strVal2 = book.getSummary();
+			break;
+		case "year_published":
+			numVal1 = this.getYearPublished();
+			numVal2 = book.getYearPublished();
+			break;
+		case "publisher_id":
+			numVal1 = this.getPublisherId();
+			numVal2 = book.getPublisherId();
+			break;
+		case "isbn":
+			strVal1 = this.getIsbn();
+			strVal2 = book.getIsbn();
+			break;
+		}
+		
+		// finally we build and return the message
+		msg = field + " changed from ";
+		
+		if(strVal1.isEmpty()) {
+			msg = msg + numVal1 + " to " + numVal2;
+		}else {
+			msg = msg + strVal1 + " to " + strVal2;
+		}
+		
+		return msg;
+	}
 }

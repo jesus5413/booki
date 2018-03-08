@@ -1,7 +1,6 @@
 package controller;
 
 import java.sql.Date;
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 import changeSingleton.ChangeViewsSingleton;

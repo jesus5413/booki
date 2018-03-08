@@ -1019,6 +1019,25 @@
 08:35:24.513 DEBUG dataBase.BookTableGateWay : connection closed! 
 
 08:35:27.614 ERROR controller.MainMenuController : Application has closed
+<<<<<<< HEAD
+09:12:58.688 DEBUG dataBase.BookTableGateWay : connection success
+
+09:12:58.753 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+13:23:30.433 DEBUG dataBase.BookTableGateWay : connection success
+
+13:30:49.803 DEBUG dataBase.BookTableGateWay : connection success
+
+13:30:50.127 DEBUG dataBase.BookTableGateWay : No data
+13:32:31.079 DEBUG dataBase.BookTableGateWay : connection success
+
+13:33:10.344 DEBUG dataBase.BookTableGateWay : connection success
+
+13:34:19.476 DEBUG dataBase.BookTableGateWay : connection success
+
+13:36:03.934 DEBUG dataBase.BookTableGateWay : connection success
+
+=======
 08:42:47.635 DEBUG dataBase.BookTableGateWay : connection success
 
 08:42:47.687 DEBUG dataBase.BookTableGateWay : connection closed! 
@@ -1704,6 +1723,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 13:50:51.066 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
 13:50:56.977 ERROR controller.MainMenuController : Application has closed
+<<<<<<< HEAD
+>>>>>>> branch 'Jesus_Test' of git@github.com:jesus5413/booki.git
+14:49:37.083 DEBUG dataBase.BookTableGateWay : connection success
+
+=======
 13:54:24.325 DEBUG dataBase.BookTableGateWay : connection success
 
 13:54:24.393 DEBUG dataBase.BookTableGateWay : connection closed! 
@@ -2381,6 +2405,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 15:15:56.994 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
 15:15:59.483 ERROR controller.MainMenuController : Application has closed
+<<<<<<< HEAD
 15:53:48.605 DEBUG dataBase.PublisherTableGateWay : connection success
 
 15:53:49.335 DEBUG dataBase.PublisherTableGateWay : connection closed! 
@@ -2439,4 +2464,57 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 16:12:46.831 DEBUG dataBase.PublisherTableGateWay : connection success
 
 16:12:46.843 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+=======
+>>>>>>> branch 'Jesus_Test' of git@github.com:jesus5413/booki.git
+16:48:06.730 DEBUG dataBase.BookTableGateWay : connection success
+
+16:48:19.602 DEBUG dataBase.BookTableGateWay : connection success
+
+16:48:19.630 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:48:22.990 DEBUG dataBase.BookTableGateWay : connection success
+
+16:48:22.995 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:48:23.025 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:48:23.032 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+16:48:26.571 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:48:26.575 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+>>>>>>> branch 'fern1' of https://github.com/jesus5413/booki.git
+
+16:57:34.632 DEBUG dataBase.BookTableGateWay : connection success
+
+16:57:34.659 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:57:43.163 DEBUG dataBase.BookTableGateWay : connection success
+
+16:57:43.167 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:57:43.192 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:57:43.206 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+16:57:45.144 DEBUG controller.BookTableViewController : Clicked new book
+16:57:45.195 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:57:45.198 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+16:58:03.700 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:58:03.703 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+16:58:22.749 DEBUG dataBase.BookTableGateWay : connection success
+
+16:58:22.787 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:58:22.818 DEBUG dataBase.BookTableGateWay : connection success
+
+16:58:22.824 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+16:58:22.852 DEBUG dataBase.PublisherTableGateWay : connection success
+
+16:58:22.861 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
