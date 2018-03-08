@@ -968,3 +968,54 @@
 08:29:03.650 DEBUG dataBase.BookTableGateWay : connection closed! 
 
 08:29:06.399 ERROR controller.MainMenuController : Application has closed
+08:32:34.811 DEBUG dataBase.BookTableGateWay : connection success
+
+08:32:35.336 DEBUG dataBase.PublisherTableGateWay : connection success
+
+08:32:35.395 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+08:32:35.666 DEBUG dataBase.PublisherTableGateWay : connection success
+
+08:32:35.698 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+08:32:35.699 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:34:39.574 DEBUG dataBase.BookTableGateWay : connection success
+
+08:34:39.909 DEBUG dataBase.PublisherTableGateWay : connection success
+
+08:34:39.944 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+08:34:41.270 DEBUG dataBase.PublisherTableGateWay : connection success
+
+08:34:41.317 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+08:34:41.317 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:34:44.576 ERROR controller.MainMenuController : Application has closed
+08:34:57.376 DEBUG dataBase.BookTableGateWay : connection success
+
+08:34:57.728 DEBUG dataBase.PublisherTableGateWay : connection success
+
+08:34:57.785 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+08:34:58.139 DEBUG dataBase.PublisherTableGateWay : connection success
+
+08:34:58.168 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+08:34:58.168 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:35:00.946 ERROR controller.MainMenuController : Application has closed
+08:35:23.742 DEBUG dataBase.BookTableGateWay : connection success
+
+08:35:24.184 DEBUG dataBase.PublisherTableGateWay : connection success
+
+08:35:24.221 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+08:35:24.480 DEBUG dataBase.PublisherTableGateWay : connection success
+
+08:35:24.512 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+08:35:24.513 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:35:27.614 ERROR controller.MainMenuController : Application has closed
