@@ -13,6 +13,7 @@ import exception.AppException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.BookModel;
+import model.Publisher;
 
 public class BookTableGateWay {
 	private static Logger logger = LogManager.getLogger(AuthorTableGateWay.class);
@@ -67,6 +68,16 @@ public class BookTableGateWay {
 			book.setIsbn(rs.getString("isbn"));
 			book.setDateAdded(rs.getDate("date_Added"));
 			
+			// Get corresponding publisher name and add to book
+			myStmt = conn.prepareStatement("select * from publishers where ID = ?");
+			myStmt.setInt(1,  book.getId());
+			rs = myStmt.executeQuery();
+			
+			Publisher pub = new Publisher();
+			pub.setID(rs.getInt("ID"));
+			pub.setPublisherName(rs.getString("publisher_name"));		
+			book.setPublisher(pub);
+			
 			bookList.add(book);
 			
 			logger.debug(book.getTitle());
@@ -90,7 +101,7 @@ public class BookTableGateWay {
 	
 	public void updateBook(BookModel book) {
 		try {
-			myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
+			myStmt = conn.prepareStatement("update book set title = ? , summary = ? , year_published = ? , publisher_id = ? , isbn = ? where ID = ?");
 			myStmt.setString(1, book.getTitle());
 			myStmt.setString(2, book.getSummary());
 			myStmt.setInt(3, book.getYearPublished());
@@ -118,7 +129,7 @@ public class BookTableGateWay {
 	
 	public void saveBook(BookModel book) {
 		try {
-			String query = " insert into authorDetail (first_name, last_name, dob, gender, web_site) values (? , ? , ? , ? , ?)";
+			String query = " insert into book (title, summary, year_published, publisher_id, isbn) values (? , ? , ? , ? , ?)";
 			myStmt = conn.prepareStatement(query);
 			myStmt.setString(1, book.getTitle());
 			myStmt.setString(2, book.getSummary());
