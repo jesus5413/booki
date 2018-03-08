@@ -2,6 +2,8 @@ package model;
 
 
 import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
 
 import alert.AlertHelper;
 import exception.InvalidDoBException;
@@ -22,7 +24,21 @@ public class BookModel {
 	private int publisherId;
 	private Publisher publisher;
 	private SimpleStringProperty isbn;
-	private java.sql.Timestamp dateAdded;
+	private Timestamp dateAdded;
+	
+	
+	public BookModel() {
+		this.id = 0;
+		this.title = new SimpleStringProperty();
+		this.summary = new SimpleStringProperty();
+		this.yearPublished = new SimpleIntegerProperty();
+		this.publisherId = 0;
+		this.publisher = new Publisher();
+		this.isbn = new SimpleStringProperty();
+		this.dateAdded = new Timestamp(1);
+		
+	}
+	
 	public int getId() {
 		return id;
 	}

@@ -928,3 +928,43 @@
 
 08:19:51.582 DEBUG dataBase.BookTableGateWay : connection success
 
+08:21:48.660 DEBUG dataBase.BookTableGateWay : connection success
+
+08:21:48.732 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:21:52.027 ERROR controller.MainMenuController : Application has closed
+08:27:36.339 DEBUG dataBase.BookTableGateWay : connection success
+
+08:27:36.399 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:27:39.786 ERROR controller.MainMenuController : Application has closed
+08:27:56.338 DEBUG dataBase.BookTableGateWay : connection success
+
+08:27:56.394 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:27:58.853 ERROR controller.MainMenuController : Application has closed
+08:28:08.064 DEBUG dataBase.BookTableGateWay : connection success
+
+08:28:08.120 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:28:10.813 ERROR controller.MainMenuController : Application has closed
+08:28:18.932 DEBUG dataBase.BookTableGateWay : connection success
+
+08:28:18.985 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:28:21.094 ERROR controller.MainMenuController : Application has closed
+08:28:29.749 DEBUG dataBase.BookTableGateWay : connection success
+
+08:28:29.804 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:28:33.560 ERROR controller.MainMenuController : Application has closed
+08:28:42.095 DEBUG dataBase.BookTableGateWay : connection success
+
+08:28:42.144 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:28:45.219 ERROR controller.MainMenuController : Application has closed
+08:29:03.591 DEBUG dataBase.BookTableGateWay : connection success
+
+08:29:03.650 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+08:29:06.399 ERROR controller.MainMenuController : Application has closed

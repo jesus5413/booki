@@ -60,11 +60,11 @@ public class BookTableGateWay {
 				BookModel book = new BookModel();
 				book.setId(rs.getInt("ID"));
 				book.setTitle(rs.getString("title"));
-//				book.setSummary(rs.getString("summary"));
-//				book.setYearPublished(rs.getInt("year_published"));
-//				book.setPublisherId(rs.getInt("publisher_id"));
-//				book.setIsbn(rs.getString("isbn"));
-				//book.setDateAdded(rs.getTimestamp("date_added"));
+	 			book.setSummary(rs.getString("summary"));
+				book.setYearPublished(rs.getInt("year_published"));
+				book.setPublisherId(rs.getInt("publisher_id"));
+				book.setIsbn(rs.getString("isbn"));
+				book.setDateAdded(rs.getTimestamp("date_added"));
 				bookList.add(book);	
 			}
 			
