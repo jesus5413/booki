@@ -64,7 +64,7 @@ public class MainLauncher extends Application{
 		test.setConnection();
 		list = test.getBooks();
 		test.closeConnection();
-		System.out.println(list.get(1).getDateAdded());
+		System.out.println(list.get(1).getPublisherId());
 		launch(args);
 	}
 	
