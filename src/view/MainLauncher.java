@@ -6,6 +6,7 @@ import java.net.URL;
 // Assignment 1 by Jesus Nieto and Fernando Renteria 
 
 import com.sun.glass.ui.TouchInputSupport;
+import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
 
 import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
@@ -59,12 +60,22 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {	
-		ObservableList<BookModel> list = FXCollections.observableArrayList();
-		BookTableGateWay test =  new BookTableGateWay();
-		test.setConnection();
-		list = test.getBooks();
-		test.closeConnection();
-		System.out.println(list.get(1).getPublisherId());
+//		ObservableList<BookModel> list = FXCollections.observableArrayList();
+//		BookTableGateWay test =  new BookTableGateWay();
+//		test.setConnection();
+//		list = test.getBooks();
+//		test.closeConnection();
+//		
+//		PublisherTableGateWay test2 = new PublisherTableGateWay();
+//		test2.setConnection();
+//		for(int i = 0; i < list.size(); i++ ) {
+//			list.get(i).setPublisher(test2.getPublisherByID(list.get(i).getPublisherId()));
+//			System.out.println(list.get(i).getPublisher().getPublisherName().get());
+//		}
+//		test2.closeConnection();
+//		
+//		
+//		System.out.println(list.get(1).getPublisherId());
 		launch(args);
 	}
 	

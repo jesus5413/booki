@@ -94,7 +94,7 @@ public class BookTableGateWay {
 			myStmt.setInt(3, book.getYearPublished());
 			myStmt.setInt(4, book.getPublisherId());
 			myStmt.setString(5, book.getIsbn());
-			myStmt.setTimestamp(6, book.getDateAdded());
+			myStmt.setInt(6, book.getId());
 			myStmt.executeUpdate();
 			logger.debug("update successful\n");
 		} catch (SQLException e) {
