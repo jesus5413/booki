@@ -26,7 +26,6 @@ public class BookDetailController {
 	public Label dateAdded;
 	public Button update;
 	public Button save;
-	public Button auditTrail;
 	ObservableList<Publisher> pubList = FXCollections.observableArrayList();
 	
 	public void initialize() {
@@ -126,14 +125,7 @@ public class BookDetailController {
 		TempStorage.oneBook = null;
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 		singleton.changeViews("t");
-	}
-	
-	public void auditTrailHandle() {
-		if(ID.getText().isEmpty()) {
-			// pop alert
-		}
-		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
-		singleton.changeViews("a");
+		
 		
 	}
 	
