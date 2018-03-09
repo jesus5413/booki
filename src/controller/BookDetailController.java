@@ -135,6 +135,24 @@ public class BookDetailController {
 		book.setPublisher(publisher.getSelectionModel().getSelectedItem());
 		book.setPublisherId(publisher.getSelectionModel().getSelectedItem().getID());
 		book.setIsbn(ISBN.getText());
+		
+		// validations before allowing to save
+		if(!book.setTitle(title.getText())) {
+			return;
+		}
+		
+		if(!book.setSummary(summary.getText())) {
+			return;
+		}
+		
+		if(!book.setYearPublished(Integer.parseInt(yearPublished.getText()))) {
+			return;
+		}
+		
+		if(!book.setIsbn(ISBN.getText())) {
+			return;
+		}
+		
 		BookTableGateWay bookCon = new BookTableGateWay();
 		bookCon.setConnection();
 		bookCon.saveBook(book);
