@@ -3142,3 +3142,44 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 19:58:56.572 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
 19:59:01.518 ERROR controller.MainMenuController : Application has closed
+20:18:20.514 DEBUG dataBase.BookTableGateWay : connection success
+
+20:18:20.537 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+20:18:20.562 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:18:20.589 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:18:22.674 DEBUG controller.BookTableViewController : Clicked harry potter 3
+20:18:22.723 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:18:22.726 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:20:24.500 DEBUG dataBase.BookTableGateWay : connection success
+
+20:20:24.523 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+20:20:24.549 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:20:24.577 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:20:25.788 DEBUG controller.BookTableViewController : Clicked hp45
+20:20:25.839 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:20:25.842 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:20:28.944 ERROR controller.MainMenuController : Application has closed
+20:20:44.123 DEBUG dataBase.BookTableGateWay : connection success
+
+20:20:44.150 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+20:20:44.178 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:20:44.206 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:20:45.328 DEBUG controller.BookTableViewController : Clicked harry potter 2
+20:20:45.378 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:20:45.381 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:20:49.352 ERROR controller.MainMenuController : Application has closed

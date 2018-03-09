@@ -10,7 +10,7 @@
       <Label fx:id="AuditLabel" text="Label" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="auditTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
           <TableColumn fx:id="dateCol" prefWidth="107.0" text="Date Added" />

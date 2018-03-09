@@ -12,9 +12,9 @@ import model.AuditTrailModel;
 public class AuditTrailController {
 	ObservableList<AuditTrailModel> auditList = FXCollections.observableArrayList();
 	@FXML TableView<AuditTrailModel> auditTable;
-	@FXML TableColumn<AuditTrailModel, Integer> ID;
-	@FXML TableColumn<AuditTrailModel, String> dateAdded;
-	@FXML TableColumn<AuditTrailModel, String> message;
+	@FXML TableColumn<AuditTrailModel, Integer> idCol;
+	@FXML TableColumn<AuditTrailModel, String> dateCol;
+	@FXML TableColumn<AuditTrailModel, String> msgCol;
 	
 	public void initialize(){
 		
