@@ -37,6 +37,7 @@ public class BookTableViewController {
 	@FXML public Button delete;
 	@FXML public TextField search;
 	
+	
 	public void initialize() {
 		getBook();
 		populateTable();
@@ -97,14 +98,13 @@ public class BookTableViewController {
 	
 	public void deleteHandle() {
 		BookModel book = new BookModel();
-		
 		book = bookTable.getSelectionModel().getSelectedItem();
-		bookTable.getItems().removeAll(bookTable.getSelectionModel().getSelectedItem());
-		
 		BookTableGateWay connection = new BookTableGateWay();
 		connection.setConnection();
 		connection.deleteBook(book.getId());  
 		connection.closeConnection();
+		populateTable();
+		
 	}
 	
 	// autocomplete search
