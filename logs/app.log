@@ -3522,3 +3522,24 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 20:42:07.648 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
+20:53:48.808 DEBUG dataBase.BookTableGateWay : connection success
+
+20:53:48.838 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+20:53:48.872 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:53:48.912 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:53:53.314 DEBUG controller.BookTableViewController : Clicked hp3
+20:53:53.413 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:53:53.422 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:53:56.368 DEBUG dataBase.AuthorTableGateWay : connection success
+
+20:53:56.376 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+20:54:03.968 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:54:03.972 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
