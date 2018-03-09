@@ -53,12 +53,14 @@ public class MainMenuController{
 			singleton.changeViews("y");	
 		}
 		if(event.getSource() == bookTable) {
+			TempStorage.oneBook = null;
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			singleton.changeViews("t");	
 		}
 		
 		
 		if(event.getSource() == exit) {
+			TempStorage.oneBook = null;
 			logger.error("Application has closed");
 			System.exit(0);
 		}
