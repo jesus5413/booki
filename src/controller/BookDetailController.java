@@ -152,6 +152,7 @@ public class BookDetailController {
 					"No Audit Trail",
 					"Audit Trail Doesn't Exist",
 					"Please save book before looking up audit trail");
+			return;
 		}
 		
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();

@@ -48,7 +48,7 @@
       <Button fx:id="update" mnemonicParsing="false" onAction="#updateButtonHandle" text="Update" BorderPane.alignment="CENTER" />
    </bottom>
    <top>
-      <Button fx:id="save" mnemonicParsing="false" onAction="#saveButtonHandle" text="Save" BorderPane.alignment="CENTER" />
+      <Button fx:id="save" mnemonicParsing="false" onAction="#saveButtonHandle" text="Add" BorderPane.alignment="CENTER" />
    </top>
    <right>
       <Button fx:id="auditTrail" mnemonicParsing="false" onAction="#auditTrailHandle" text="Audit Trail" BorderPane.alignment="CENTER" />
