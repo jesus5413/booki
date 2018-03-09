@@ -61,41 +61,6 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {	
-
-		ObservableList<BookModel> list = FXCollections.observableArrayList();
-		BookTableGateWay test =  new BookTableGateWay();
-		test.setConnection();
-		list = test.getBooks();
-		
-		
-		
-		// *********************************************************************
-		// TESTING BOOK AUDIT TRIAL
-		
-		ObservableList<AuditTrailModel> l2 = FXCollections.observableArrayList();
-		l2 = test.getAuditTrail(11);
-		//
-		// *********************************************************************
-		test.closeConnection();
-		System.out.println(list.get(1).getPublisherId());
-
-//		ObservableList<BookModel> list = FXCollections.observableArrayList();
-//		BookTableGateWay test =  new BookTableGateWay();
-//		test.setConnection();
-//		list = test.getBooks();
-//		test.closeConnection();
-//		
-//		PublisherTableGateWay test2 = new PublisherTableGateWay();
-//		test2.setConnection();
-//		for(int i = 0; i < list.size(); i++ ) {
-//			list.get(i).setPublisher(test2.getPublisherByID(list.get(i).getPublisherId()));
-//			System.out.println(list.get(i).getPublisher().getPublisherName().get());
-//		}
-//		test2.closeConnection();
-//		
-//		
-//		System.out.println(list.get(1).getPublisherId());
-
 		launch(args);
 	}
 	
