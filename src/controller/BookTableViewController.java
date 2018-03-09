@@ -14,6 +14,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.TableColumn.CellDataFeatures;
@@ -39,7 +40,7 @@ public class BookTableViewController {
 	public void initialize() {
 		getBook();
 		populateTable();
-
+		searchHandle();
 	}
 	
 	public void populateTable() {
@@ -92,8 +93,6 @@ public class BookTableViewController {
 			});
 			return row;
 		});
-		
-		
 	}
 	
 	public void deleteHandle() {
@@ -106,11 +105,33 @@ public class BookTableViewController {
 		connection.setConnection();
 		connection.deleteBook(book.getId());  
 		connection.closeConnection();
-		
 	}
 	
-	
-
+	// autocomplete search
+	public void searchHandle() {
+		// p-> true is a predicate that must be true. This is a lambda expression
+		FilteredList<BookModel> filteredBooks = new FilteredList<>(bookList, p-> true);
+		search.textProperty().addListener((observable, oldVal, newVal) ->{
+			filteredBooks.setPredicate(book ->{
+				// if filter is empty, display all books
+				if(newVal == null || newVal.isEmpty()) {
+					return true;
+				}
+				
+				String lowerCaseFilter = newVal.toLowerCase();
+				
+				if(book.getTitle().toLowerCase().contains(lowerCaseFilter)) {
+					return true;
+				}
+				
+				return false;
+			});
+		});
+		
+		SortedList<BookModel> sortedBooks = new SortedList<>(filteredBooks);
+		sortedBooks.comparatorProperty().bind(bookTable.comparatorProperty());
+		bookTable.setItems(sortedBooks);
+	}
 }
 
 
