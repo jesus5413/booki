@@ -6,9 +6,13 @@ import java.net.URL;
 // Assignment 1 by Jesus Nieto and Fernando Renteria 
 
 import com.sun.glass.ui.TouchInputSupport;
+import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
 
 import dataBase.AuthorTableGateWay;
+import dataBase.BookTableGateWay;
+import dataBase.PublisherTableGateWay;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
@@ -17,14 +21,17 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import model.AuditTrailModel;
 import model.AuthorModel;
+import model.BookModel;
+import model.Publisher;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
  * 
- * “CS 4743 Assignment 2 by Jesus Nieto and Fernando Renteria 
+ * Assignment 3 by Jesus Nieto and Fernando Renteria 
  * @author jesusnieto
  *
  */
@@ -53,7 +60,7 @@ public class MainLauncher extends Application{
 	 * This function launches the application 
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) {	
 		launch(args);
 	}
 	

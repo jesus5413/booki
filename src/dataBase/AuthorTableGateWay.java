@@ -46,7 +46,6 @@ public class AuthorTableGateWay {
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://easel2.fulgentcorp.com:3306/wwh124?useSSL=false","wwh124","sanAntonio1234");
 			logger.debug("connection success\n");
-			//conn.close();
 		}catch (Exception e) {
 			logger.debug("some error\n");
 			logger.debug(e);
@@ -143,7 +142,6 @@ public class AuthorTableGateWay {
 			myStmt.executeQuery();
 			logger.debug("read successful\n");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

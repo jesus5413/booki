@@ -14,10 +14,16 @@
                 <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#handleMenuAction" text="Quit" />
               </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Views">
+            <Menu mnemonicParsing="false" text="Authors">
               <items>
                   <MenuItem fx:id="authorTable" mnemonicParsing="false" onAction="#handleMenuAction" text="Author Table" />
                   <MenuItem fx:id="addAuthor" mnemonicParsing="false" onAction="#handleMenuAction" text="Add Author" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Books">
+              <items>
+                <MenuItem fx:id="bookTable" mnemonicParsing="false" onAction="#handleMenuAction" text="Book Table" />
+                  <MenuItem fx:id="addBook" mnemonicParsing="false" onAction="#handleMenuAction" text="Add Book" />
               </items>
             </Menu>
         </menus>
