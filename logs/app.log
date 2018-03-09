@@ -2549,6 +2549,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 16:54:22.426 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
+<<<<<<< HEAD
 17:01:57.835 DEBUG dataBase.BookTableGateWay : connection success
 
 17:01:57.866 DEBUG dataBase.BookTableGateWay : connection closed! 
@@ -2610,4 +2611,289 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 17:03:24.345 DEBUG dataBase.PublisherTableGateWay : connection success
 
 17:03:24.360 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+=======
+17:05:09.456 DEBUG dataBase.BookTableGateWay : connection success
+
+17:05:09.500 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:05:12.571 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:05:12.575 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+>>>>>>> branch 'fern1' of https://github.com/jesus5413/booki.git
+
+17:15:04.822 DEBUG dataBase.BookTableGateWay : connection success
+
+17:15:04.847 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:15:07.972 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:15:07.976 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:15:28.276 DEBUG dataBase.BookTableGateWay : connection success
+
+17:15:28.329 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:15:28.383 DEBUG dataBase.BookTableGateWay : connection success
+
+17:15:28.388 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:15:28.425 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:15:28.442 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:15:39.377 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:15:39.381 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:15:52.734 DEBUG dataBase.BookTableGateWay : connection success
+
+17:15:52.780 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:15:52.816 DEBUG dataBase.BookTableGateWay : connection success
+
+17:15:52.821 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:15:52.845 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:15:52.864 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:16:06.564 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:16:06.568 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:16:07.819 DEBUG dataBase.BookTableGateWay : connection success
+
+17:16:07.825 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:16:07.851 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:16:07.872 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:16:09.455 ERROR controller.MainMenuController : Application has closed
+17:47:09.005 DEBUG dataBase.BookTableGateWay : connection success
+
+17:47:09.045 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:47:12.125 DEBUG dataBase.BookTableGateWay : connection success
+
+17:47:12.130 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:47:12.160 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:47:12.183 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:47:15.904 DEBUG controller.BookTableViewController : Clicked hp45
+17:47:15.958 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:47:15.961 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:47:22.300 DEBUG dataBase.BookTableGateWay : connection success
+
+17:47:22.366 DEBUG dataBase.BookTableGateWay : update successful
+
+17:47:22.367 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:47:22.400 DEBUG dataBase.BookTableGateWay : connection success
+
+17:47:22.405 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:47:22.433 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:47:22.456 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:48:20.567 DEBUG dataBase.BookTableGateWay : connection success
+
+17:48:20.605 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:48:26.790 DEBUG dataBase.BookTableGateWay : connection success
+
+17:48:26.796 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:48:26.826 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:48:26.846 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:48:36.896 DEBUG controller.BookTableViewController : Clicked HP3
+17:48:36.951 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:48:36.955 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:48:42.357 DEBUG dataBase.BookTableGateWay : connection success
+
+17:48:53.281 DEBUG dataBase.BookTableGateWay : connection success
+
+17:48:56.874 DEBUG dataBase.BookTableGateWay : connection success
+
+17:48:56.878 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:48:56.902 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:48:56.922 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:49:00.443 ERROR controller.MainMenuController : Application has closed
+17:49:07.578 DEBUG dataBase.BookTableGateWay : connection success
+
+17:49:07.608 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:49:12.566 DEBUG dataBase.BookTableGateWay : connection success
+
+17:49:12.572 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:49:12.600 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:49:12.620 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:49:14.709 DEBUG controller.BookTableViewController : Clicked hp45
+17:49:14.760 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:49:14.763 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:49:22.774 DEBUG dataBase.BookTableGateWay : connection success
+
+17:49:22.823 DEBUG dataBase.BookTableGateWay : update successful
+
+17:49:22.824 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:49:22.860 DEBUG dataBase.BookTableGateWay : connection success
+
+17:49:22.864 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:49:22.886 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:49:22.906 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:49:27.434 DEBUG controller.BookTableViewController : Clicked hp209
+17:49:27.476 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:49:27.480 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:49:34.741 DEBUG dataBase.BookTableGateWay : connection success
+
+17:49:34.800 DEBUG dataBase.BookTableGateWay : update successful
+
+17:49:34.801 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:49:34.834 DEBUG dataBase.BookTableGateWay : connection success
+
+17:49:34.838 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:49:34.864 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:49:34.885 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:50:11.387 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:50:11.391 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:51:48.502 DEBUG dataBase.BookTableGateWay : connection success
+
+17:51:48.532 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:51:50.969 DEBUG dataBase.BookTableGateWay : connection success
+
+17:51:50.974 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:51:51.001 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:51:51.020 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:51:52.408 DEBUG controller.BookTableViewController : Clicked hp209
+17:51:52.460 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:51:52.463 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:51:58.689 DEBUG dataBase.BookTableGateWay : connection success
+
+17:51:58.757 DEBUG dataBase.BookTableGateWay : update successful
+
+17:51:58.758 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:51:58.791 DEBUG dataBase.BookTableGateWay : connection success
+
+17:51:58.795 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:51:58.820 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:51:58.840 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:53:06.184 DEBUG dataBase.BookTableGateWay : connection success
+
+17:53:06.222 DEBUG dataBase.BookTableGateWay : deletion successful 
+
+17:53:06.223 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:55:26.335 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:55:26.339 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:55:49.231 DEBUG dataBase.BookTableGateWay : connection success
+
+17:55:49.269 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:55:49.303 DEBUG dataBase.BookTableGateWay : connection success
+
+17:55:49.308 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:55:49.332 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:55:49.354 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:56:09.334 DEBUG controller.BookTableViewController : Clicked a series of unfortunate events
+17:56:09.375 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:56:09.378 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+17:56:12.437 DEBUG dataBase.BookTableGateWay : connection success
+
+17:56:12.500 DEBUG dataBase.BookTableGateWay : update successful
+
+17:56:12.501 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:56:12.530 DEBUG dataBase.BookTableGateWay : connection success
+
+17:56:12.534 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+17:56:12.559 DEBUG dataBase.PublisherTableGateWay : connection success
+
+17:56:12.578 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:08:33.781 DEBUG dataBase.BookTableGateWay : connection success
+
+18:08:33.812 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:08:36.867 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:08:36.871 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:09:02.590 DEBUG dataBase.BookTableGateWay : connection success
+
+18:09:02.632 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:09:02.687 DEBUG dataBase.BookTableGateWay : connection success
+
+18:09:02.691 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:09:02.716 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:09:02.739 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:10:09.916 DEBUG dataBase.BookTableGateWay : connection success
+
+18:10:09.949 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:10:12.914 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:10:12.919 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:10:30.142 DEBUG dataBase.BookTableGateWay : connection success
+
+18:10:30.210 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:10:30.265 DEBUG dataBase.BookTableGateWay : connection success
+
+18:10:30.270 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:10:30.293 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:10:30.319 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 

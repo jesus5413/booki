@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -152,11 +153,19 @@ public class BookTableGateWay {
 			myStmt.setString(5, book.getIsbn());
 			myStmt.execute();
 			
+			int id;
+			Timestamp dateAdded;
+			myStmt = conn.prepareStatement("select * from book where title = ? ");
+			myStmt.setString(1,  book.getTitle());
+			rs = myStmt.executeQuery();
+			rs.next();
+			id = rs.getInt("ID");
+			dateAdded = rs.getTimestamp("date_added");
+			
 			// we will add a record to audit trail after successfully inserting book
-			myStmt = conn.prepareStatement("insert into book_audit_trail (book_id, date_added, entry_msg +"
-					+ "values (?, ?, ?)");
-			myStmt.setInt(1, book.getId());
-			myStmt.setTimestamp(2, book.getDateAdded());
+			myStmt = conn.prepareStatement("insert into book_audit_trail (book_id, date_added, entry_msg) values (?, ?, ?)");
+			myStmt.setInt(1, id);
+			myStmt.setTimestamp(2, dateAdded);
 			myStmt.setString(3, "Book added");
 			myStmt.execute();
 		} catch (SQLException e) {
