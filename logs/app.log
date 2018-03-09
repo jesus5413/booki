@@ -3514,3 +3514,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 20:31:22.804 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
+20:42:04.836 DEBUG dataBase.BookTableGateWay : connection success
+
+20:42:04.879 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+20:42:07.643 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:42:07.648 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+

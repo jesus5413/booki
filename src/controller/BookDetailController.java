@@ -3,6 +3,7 @@ package controller;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
+import alert.AlertHelper;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
@@ -147,7 +148,12 @@ public class BookDetailController {
 	public void auditTrailHandle() {
 		if(ID.getText().isEmpty()) {
 			// pop alert
+			AlertHelper.showWarningMessage(
+					"No Audit Trail",
+					"Audit Trail Doesn't Exist",
+					"Please save book before looking up audit trail");
 		}
+		
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 		singleton.changeViews("a");
 		
