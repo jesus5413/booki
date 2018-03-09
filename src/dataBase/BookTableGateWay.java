@@ -79,12 +79,14 @@ public class BookTableGateWay {
 	}
 	
 	// get all associated audits from a particular book
-	public ObservableList<AuditTrailModel> getAuditTrail(){
+	public ObservableList<AuditTrailModel> getAuditTrail(int bookId){
 		ObservableList<AuditTrailModel> auditTrail = FXCollections.observableArrayList();
 		
 		try {
-			myStmt = conn.prepareStatement("select * from book_audit_trail as a inner join book on a.book_id = book.id");
+			myStmt = conn.prepareStatement("select * from book_audit_trail where book_id = ?");
+			myStmt.setInt(1, bookId);
 			rs = myStmt.executeQuery();
+
 			while(rs.next()) {
 			// we'll make a new model and add it onto our list
 				AuditTrailModel trail = new AuditTrailModel();
@@ -92,7 +94,6 @@ public class BookTableGateWay {
 				trail.setDateAdded(rs.getTimestamp("date_added"));
 				trail.setMsg(rs.getString("entry_msg"));
 				auditTrail.add(trail);
-				logger.info(rs.getString("entry_msg"));
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
@@ -196,6 +197,8 @@ public class BookTableGateWay {
 			e.printStackTrace();
 		}
 	}
+	
+	
 	
 	
 }
