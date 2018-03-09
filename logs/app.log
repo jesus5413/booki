@@ -2897,6 +2897,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 18:10:30.319 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
+<<<<<<< HEAD
 18:21:29.213 DEBUG dataBase.BookTableGateWay : connection success
 
 18:21:29.249 DEBUG dataBase.BookTableGateWay : connection closed! 
@@ -2994,6 +2995,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 19:15:31.523 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
+<<<<<<< HEAD
 19:35:50.714 DEBUG dataBase.BookTableGateWay : connection success
 
 19:35:50.759 DEBUG dataBase.BookTableGateWay : connection closed! 
@@ -3025,3 +3027,367 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 19:36:05.526 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
 19:36:10.119 ERROR controller.MainMenuController : Application has closed
+=======
+=======
+18:18:53.487 DEBUG dataBase.BookTableGateWay : connection success
+
+18:18:53.518 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:18:56.813 DEBUG dataBase.BookTableGateWay : connection success
+
+18:18:56.819 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:18:56.848 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:18:56.874 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:18:58.160 DEBUG controller.BookTableViewController : Clicked hp209
+18:18:58.214 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:18:58.218 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:20:15.273 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:20:15.277 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:24:26.872 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:24:26.876 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:40:09.743 DEBUG dataBase.BookTableGateWay : connection success
+
+18:40:09.769 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:40:14.518 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:40:14.522 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:40:17.316 ERROR controller.MainMenuController : Application has closed
+18:40:34.435 DEBUG dataBase.BookTableGateWay : connection success
+
+18:40:34.464 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:40:36.738 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:40:36.741 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:40:57.347 ERROR controller.MainMenuController : Application has closed
+18:42:19.369 DEBUG dataBase.BookTableGateWay : connection success
+
+18:42:19.395 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:42:21.917 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:42:21.925 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:53:20.473 DEBUG dataBase.BookTableGateWay : connection success
+
+18:53:20.504 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:53:26.827 DEBUG dataBase.BookTableGateWay : connection success
+
+18:53:26.833 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:53:26.863 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:53:26.889 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:53:28.871 DEBUG controller.BookTableViewController : Clicked hp209
+18:53:28.924 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:53:28.928 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:53:30.288 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+18:53:35.521 ERROR controller.MainMenuController : Application has closed
+18:55:18.022 DEBUG dataBase.BookTableGateWay : connection success
+
+18:55:18.055 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:55:21.444 DEBUG dataBase.BookTableGateWay : connection success
+
+18:55:21.449 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:55:21.474 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:55:21.498 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:55:22.807 DEBUG controller.BookTableViewController : Clicked harry potter 2
+18:55:22.857 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:55:22.861 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:55:24.025 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+18:55:27.382 ERROR controller.MainMenuController : Application has closed
+18:57:23.140 DEBUG dataBase.BookTableGateWay : connection success
+
+18:57:23.165 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:57:25.800 DEBUG dataBase.BookTableGateWay : connection success
+
+18:57:25.805 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:57:25.833 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:57:25.860 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:57:27.817 DEBUG controller.BookTableViewController : Clicked test1
+18:57:27.869 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:57:27.873 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:57:28.827 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+18:57:32.540 ERROR controller.MainMenuController : Application has closed
+18:58:00.266 DEBUG dataBase.BookTableGateWay : connection success
+
+18:58:00.292 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:58:03.369 DEBUG dataBase.BookTableGateWay : connection success
+
+18:58:03.374 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:58:03.401 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:58:03.428 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:58:04.786 DEBUG controller.BookTableViewController : Clicked test1
+18:58:04.837 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:58:04.840 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:58:05.757 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+18:58:08.852 ERROR controller.MainMenuController : Application has closed
+19:01:54.661 DEBUG dataBase.BookTableGateWay : connection success
+
+19:01:54.689 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:01:57.897 DEBUG dataBase.BookTableGateWay : connection success
+
+19:01:57.902 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:01:57.930 DEBUG dataBase.PublisherTableGateWay : connection success
+
+19:01:57.959 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+19:02:01.502 DEBUG controller.BookTableViewController : Clicked test1
+19:02:01.552 DEBUG dataBase.PublisherTableGateWay : connection success
+
+19:02:01.556 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+19:02:24.300 ERROR controller.MainMenuController : Application has closed
+19:04:12.896 DEBUG dataBase.BookTableGateWay : connection success
+
+19:04:12.922 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:04:15.333 DEBUG dataBase.BookTableGateWay : connection success
+
+19:04:15.338 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:04:15.365 DEBUG dataBase.PublisherTableGateWay : connection success
+
+19:04:15.395 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+19:04:17.447 DEBUG controller.BookTableViewController : Clicked test1
+19:04:17.501 DEBUG dataBase.PublisherTableGateWay : connection success
+
+19:04:17.505 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+19:04:22.162 ERROR controller.MainMenuController : Application has closed
+>>>>>>> branch 'Jesus_Test' of git@github.com:jesus5413/booki.git
+19:16:41.469 DEBUG dataBase.BookTableGateWay : connection success
+
+19:16:41.510 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:16:44.184 DEBUG dataBase.BookTableGateWay : connection success
+
+19:16:44.191 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:16:44.228 DEBUG dataBase.PublisherTableGateWay : connection success
+
+19:16:44.267 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+19:16:45.563 DEBUG controller.BookTableViewController : Clicked new book
+19:16:45.640 DEBUG dataBase.PublisherTableGateWay : connection success
+
+19:16:45.647 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+19:17:22.826 DEBUG dataBase.BookTableGateWay : connection success
+
+19:17:22.860 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:23:29.588 DEBUG dataBase.BookTableGateWay : connection success
+
+19:23:29.634 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:23:29.635 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:23:29.635 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:23:29.636 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:23:29.636 INFO  dataBase.BookTableGateWay : isbn changed from 123 to abcdefghty
+19:23:29.637 INFO  dataBase.BookTableGateWay : year_published changed from 2018 to 2011
+19:23:29.637 INFO  dataBase.BookTableGateWay : year_published changed from 2003 to 2002
+19:23:29.638 INFO  dataBase.BookTableGateWay : Book added
+19:23:29.640 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:24:39.896 DEBUG dataBase.BookTableGateWay : connection success
+
+19:24:39.934 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:24:39.935 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:24:39.935 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:24:39.936 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:24:39.936 INFO  dataBase.BookTableGateWay : isbn changed from 123 to abcdefghty
+19:24:39.936 INFO  dataBase.BookTableGateWay : year_published changed from 2018 to 2011
+19:24:39.937 INFO  dataBase.BookTableGateWay : year_published changed from 2003 to 2002
+19:24:39.937 INFO  dataBase.BookTableGateWay : Book added
+19:24:39.939 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:26:29.187 DEBUG dataBase.BookTableGateWay : connection success
+
+19:26:29.224 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:26:29.224 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:26:29.225 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:26:29.225 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:26:29.226 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:26:29.226 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:26:29.227 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:26:29.227 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:26:29.228 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:26:29.228 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:26:29.228 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:26:29.229 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:26:29.229 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:26:29.229 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:26:29.230 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:26:29.230 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:26:29.230 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:26:29.231 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:26:29.232 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:27:30.463 DEBUG dataBase.BookTableGateWay : connection success
+
+19:27:30.502 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:27:30.503 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:27:30.504 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:27:30.504 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:27:30.505 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:27:30.505 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:27:30.506 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:27:30.506 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:27:30.507 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:27:30.507 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:27:30.507 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:27:30.508 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:27:30.508 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:27:30.509 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:27:30.509 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:27:30.509 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:27:30.510 INFO  dataBase.BookTableGateWay : year_published changed from 2008 to 2006
+19:27:30.510 INFO  dataBase.BookTableGateWay : summary changed from last movie to or is it
+19:27:30.513 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:27:51.443 DEBUG dataBase.BookTableGateWay : connection success
+
+19:27:51.479 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:27:51.480 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:27:51.480 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:27:51.481 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:27:51.481 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:27:51.482 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:27:51.482 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:27:51.482 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:27:51.483 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:27:51.483 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:27:51.484 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:27:51.484 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:27:51.484 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:27:51.485 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:27:51.486 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:27:51.486 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:27:51.486 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:27:51.487 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:27:51.489 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:29:54.000 DEBUG dataBase.BookTableGateWay : connection success
+
+19:29:54.039 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:29:54.040 INFO  dataBase.BookTableGateWay : 0
+19:29:54.041 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:29:54.041 INFO  dataBase.BookTableGateWay : 1
+19:29:54.042 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:29:54.042 INFO  dataBase.BookTableGateWay : 2
+19:29:54.043 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:29:54.043 INFO  dataBase.BookTableGateWay : 3
+19:29:54.043 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:29:54.044 INFO  dataBase.BookTableGateWay : 4
+19:29:54.044 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:29:54.044 INFO  dataBase.BookTableGateWay : 5
+19:29:54.044 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:29:54.045 INFO  dataBase.BookTableGateWay : 6
+19:29:54.045 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:29:54.046 INFO  dataBase.BookTableGateWay : 7
+19:29:54.046 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:29:54.046 INFO  dataBase.BookTableGateWay : 8
+19:29:54.047 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:29:54.047 INFO  dataBase.BookTableGateWay : 9
+19:29:54.047 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:29:54.048 INFO  dataBase.BookTableGateWay : 10
+19:29:54.048 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:29:54.048 INFO  dataBase.BookTableGateWay : 11
+19:29:54.048 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:29:54.049 INFO  dataBase.BookTableGateWay : 12
+19:29:54.049 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:29:54.049 INFO  dataBase.BookTableGateWay : 13
+19:29:54.050 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:29:54.050 INFO  dataBase.BookTableGateWay : 14
+19:29:54.050 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:29:54.050 INFO  dataBase.BookTableGateWay : 15
+19:29:54.051 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:29:54.051 INFO  dataBase.BookTableGateWay : 16
+19:29:54.051 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:29:54.051 INFO  dataBase.BookTableGateWay : 17
+19:29:54.053 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:30:30.622 DEBUG dataBase.BookTableGateWay : connection success
+
+19:30:30.660 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:30:30.661 INFO  dataBase.BookTableGateWay : 0
+19:30:30.662 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:30:30.662 INFO  dataBase.BookTableGateWay : 1
+19:30:30.663 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:30:30.663 INFO  dataBase.BookTableGateWay : 2
+19:30:30.664 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:30:30.664 INFO  dataBase.BookTableGateWay : 3
+19:30:30.665 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:30:30.665 INFO  dataBase.BookTableGateWay : 4
+19:30:30.665 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:30:30.666 INFO  dataBase.BookTableGateWay : 5
+19:30:30.666 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:30:30.667 INFO  dataBase.BookTableGateWay : 6
+19:30:30.667 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:30:30.668 INFO  dataBase.BookTableGateWay : 7
+19:30:30.668 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:30:30.668 INFO  dataBase.BookTableGateWay : 8
+19:30:30.669 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:30:30.669 INFO  dataBase.BookTableGateWay : 9
+19:30:30.669 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:30:30.669 INFO  dataBase.BookTableGateWay : 10
+19:30:30.670 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:30:30.670 INFO  dataBase.BookTableGateWay : 11
+19:30:30.670 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:30:30.671 INFO  dataBase.BookTableGateWay : 12
+19:30:30.671 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:30:30.671 INFO  dataBase.BookTableGateWay : 13
+19:30:30.671 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:30:30.672 INFO  dataBase.BookTableGateWay : 14
+19:30:30.672 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:30:30.672 INFO  dataBase.BookTableGateWay : 15
+19:30:30.673 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:30:30.673 INFO  dataBase.BookTableGateWay : 16
+19:30:30.673 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:30:30.673 INFO  dataBase.BookTableGateWay : 17
+19:30:30.676 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+19:32:47.839 DEBUG dataBase.BookTableGateWay : connection success
+
+19:32:47.874 INFO  dataBase.BookTableGateWay : year_published changed from 0 to 1922
+19:32:47.875 INFO  dataBase.BookTableGateWay : year_published changed from 1922 to 1921
+19:32:47.877 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+>>>>>>> branch 'fern1' of https://github.com/jesus5413/booki.git

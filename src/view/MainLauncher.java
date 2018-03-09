@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import model.AuditTrailModel;
 import model.AuthorModel;
 import model.BookModel;
 import model.Publisher;
@@ -66,18 +67,13 @@ public class MainLauncher extends Application{
 		test.setConnection();
 		list = test.getBooks();
 		
+		
+		
 		// *********************************************************************
 		// TESTING BOOK AUDIT TRIAL
 		
-//		BookModel temp = new BookModel();
-//		temp.setId(2);
-//		temp.setTitle("gsggwrtg");
-//		temp.setSummary("gwrtghwgwerfgwegw");
-//		temp.setYearPublished(1998);
-//		temp.setPublisherId(1);
-//		temp.setIsbn("dfghefhefhg");
-//		test.updateBook(temp);
-		
+		ObservableList<AuditTrailModel> l2 = FXCollections.observableArrayList();
+		l2 = test.getAuditTrail(11);
 		//
 		// *********************************************************************
 		test.closeConnection();
