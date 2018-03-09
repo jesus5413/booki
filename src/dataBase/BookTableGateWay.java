@@ -14,6 +14,7 @@ import exception.AppException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
+import model.AuditTrailModel;
 import model.BookModel;
 import model.Publisher;
 
@@ -75,6 +76,29 @@ public class BookTableGateWay {
 		}
 		
 		return bookList;
+	}
+	
+	public ObservableList<AuditTrailModel> getAuditTrail(int bookId){
+		ObservableList<AuditTrailModel> auditTrail = FXCollections.observableArrayList();
+		
+		try {
+			myStmt = conn.prepareStatement("select * from book_audit_trail where book_id = ?");
+			myStmt.setInt(1, bookId);
+			rs = myStmt.executeQuery();
+
+			while(rs.next()) {
+			// we'll make a new model and add it onto our list
+				AuditTrailModel trail = new AuditTrailModel();
+				trail.setId(rs.getInt("id"));
+				trail.setDateAdded(rs.getTimestamp("date_added"));
+				trail.setMsg(rs.getString("entry_msg"));
+				auditTrail.add(trail);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return auditTrail;
 	}
 	
 	public void deleteBook(int ID) {
