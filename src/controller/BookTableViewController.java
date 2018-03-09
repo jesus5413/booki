@@ -104,6 +104,7 @@ public class BookTableViewController {
 		connection.deleteBook(book.getId());  
 		connection.closeConnection();
 		populateTable();
+		searchHandle();
 		
 	}
 	
