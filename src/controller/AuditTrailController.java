@@ -2,6 +2,7 @@ package controller;
 
 import javax.swing.LayoutFocusTraversalPolicy;
 
+import dataBase.TempStorage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -15,9 +16,13 @@ public class AuditTrailController {
 	@FXML TableColumn<AuditTrailModel, Integer> ID;
 	@FXML TableColumn<AuditTrailModel, String> dateAdded;
 	@FXML TableColumn<AuditTrailModel, String> message;
+	private int id;
 	
 	public void initialize(){
-		
+		id = TempStorage.oneAuthor.getID();
+		TempStorage.oneAuthor = null;
 	}
+	
+	
 
 }
