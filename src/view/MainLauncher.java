@@ -31,7 +31,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
- * Assignment 2 by Jesus Nieto and Fernando Renteria 
+ * Assignment 3 by Jesus Nieto and Fernando Renteria 
  * @author jesusnieto
  *
  */
