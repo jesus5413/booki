@@ -72,6 +72,23 @@ public class BookDetailController {
 	}
 	
 	public void updateButtonHandle() {
+		// validations before allowing to save
+		if(!TempStorage.oneBook.setTitle(title.getText())) {
+			return;
+		}
+		
+		if(!TempStorage.oneBook.setSummary(summary.getText())) {
+			return;
+		}
+		
+		if(!TempStorage.oneBook.setYearPublished(Integer.parseInt(yearPublished.getText()))) {
+			return;
+		}
+		
+		if(!TempStorage.oneBook.setIsbn(ISBN.getText())) {
+			return;
+		}
+		
 		TempStorage.oneBook.setTitle(title.getText());
 		TempStorage.oneBook.setSummary(summary.getText());
 		TempStorage.oneBook.setYearPublished(Integer.parseInt(yearPublished.getText()));
@@ -80,8 +97,8 @@ public class BookDetailController {
 			TempStorage.oneBook.setPublisher(publisher.getSelectionModel().getSelectedItem());
 			TempStorage.oneBook.setPublisherId(publisher.getSelectionModel().getSelectedItem().getID());
 		}
-		TempStorage.oneBook.setIsbn(ISBN.getText());
 		
+		TempStorage.oneBook.setIsbn(ISBN.getText());
 		
 		BookTableGateWay bookCon = new BookTableGateWay();
 		bookCon.setConnection();
@@ -90,7 +107,6 @@ public class BookDetailController {
 		TempStorage.oneBook = null;
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 		singleton.changeViews("t");
-		
 	}
 	
 	/**
