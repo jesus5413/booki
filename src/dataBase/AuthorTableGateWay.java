@@ -17,6 +17,8 @@ import com.mysql.jdbc.exceptions.MySQLStatementCancelledException;
 import com.mysql.jdbc.exceptions.jdbc4.MySQLDataException;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
+import alert.AlertHelper;
 import exception.AppException;
 import exception.InvalidDoBException;
 import exception.InvalidNameException;
@@ -117,11 +119,14 @@ public class AuthorTableGateWay {
 	 * @param author
 	 */
 	public void updateAuthor(AuthorModel author) {
+		// we will check for timestamp differences here. Continue updating only if Timestamps of
+		// author and same author in DB are the same
 		if(isDifferentTs(author)) {
-			System.out.println("Different TS");
+			AlertHelper.showWarningMessage(
+					"Update Error", 
+					"Author Being Updated",
+					"Author is currently being updated by someone");
 		}else {
-			System.out.println("Same TS. Continue Updating");
-			
 			try {
 				myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
 				myStmt.setString(1, author.getFirstName());
@@ -131,6 +136,15 @@ public class AuthorTableGateWay {
 				myStmt.setString(5, author.getWebSite());
 				myStmt.setInt(6, author.getID());
 				myStmt.executeUpdate();
+				
+				myStmt = conn.prepareStatement("select last_modified from authorDetail");
+				rs = myStmt.executeQuery();
+				
+				while(rs.next()) {
+					// update author's lastModified val
+					author.setLastModified(rs.getTimestamp("last_modified").toLocalDateTime());		
+				}
+				
 				logger.debug("update successful\n");
 			} catch (SQLException e) {
 				throw new AppException(e);
@@ -170,8 +184,6 @@ public class AuthorTableGateWay {
 	}
 	
 	private boolean isDifferentTs(AuthorModel author) {
-		LocalDateTime curr;
-		
 		// we will get last_modified to compare timestamp with author model we're updating
 		try {
 			myStmt = conn.prepareStatement("select last_modified from authorDetail where ID = ?");
