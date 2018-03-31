@@ -168,6 +168,31 @@ public class AuthorTableGateWay {
 		}
 	}
 	
+	// return author with specific id
+	public AuthorModel getSingleAuthor(int id) {
+		AuthorModel auth = new AuthorModel();
+		
+		try {
+			// IDs are unique, thus we select the record where it matches
+			myStmt = conn.prepareStatement("select * from authorDetail where ID = ?");
+			myStmt.setInt(1, id);
+			rs = myStmt.executeQuery();
+			
+			while(rs.next()) {
+				auth.setID(id);
+				auth.setFirstName(rs.getString("first_name"));
+				auth.setLastName(rs.getString("last_name"));
+				auth.setDateOfBirth(rs.getDate("dob"));
+				auth.setGender(rs.getString("gender"));
+				auth.setWebSite(rs.getString("web_site"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return auth;
+	}
+	
 	public void saveAuthor(AuthorModel author) {
 		try {
 			String query = " insert into authorDetail (first_name, last_name, dob, gender, web_site) values (? , ? , ? , ? , ?)";

@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.LinkedList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,6 +16,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import model.AuditTrailModel;
+import model.AuthorBook;
+import model.AuthorModel;
 import model.BookModel;
 import model.Publisher;
 
@@ -198,9 +201,40 @@ public class BookTableGateWay {
 		}
 	}
 	
-	
-	
-	
+	public ObservableList<AuthorBook> getAuthorsForBook(BookModel book) {
+		AuthorTableGateWay authConn = new AuthorTableGateWay();
+		ObservableList<AuthorBook> authBookList = FXCollections.observableArrayList();
+		AuthorModel auth = new AuthorModel();
+		
+		try {
+			// first we get author ids from author_book before searching authorDetail table
+			myStmt = conn.prepareStatement("select * from author_book where book_id = ?");
+			myStmt.setInt(1, book.getId());
+			rs = myStmt.executeQuery();
+			
+			// next we need to get every author and add it to AuthBook model
+			authConn.setConnection();
+			
+			while(rs.next()) {
+				auth = authConn.getSingleAuthor(rs.getInt("author_id"));
+				
+				// we'll make a new model and add it onto our list
+				AuthorBook authBook = new AuthorBook();
+				authBook.setRoyalty(rs.getBigDecimal("royalty").doubleValue());
+				authBook.setBook(book);
+				authBook.setAuthor(auth);
+				authBookList.add(authBook);
+			}
+			
+			authConn.closeConnection();
+			
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return authBookList;
+	}
 }
 
 
