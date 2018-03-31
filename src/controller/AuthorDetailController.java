@@ -24,6 +24,7 @@ public class AuthorDetailController {
 	public TextField website;
 	public Button update;
 	public Button save;
+	public Button auditTrail;
 	
 	public void initialize() {
 		if(TempStorage.oneAuthor != null) {
@@ -116,4 +117,16 @@ public class AuthorDetailController {
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 		singleton.changeViews("z");
 	}
+	
+	public void auditTrailHandle() {
+		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+		singleton.changeViews("c");
+		
+	}
+	
+	
 }
+
+
+
+
