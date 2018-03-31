@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.*;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.Observable;
 
 import org.apache.logging.log4j.LogManager;
@@ -82,6 +83,7 @@ public class AuthorTableGateWay {
 				authorDetail.setDateOfBirth(rs.getDate("dob"));
 				authorDetail.setGender(rs.getString("gender"));
 				authorDetail.setWebSite(rs.getString("web_site"));
+				authorDetail.setLastModified(rs.getTimestamp("last_modified").toLocalDateTime());
 				authorList.add(authorDetail);
 			}		
 		} catch (SQLException e) {	
@@ -115,19 +117,25 @@ public class AuthorTableGateWay {
 	 * @param author
 	 */
 	public void updateAuthor(AuthorModel author) {
-		try {
-			myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
-			myStmt.setString(1, author.getFirstName());
-			myStmt.setString(2, author.getLastName());
-			myStmt.setDate(3, author.getDateOfBirth());
-			myStmt.setString(4, author.getGender());
-			myStmt.setString(5, author.getWebSite());
-			myStmt.setInt(6, author.getID());
-			myStmt.executeUpdate();
-			logger.debug("update successful\n");
-		} catch (SQLException e) {
-			throw new AppException(e);
-		}	
+		if(isDifferentTs(author)) {
+			System.out.println("Different TS");
+		}else {
+			System.out.println("Same TS. Continue Updating");
+			
+			try {
+				myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
+				myStmt.setString(1, author.getFirstName());
+				myStmt.setString(2, author.getLastName());
+				myStmt.setDate(3, author.getDateOfBirth());
+				myStmt.setString(4, author.getGender());
+				myStmt.setString(5, author.getWebSite());
+				myStmt.setInt(6, author.getID());
+				myStmt.executeUpdate();
+				logger.debug("update successful\n");
+			} catch (SQLException e) {
+				throw new AppException(e);
+			}	
+		}
 	}
 	
 	/**
@@ -159,5 +167,32 @@ public class AuthorTableGateWay {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private boolean isDifferentTs(AuthorModel author) {
+		LocalDateTime curr;
+		
+		// we will get last_modified to compare timestamp with author model we're updating
+		try {
+			myStmt = conn.prepareStatement("select last_modified from authorDetail where ID = ?");
+			myStmt.setInt(1,  author.getID());
+			rs = myStmt.executeQuery();
+			
+			while(rs.next()) {
+				AuthorModel authInDb = new AuthorModel();
+				authInDb.setLastModified(rs.getTimestamp("last_modified").toLocalDateTime());
+				
+				// if dates are equal, compareTo returns 0
+				if(author.getLastModified().compareTo(authInDb.getLastModified()) == 0) {
+					return false;
+				}
+				
+				return true;
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return true;
 	}
 }
