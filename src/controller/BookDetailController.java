@@ -8,6 +8,7 @@ import alert.AlertHelper;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorBookGateWay;
 import dataBase.AuthorTableGateWay;
+import dataBase.BookAuditTrailGateWay;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
 import dataBase.TempStorage;
@@ -62,12 +63,14 @@ public class BookDetailController {
 	PublisherTableGateWay pubCon;
 	BookTableGateWay bookCon;
 	AuthorBookGateWay authBookConn;
+	BookAuditTrailGateWay auditConn;
 	
 	public void initialize() {
 		authConn = new AuthorTableGateWay();
 		pubCon = new PublisherTableGateWay();
 		bookCon = new BookTableGateWay();
 		authBookConn = new AuthorBookGateWay();
+		auditConn = new BookAuditTrailGateWay();
 		setCellDataToTextField();
 		
 		if(TempStorage.oneBook != null) {
@@ -267,6 +270,12 @@ public class BookDetailController {
 		authBookConn.insertAuthor(authBook.getAuthor().getID(), authBook.getBook().getId(), new BigDecimal(authBook.getRoyalty()));
 		authBookConn.closeConnection();
 		
+		// Add new author to audit trail
+		auditConn.setConnection();
+		auditConn.addMessage(authBook.getBook().getId(),
+				authBook.getAuthor().getFirstName() + " " + authBook.getAuthor().getLastName() + " has been added");
+		auditConn.closeConnection();
+		
 		// once new author has been added, repopulate author table
 		populateAuthorTable();
 	}
@@ -282,6 +291,12 @@ public class BookDetailController {
 		authBookConn.setConnection();
 		authBookConn.deleteAuthor(TempStorage.oneBook.getId(), selectedAuthor.getAuthor().getID());
 		authBookConn.closeConnection();
+		
+		// Add deleted author to audit trail
+		auditConn.setConnection();
+		auditConn.addMessage(TempStorage.oneBook.getId(),
+				selectedAuthor.getAuthor().getFirstName() + " " + selectedAuthor.getAuthor().getLastName() + " has been deleted");
+		auditConn.closeConnection();
 		
 		// once author has been deleted, repopulate the author table
 		populateAuthorTable();
@@ -304,11 +319,25 @@ public class BookDetailController {
 	
 	public void updateRoyaltyHandle() {
 		double value = Double.parseDouble(royalties.getText());
+		double oldVal = 0.0;
+		
 		if(value >= 0 && value <= 1.0) {
+			// get previous value to store in audit trail
+			authBookConn.setConnection();
+			oldVal = authBookConn.getRoyalty(TempStorage.oneBook.getId(), obj.getAuthor().getID());
+			authBookConn.closeConnection();
+			
 			obj.setRoyalty(value);
 			bookCon.setConnection();
 			bookCon.updateAuthBook(obj);
 			bookCon.closeConnection();
+			
+			// Add changes in royalty
+			auditConn.setConnection();
+			auditConn.addMessage(TempStorage.oneBook.getId(),
+					"Royalty changed from " + oldVal + " to " + value);
+			auditConn.closeConnection();
+			
 			populateAuthorTable();
 		}else {
 			//some error alert stating to input number between 0 and 1
