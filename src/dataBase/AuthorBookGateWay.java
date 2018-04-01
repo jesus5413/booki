@@ -1,5 +1,6 @@
 package dataBase;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -41,16 +42,16 @@ public class AuthorBookGateWay {
 		}
 	}
 	
-	public void insertAuthorsForBook(BookModel book) {
-//		try {
-//			myStmt = conn.prepareStatement("select author_id from book where ID = ?");
-//			myStmt.setInt(1,  book.getId());
-//			rs = myStmt.executeQuery();
-//			rs.next();
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+	public void insertAuthor(int authId, int bookId, BigDecimal royalty) {
+		try {
+			myStmt = conn.prepareStatement("insert into author_book (author_id, book_id, royalty) values (?, ?, ?)");
+			myStmt.setInt(1, authId);
+			myStmt.setInt(2, bookId);
+			myStmt.setBigDecimal(3, royalty);
+			myStmt.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void deleteAuthor(int bookId, int authId) {
