@@ -5,14 +5,23 @@ import java.text.SimpleDateFormat;
 
 import alert.AlertHelper;
 import changeSingleton.ChangeViewsSingleton;
+import dataBase.AuthorBookGateWay;
+import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
 import dataBase.TempStorage;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.StringConverter;
+import model.AuthorBook;
+import model.AuthorModel;
 import model.BookModel;
 import model.Publisher;
 
@@ -28,13 +37,21 @@ public class BookDetailController {
 	public Button update;
 	public Button save;
 	public Button auditTrail;
+	public Button addAuthButton;
+	public Button delButton;
 	ObservableList<Publisher> pubList = FXCollections.observableArrayList();
+	ObservableList<AuthorBook> authBookList = FXCollections.observableArrayList();
+	
+	@FXML private TableView<AuthorBook> table; // holds authors for book
+	@FXML private TableColumn<AuthorBook, String> authorName;
+	@FXML private TableColumn<AuthorBook, Integer> royalty;
 	
 	public void initialize() {
 		if(TempStorage.oneBook != null) {
 			save.setVisible(false);	
 			comboboxStringConverter();
 			textFieldPlaceHolder();
+			populateAuthorTable();
 		}else {
 			save.setVisible(true);
 			update.setVisible(false);
@@ -47,7 +64,6 @@ public class BookDetailController {
 			pubCon.closeConnection();
 			comboboxStringConverter();
 			publisher.setItems(pubList);
-
 		}
 		
 	}
@@ -59,14 +75,12 @@ public class BookDetailController {
 		summary.setText(TempStorage.oneBook.getSummary());
 		yearPublished.setText(Integer.toString(TempStorage.oneBook.getYearPublished()));
 		
-		
 		PublisherTableGateWay pubCon = new PublisherTableGateWay();
 		pubCon.setConnection();
 		pubList = pubCon.getPublishers();
 		pubCon.closeConnection();
 		publisher.setItems(pubList);
 		publisher.setPromptText(TempStorage.oneBook.getPublisher().getPublisherName().get());
-		
 		
 		ISBN.setText(TempStorage.oneBook.getIsbn());
 		dateAdded.setText(TempStorage.oneBook.getDateAdded().toString());	
@@ -177,5 +191,45 @@ public class BookDetailController {
 		
 	}
 	
-
+	public void populateAuthorTable() {
+		BookTableGateWay conn = new BookTableGateWay();
+		conn.setConnection();
+		authBookList = conn.getAuthorsForBook(TempStorage.oneBook);
+		conn.closeConnection();
+		setCell();
+		table.setItems(authBookList);
+		
+	}
+	
+	public void setCell() {
+		royalty.setCellValueFactory(new PropertyValueFactory<>("royalty"));
+		authorName.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getAuthor().getFirstName() + " " +cellData.getValue().getAuthor().getLastName()));
+	}
+	
+	// add new author to current book
+	public void addAuthButtonHandle(){
+		
+		
+		// once new author has been added, repopulate author table
+		populateAuthorTable();
+	}
+	
+	// Whenever user highlights and clicks delete, delete specified author from authorBook table and view
+	public void delButtonHandle() {
+		AuthorBook selectedAuthor = new AuthorBook();
+		
+		selectedAuthor = table.getSelectionModel().getSelectedItem();
+		table.getItems().removeAll(table.getSelectionModel().getSelectedItem());
+	
+		// delete author from authorBook
+		AuthorBookGateWay conn = new AuthorBookGateWay();
+		System.out.println(selectedAuthor.getAuthor().getID());
+		System.out.println(TempStorage.oneBook.getId());
+		conn.setConnection();
+		conn.deleteAuthor(TempStorage.oneBook.getId(), selectedAuthor.getAuthor().getID());
+		conn.closeConnection();
+		
+		// once author has been deleted, repopulate the author table
+		populateAuthorTable();
+	}
 }

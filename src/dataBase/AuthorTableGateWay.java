@@ -1,11 +1,8 @@
 package dataBase;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.*;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.Observable;
 
@@ -24,6 +21,7 @@ import exception.InvalidDoBException;
 import exception.InvalidNameException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import model.AuditTrailModel;
 import model.AuthorModel;
 import validators.Validator;
 
@@ -119,6 +117,7 @@ public class AuthorTableGateWay {
 	 * @param author
 	 */
 	public void updateAuthor(AuthorModel author) {
+
 		// we will check for timestamp differences here. Continue updating only if Timestamps of
 		// author and same author in DB are the same
 		if(isDifferentTs(author)) {
@@ -128,6 +127,23 @@ public class AuthorTableGateWay {
 					"Author is currently being updated by someone");
 		}else {
 			try {
+				myStmt = conn.prepareStatement("select * from authorDetail where ID = ?");
+				myStmt.setInt(1, author.getID());
+				rs = myStmt.executeQuery();
+				rs.next();
+				
+				AuthorModel temp = new AuthorModel();
+				temp.setID(rs.getInt("ID"));
+				temp.setFirstName(rs.getString("first_name"));
+				temp.setLastName(rs.getString("last_name"));
+				temp.setDateOfBirth(rs.getDate("dob"));
+				temp.setGender(rs.getString("gender"));
+				temp.setWebSite(rs.getString("web_site"));
+				
+				//returns the message of hat changed in the data
+				String message = temp.compare(author);
+				
+				
 				myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
 				myStmt.setString(1, author.getFirstName());
 				myStmt.setString(2, author.getLastName());
@@ -136,6 +152,11 @@ public class AuthorTableGateWay {
 				myStmt.setString(5, author.getWebSite());
 				myStmt.setInt(6, author.getID());
 				myStmt.executeUpdate();
+				
+				myStmt = conn.prepareStatement("insert into author_audit_trail (author_id, message) values (?, ?)");
+				myStmt.setInt(1, author.getID());
+				myStmt.setString(2, message);
+				myStmt.execute();
 				
 				myStmt = conn.prepareStatement("select last_modified from authorDetail");
 				rs = myStmt.executeQuery();
@@ -150,6 +171,7 @@ public class AuthorTableGateWay {
 				throw new AppException(e);
 			}	
 		}
+
 	}
 	
 	/**
@@ -203,6 +225,25 @@ public class AuthorTableGateWay {
 			myStmt.setString(4, author.getGender());
 			myStmt.setString(5, author.getWebSite());
 			myStmt.execute();
+			
+			
+			int id;
+			Timestamp dateAdded;
+			myStmt = conn.prepareStatement("select * from authorDetail where web_site = ? ");
+			myStmt.setString(1,  author.getWebSite());
+			rs = myStmt.executeQuery();
+			rs.next();
+			id = rs.getInt("ID");
+			dateAdded = rs.getTimestamp("date_added");
+			
+			// we will add a record to audit trail after successfully inserting book
+			myStmt = conn.prepareStatement("insert into author_audit_trail (author_id, date_added, message) values (?, ?, ?)");
+			myStmt.setInt(1, id);
+			myStmt.setTimestamp(2, dateAdded);
+			myStmt.setString(3, "Author added");
+			myStmt.execute();
+			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -232,4 +273,32 @@ public class AuthorTableGateWay {
 		
 		return true;
 	}
+	
+	
+	public ObservableList<AuditTrailModel> getAuditTrail(int authorId){
+		ObservableList<AuditTrailModel> auditTrail = FXCollections.observableArrayList();
+		
+		try {
+			myStmt = conn.prepareStatement("select * from author_audit_trail where author_id = ?");
+			myStmt.setInt(1, authorId);
+			rs = myStmt.executeQuery();
+
+			while(rs.next()) {
+			// we'll make a new model and add it onto our list
+				AuditTrailModel trail = new AuditTrailModel();
+				trail.setId(rs.getInt("id"));
+				trail.setDateAdded(rs.getTimestamp("date_added"));
+				trail.setMsg(rs.getString("message"));
+				auditTrail.add(trail);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return auditTrail;
+	}
+	
+	
+	
+	
 }

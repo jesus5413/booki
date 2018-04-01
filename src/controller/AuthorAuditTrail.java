@@ -1,6 +1,7 @@
 package controller;
 
 import changeSingleton.ChangeViewsSingleton;
+import dataBase.AuthorTableGateWay;
 import dataBase.TempStorage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,10 +22,16 @@ public class AuthorAuditTrail {
 	public void initialize() {
 		id = TempStorage.oneAuthor.getID();
 		authorName.setText("Audit trail for " + TempStorage.oneAuthor.getFirstName() + " " +TempStorage.oneAuthor.getLastName());
-		
+		populateTable();
 	}
 	
 	public void populateTable() {
+		AuthorTableGateWay authCon = new AuthorTableGateWay();
+		authCon.setConnection();
+		auditList = authCon.getAuditTrail(id);
+		authCon.closeConnection();
+		setCell();
+		authorAuditTable.setItems(auditList);
 		
 	}
 	
