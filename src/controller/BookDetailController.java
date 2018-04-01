@@ -145,10 +145,7 @@ public class BookDetailController {
 			return;
 		}
 		
-//		TempStorage.oneBook.setTitle(title.getText());
-//		TempStorage.oneBook.setSummary(summary.getText());
-//		TempStorage.oneBook.setYearPublished(Integer.parseInt(yearPublished.getText()));
-		//TempStorage.oneBook.setIsbn(ISBN.getText());
+
 		
 		if(publisher.getSelectionModel().getSelectedItem() != null) {
 			TempStorage.oneBook.setPublisher(publisher.getSelectionModel().getSelectedItem());
