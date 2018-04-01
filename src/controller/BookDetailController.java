@@ -329,6 +329,11 @@ public class BookDetailController {
 			
 			double value = Double.parseDouble(royalties.getText());
 			if(value >= 0 && value <= 1.0) {
+				// get previous value to store in audit trail
+				authBookConn.setConnection();
+				oldVal = authBookConn.getRoyalty(TempStorage.oneBook.getId(), obj.getAuthor().getID());
+				authBookConn.closeConnection();
+				
 				obj.setRoyalty(value);
 				bookCon.setConnection();
 				bookCon.updateAuthBook(obj);
