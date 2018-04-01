@@ -119,6 +119,14 @@ public class AuthorDetailController {
 	}
 	
 	public void auditTrailHandle() {
+		if(ID.getText().isEmpty()) {
+			// pop alert
+			AlertHelper.showWarningMessage(
+					"No Audit Trail",
+					"Audit Trail Doesn't Exist",
+					"Please save book before looking up audit trail");
+			return;
+		}
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 		singleton.changeViews("c");
 		

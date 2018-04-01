@@ -6462,3 +6462,20 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 02:08:06.492 ERROR controller.MainMenuController : Application has closed
 02:08:08.482 ERROR controller.MainMenuController : Application has closed
+02:09:13.004 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+02:09:15.366 ERROR controller.MainMenuController : Application has closed
+02:11:39.850 ERROR controller.MainMenuController : Application has closed
+02:11:53.757 DEBUG dataBase.AuthorTableGateWay : connection success
+
+02:11:53.826 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+02:11:55.167 DEBUG controller.AuthorTableViewController : Clicked Harry Potter
+02:11:56.760 DEBUG dataBase.AuthorTableGateWay : connection success
+
+02:11:56.812 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+02:12:01.266 DEBUG dataBase.AuthorTableGateWay : connection success
+
+02:12:01.314 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+02:12:06.268 ERROR controller.MainMenuController : Application has closed
