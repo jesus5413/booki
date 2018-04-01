@@ -8,11 +8,17 @@ import changeSingleton.ChangeViewsSingleton;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
 import dataBase.TempStorage;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.StringConverter;
+import model.AuthorBook;
 import model.BookModel;
 import model.Publisher;
 
@@ -29,12 +35,18 @@ public class BookDetailController {
 	public Button save;
 	public Button auditTrail;
 	ObservableList<Publisher> pubList = FXCollections.observableArrayList();
+	ObservableList<AuthorBook> authBookList = FXCollections.observableArrayList();
+	
+	@FXML private TableView<AuthorBook> table;
+	@FXML private TableColumn<AuthorBook, String> authorName;
+	@FXML private TableColumn<AuthorBook, Integer> royalty;
 	
 	public void initialize() {
 		if(TempStorage.oneBook != null) {
 			save.setVisible(false);	
 			comboboxStringConverter();
 			textFieldPlaceHolder();
+			populateAuthorTable();
 		}else {
 			save.setVisible(true);
 			update.setVisible(false);
@@ -177,5 +189,27 @@ public class BookDetailController {
 		
 	}
 	
+	
+	
+	public void populateAuthorTable() {
+		BookTableGateWay conn = new BookTableGateWay();
+		conn.setConnection();
+		authBookList = conn.getAuthorsForBook(TempStorage.oneBook);
+		conn.closeConnection();
+		setCell();
+		table.setItems(authBookList);
+		
+	}
+	
+	public void setCell() {
+		royalty.setCellValueFactory(new PropertyValueFactory<>("royalty"));
+		authorName.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getAuthor().getFirstName() + " " +cellData.getValue().getAuthor().getLastName()));
+	}
+	
 
 }
+
+
+
+
+
