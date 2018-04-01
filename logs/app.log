@@ -7241,3 +7241,46 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 11:03:04.403 DEBUG dataBase.BookTableGateWay : connection closed! 
 
+11:44:17.746 DEBUG dataBase.BookTableGateWay : connection success
+
+11:44:17.833 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+11:44:18.211 DEBUG dataBase.PublisherTableGateWay : connection success
+
+11:44:18.627 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+11:44:20.971 DEBUG controller.BookTableViewController : Clicked harry potter
+11:44:21.372 DEBUG dataBase.PublisherTableGateWay : connection success
+
+11:44:21.423 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+11:44:21.792 DEBUG dataBase.BookTableGateWay : connection success
+
+11:44:22.213 DEBUG dataBase.AuthorTableGateWay : connection success
+
+11:44:22.213 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+11:44:22.214 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+11:44:26.657 DEBUG dataBase.BookTableGateWay : connection success
+
+11:44:26.714 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+11:44:27.100 DEBUG dataBase.PublisherTableGateWay : connection success
+
+11:44:27.524 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+11:44:33.627 DEBUG controller.BookTableViewController : Clicked Storm of Swords
+11:44:34.018 DEBUG dataBase.PublisherTableGateWay : connection success
+
+11:44:34.069 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+11:44:34.434 DEBUG dataBase.BookTableGateWay : connection success
+
+11:44:34.923 DEBUG dataBase.AuthorTableGateWay : connection success
+
+11:44:34.972 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+11:44:34.973 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+11:44:47.085 ERROR controller.MainMenuController : Application has closed

@@ -232,4 +232,5 @@ public class BookDetailController {
 		// once author has been deleted, repopulate the author table
 		populateAuthorTable();
 	}
+	
 }
