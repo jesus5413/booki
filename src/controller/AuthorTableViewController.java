@@ -73,6 +73,7 @@ public class AuthorTableViewController {
 			        singleton.changeViews("b");    
 				}
 			});
+			
 			return row;
 		});
 		
@@ -91,7 +92,6 @@ public class AuthorTableViewController {
 			connection.deleteAuthor(selectedAuthor.getID());  
 			connection.closeConnection();
 		}
-		
 	}
 }
 

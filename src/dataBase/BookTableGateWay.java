@@ -1,5 +1,6 @@
 package dataBase;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -20,6 +21,7 @@ import model.AuthorBook;
 import model.AuthorModel;
 import model.BookModel;
 import model.Publisher;
+import sun.nio.cs.ext.Big5;
 
 public class BookTableGateWay {
 	private static Logger logger = LogManager.getLogger(AuthorTableGateWay.class);
@@ -114,6 +116,23 @@ public class BookTableGateWay {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}	
+	}
+	
+	public void updateAuthBook(AuthorBook author) {
+		try {
+			
+			
+			myStmt = conn.prepareStatement("update author_book set royalty = ? where book_id = ? and author_id = ?");
+			myStmt.setBigDecimal(1, BigDecimal.valueOf(author.getRoyalty()).movePointLeft(5));
+			myStmt.setInt(2, author.getBook().getId());
+			myStmt.setInt(3, author.getAuthor().getID());
+			myStmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public void updateBook(BookModel book) {
