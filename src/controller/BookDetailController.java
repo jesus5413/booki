@@ -341,6 +341,10 @@ public class BookDetailController {
 			populateAuthorTable();
 		}else {
 			//some error alert stating to input number between 0 and 1
+			AlertHelper.showWarningMessage(
+					"Wrong Royalty", 
+					"Enter correct royalty",
+					"Please enter a royalty between 0 and 1");
 		}
 		
 		
