@@ -1,11 +1,13 @@
 package dataBase;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.LinkedList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,8 +17,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import model.AuditTrailModel;
+import model.AuthorBook;
+import model.AuthorModel;
 import model.BookModel;
 import model.Publisher;
+import sun.nio.cs.ext.Big5;
 
 public class BookTableGateWay {
 	private static Logger logger = LogManager.getLogger(AuthorTableGateWay.class);
@@ -113,6 +118,23 @@ public class BookTableGateWay {
 		}	
 	}
 	
+	public void updateAuthBook(AuthorBook author) {
+		try {
+			
+			
+			myStmt = conn.prepareStatement("update author_book set royalty = ? where book_id = ? and author_id = ?");
+			myStmt.setBigDecimal(1, BigDecimal.valueOf(author.getRoyalty()).movePointLeft(5));
+			myStmt.setInt(2, author.getBook().getId());
+			myStmt.setInt(3, author.getAuthor().getID());
+			myStmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
 	public void updateBook(BookModel book) {
 		try {
 			// get book from books table and save that into a local variable to compare differences
@@ -198,9 +220,40 @@ public class BookTableGateWay {
 		}
 	}
 	
-	
-	
-	
+	public ObservableList<AuthorBook> getAuthorsForBook(BookModel book) {
+		AuthorTableGateWay authConn = new AuthorTableGateWay();
+		ObservableList<AuthorBook> authBookList = FXCollections.observableArrayList();
+		AuthorModel auth = new AuthorModel();
+		
+		try {
+			// first we get author ids from author_book before searching authorDetail table
+			myStmt = conn.prepareStatement("select * from author_book where book_id = ?");
+			myStmt.setInt(1, book.getId());
+			rs = myStmt.executeQuery();
+			
+			// next we need to get every author and add it to AuthBook model
+			authConn.setConnection();
+			
+			while(rs.next()) {
+				auth = authConn.getSingleAuthor(rs.getInt("author_id"));
+				
+				// we'll make a new model and add it onto our list
+				AuthorBook authBook = new AuthorBook();
+				authBook.setRoyalty(rs.getBigDecimal("royalty").doubleValue());
+				authBook.setBook(book);
+				authBook.setAuthor(auth);
+				authBookList.add(authBook);
+			}
+			
+			authConn.closeConnection();
+			
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return authBookList;
+	}
 }
 
 

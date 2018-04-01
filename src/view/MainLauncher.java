@@ -22,6 +22,7 @@ import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.AuditTrailModel;
+import model.AuthorBook;
 import model.AuthorModel;
 import model.BookModel;
 import model.Publisher;
@@ -31,7 +32,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
- * Assignment 3 by Jesus Nieto and Fernando Renteria 
+ * Assignment 4 by Jesus Nieto and Fernando Renteria 
  * @author jesusnieto
  *
  */
@@ -61,6 +62,19 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {	
+		// TEST
+//		BookTableGateWay conn = new BookTableGateWay();
+//		conn.setConnection();
+//		BookModel book = new BookModel();
+//		book.setId(43);
+//		ObservableList<AuthorBook> authorBookL = conn.getAuthorsForBook(book);
+//		conn.closeConnection();
+//		
+//		System.out.println(authorBookL.size());
+//		authorBookL.forEach((record) ->{
+//			System.out.println(record.getRoyalty());
+//		});
+		// ENDTEST
 		launch(args);
 	}
 	

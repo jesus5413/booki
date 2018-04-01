@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AuthorDetailController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AuthorDetailController">
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -71,4 +71,7 @@
    <top>
       <Button fx:id="save" mnemonicParsing="false" onAction="#saveButtonHandle" text="Add" BorderPane.alignment="CENTER" />
    </top>
+   <right>
+      <Button fx:id="auditTrail" mnemonicParsing="false" onAction="#auditTrailHandle" text="Audit Trail" BorderPane.alignment="CENTER" />
+   </right>
 </BorderPane>

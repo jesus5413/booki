@@ -24,6 +24,7 @@ public class AuthorDetailController {
 	public TextField website;
 	public Button update;
 	public Button save;
+	public Button auditTrail;
 	
 	public void initialize() {
 		if(TempStorage.oneAuthor != null) {
@@ -116,4 +117,24 @@ public class AuthorDetailController {
 		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 		singleton.changeViews("z");
 	}
+	
+	public void auditTrailHandle() {
+		if(ID.getText().isEmpty()) {
+			// pop alert
+			AlertHelper.showWarningMessage(
+					"No Audit Trail",
+					"Audit Trail Doesn't Exist",
+					"Please save book before looking up audit trail");
+			return;
+		}
+		ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+		singleton.changeViews("c");
+		
+	}
+	
+	
 }
+
+
+
+
