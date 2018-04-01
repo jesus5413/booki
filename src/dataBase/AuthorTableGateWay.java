@@ -118,43 +118,6 @@ public class AuthorTableGateWay {
 	 */
 	public void updateAuthor(AuthorModel author) {
 
-		try {
-			myStmt = conn.prepareStatement("select * from authorDetail where ID = ?");
-			myStmt.setInt(1, author.getID());
-			rs = myStmt.executeQuery();
-			rs.next();
-			
-			AuthorModel temp = new AuthorModel();
-			temp.setID(rs.getInt("ID"));
-			temp.setFirstName(rs.getString("first_name"));
-			temp.setLastName(rs.getString("last_name"));
-			temp.setDateOfBirth(rs.getDate("dob"));
-			temp.setGender(rs.getString("gender"));
-			temp.setWebSite(rs.getString("web_site"));
-			
-			//returns the message of hat changed in the data
-			String message = temp.compare(author);
-			
-			myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
-			myStmt.setString(1, author.getFirstName());
-			myStmt.setString(2, author.getLastName());
-			myStmt.setDate(3, author.getDateOfBirth());
-			myStmt.setString(4, author.getGender());
-			myStmt.setString(5, author.getWebSite());
-			myStmt.setInt(6, author.getID());
-			myStmt.executeUpdate();
-			
-			
-			myStmt = conn.prepareStatement("insert into author_audit_trail (author_id, message) values (?, ?)");
-			myStmt.setInt(1, author.getID());
-			myStmt.setString(2, message);
-			myStmt.execute();
-			
-			logger.debug("update successful\n");
-		} catch (SQLException e) {
-			throw new AppException(e);
-		}	
-
 		// we will check for timestamp differences here. Continue updating only if Timestamps of
 		// author and same author in DB are the same
 		if(isDifferentTs(author)) {
@@ -164,6 +127,23 @@ public class AuthorTableGateWay {
 					"Author is currently being updated by someone");
 		}else {
 			try {
+				myStmt = conn.prepareStatement("select * from authorDetail where ID = ?");
+				myStmt.setInt(1, author.getID());
+				rs = myStmt.executeQuery();
+				rs.next();
+				
+				AuthorModel temp = new AuthorModel();
+				temp.setID(rs.getInt("ID"));
+				temp.setFirstName(rs.getString("first_name"));
+				temp.setLastName(rs.getString("last_name"));
+				temp.setDateOfBirth(rs.getDate("dob"));
+				temp.setGender(rs.getString("gender"));
+				temp.setWebSite(rs.getString("web_site"));
+				
+				//returns the message of hat changed in the data
+				String message = temp.compare(author);
+				
+				
 				myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
 				myStmt.setString(1, author.getFirstName());
 				myStmt.setString(2, author.getLastName());
@@ -172,6 +152,11 @@ public class AuthorTableGateWay {
 				myStmt.setString(5, author.getWebSite());
 				myStmt.setInt(6, author.getID());
 				myStmt.executeUpdate();
+				
+				myStmt = conn.prepareStatement("insert into author_audit_trail (author_id, message) values (?, ?)");
+				myStmt.setInt(1, author.getID());
+				myStmt.setString(2, message);
+				myStmt.execute();
 				
 				myStmt = conn.prepareStatement("select last_modified from authorDetail");
 				rs = myStmt.executeQuery();
@@ -255,7 +240,7 @@ public class AuthorTableGateWay {
 			myStmt = conn.prepareStatement("insert into author_audit_trail (author_id, date_added, message) values (?, ?, ?)");
 			myStmt.setInt(1, id);
 			myStmt.setTimestamp(2, dateAdded);
-			myStmt.setString(3, "Book added");
+			myStmt.setString(3, "Author added");
 			myStmt.execute();
 			
 			
