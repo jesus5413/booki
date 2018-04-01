@@ -116,6 +116,22 @@ public class AuthorTableGateWay {
 	 */
 	public void updateAuthor(AuthorModel author) {
 		try {
+			myStmt = conn.prepareStatement("select * from authorDetail where ID = ?");
+			myStmt.setInt(1, author.getID());
+			rs = myStmt.executeQuery();
+			rs.next();
+			
+			AuthorModel temp = new AuthorModel();
+			temp.setID(rs.getInt("ID"));
+			temp.setFirstName(rs.getString("first_name"));
+			temp.setLastName(rs.getString("last_name"));
+			temp.setDateOfBirth(rs.getDate("dob"));
+			temp.setGender(rs.getString("gender"));
+			temp.setWebSite(rs.getString("web_site"));
+			
+			//returns the message of hat changed in the data
+			String message = temp.compare(author);
+			
 			myStmt = conn.prepareStatement("update authorDetail set first_name = ? , last_name = ? , dob = ? , gender = ? , web_site = ? where ID = ?");
 			myStmt.setString(1, author.getFirstName());
 			myStmt.setString(2, author.getLastName());
@@ -124,6 +140,12 @@ public class AuthorTableGateWay {
 			myStmt.setString(5, author.getWebSite());
 			myStmt.setInt(6, author.getID());
 			myStmt.executeUpdate();
+			
+			
+			myStmt = conn.prepareStatement("insert into author_audit_trail (author_id, date_added, message) values (?, ?, ?)");
+			myStmt.setInt(1, author.getID());
+			//myStmt.setDate(2, author.get);
+			
 			logger.debug("update successful\n");
 		} catch (SQLException e) {
 			throw new AppException(e);

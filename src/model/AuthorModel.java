@@ -150,4 +150,71 @@ public class AuthorModel {
 			return val;
 		}
 	}
+	
+	public String compare(AuthorModel author) {
+		String msg ="";
+		String field = "";
+		String oldValue = "";
+		String newValue = "";
+		Date oldDat = new Date(1);
+		Date newDate = new Date(1);
+		
+		if(!this.getFirstName().equals(author.getFirstName())) {
+			field = "first name";
+		}
+		else if(!this.getLastName().equals(author.getLastName())) {
+			field = "last name";
+		}
+		else if(!this.getDateOfBirth().equals(author.getDateOfBirth())) {
+			field = "date of birth";
+		}
+		else if(!this.getGender().equals(author.getGender())) {
+			field = "gender";
+		}
+		else if(!this.getWebSite().equals(author.getWebSite())) {
+			field = "website";
+		}else {
+			return null;
+		}
+		
+		switch(field) {
+		case "first name":
+			oldValue = this.getFirstName();
+			newValue = author.getFirstName();
+			break;
+		case "last name":
+			oldValue = this.getLastName();
+			newValue = this.getLastName();
+			break;
+		case "date of birth":
+			oldDat = this.getDateOfBirth();
+			newDate = author.getDateOfBirth();
+			break;
+		case "gender":
+			oldValue = this.getGender();
+			newValue = author.getGender();
+			break;
+		case "website":
+			oldValue = this.getWebSite();
+			newValue = author.getWebSite();
+		}
+		
+		msg = field + " changed from ";
+		if(newDate != null ) {
+			msg = msg + oldDat.toString() + " to " + newDate.toString();
+		}else {
+			msg = msg + oldValue + " to " + newValue;
+		}
+		return msg;
+		
+	}
+	
+	
 }
+
+
+
+
+
+
+

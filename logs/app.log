@@ -6014,3 +6014,14 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 18:37:23.277 DEBUG controller.AuthorTableViewController : Clicked George Martin
 18:37:29.836 ERROR controller.MainMenuController : Application has closed
+21:29:16.204 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:29:16.256 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:29:18.330 DEBUG controller.AuthorTableViewController : Clicked Fernandasd Renteria
+00:02:26.213 DEBUG dataBase.AuthorTableGateWay : connection success
+
+00:02:26.283 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+00:02:27.938 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+00:44:22.865 ERROR controller.MainMenuController : Application has closed
