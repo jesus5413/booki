@@ -343,10 +343,12 @@ public class BookDetailController {
 				populateAuthorTable();
 			}else {
 			//some error alert stating to input number between 0 and 1
+
 				AlertHelper.showWarningMessage("Error", "ERROR", "Please insert a value between 0 and 1.0!");
 			}
 		}else{
 			AlertHelper.showWarningMessage("Error", "ERROR", "Please select an author from the list.");
+
 		}
 		
 	}
