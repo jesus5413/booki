@@ -260,24 +260,30 @@ public class BookDetailController {
 		AuthorBookGateWay conn = new AuthorBookGateWay();
 		AuthorBook authBook = new AuthorBook();
 		
+		if(TempStorage.oneBook != null) {
 		// Get AuthorBook information
-		authBook.setAuthor(allAuthsCb.getSelectionModel().getSelectedItem());
-		authBook.setBook(TempStorage.oneBook);
-		authBook.setRoyalty(0.0); // default royalty of 0
+			authBook.setAuthor(allAuthsCb.getSelectionModel().getSelectedItem());
+			authBook.setBook(TempStorage.oneBook);
+			authBook.setRoyalty(0.0); // default royalty of 0
 		
 		// Update AuthorBook table with current book id and newly added author id and royalty
-		authBookConn.setConnection();
-		authBookConn.insertAuthor(authBook.getAuthor().getID(), authBook.getBook().getId(), new BigDecimal(authBook.getRoyalty()));
-		authBookConn.closeConnection();
+			authBookConn.setConnection();
+			authBookConn.insertAuthor(authBook.getAuthor().getID(), authBook.getBook().getId(), new BigDecimal(authBook.getRoyalty()));
+			authBookConn.closeConnection();
+			
+			// Add new author to audit trail
+			auditConn.setConnection();
+			auditConn.addMessage(authBook.getBook().getId(),
+					authBook.getAuthor().getFirstName() + " " + authBook.getAuthor().getLastName() + " has been added");
+			auditConn.closeConnection();
+			
+			populateAuthorTable(); // re-populate the author table
+		}else {
+			AlertHelper.showWarningMessage("Error", "ERROR", "Please create the book first! Then edit the book from the table to add authors.");
+		}
 		
-		// Add new author to audit trail
-		auditConn.setConnection();
-		auditConn.addMessage(authBook.getBook().getId(),
-				authBook.getAuthor().getFirstName() + " " + authBook.getAuthor().getLastName() + " has been added");
-		auditConn.closeConnection();
-		
-		// once new author has been added, repopulate author table
-		populateAuthorTable();
+
+		//populateAuthorTable();
 	}
 	
 	// Whenever user highlights and clicks delete, delete specified author from authorBook table and view
@@ -318,35 +324,29 @@ public class BookDetailController {
 	}
 	
 	public void updateRoyaltyHandle() {
-		double value = Double.parseDouble(royalties.getText());
 		double oldVal = 0.0;
-		
-		if(value >= 0 && value <= 1.0) {
-			// get previous value to store in audit trail
-			authBookConn.setConnection();
-			oldVal = authBookConn.getRoyalty(TempStorage.oneBook.getId(), obj.getAuthor().getID());
-			authBookConn.closeConnection();
+		if(!royalties.getText().isEmpty()) {
 			
-			obj.setRoyalty(value);
-			bookCon.setConnection();
-			bookCon.updateAuthBook(obj);
-			bookCon.closeConnection();
-			
-			// Add changes in royalty
-			auditConn.setConnection();
-			auditConn.addMessage(TempStorage.oneBook.getId(),
-					"Royalty changed from " + oldVal + " to " + value);
-			auditConn.closeConnection();
-			
-			populateAuthorTable();
-		}else {
-			//some error alert stating to input number between 0 and 1
-			AlertHelper.showWarningMessage(
-					"Wrong Royalty", 
-					"Enter correct royalty",
-					"Please enter a royalty between 0 and 1");
+			double value = Double.parseDouble(royalties.getText());
+			if(value >= 0 && value <= 1.0) {
+				obj.setRoyalty(value);
+				bookCon.setConnection();
+				bookCon.updateAuthBook(obj);
+				bookCon.closeConnection();
+				
+				// Add changes in royalty
+				auditConn.setConnection();
+				auditConn.addMessage(TempStorage.oneBook.getId(),
+						"Royalty changed from " + oldVal + " to " + value);
+				auditConn.closeConnection();
+				
+				populateAuthorTable();
+			}else {
+				AlertHelper.showWarningMessage("Error", "ERROR", "Please insert a value between 0 and 1.0!");
+			}
+		}else{
+			AlertHelper.showWarningMessage("Error", "ERROR", "Please select an author from the list.");
 		}
-		
 		
 	}
 	
