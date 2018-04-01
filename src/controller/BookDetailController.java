@@ -257,18 +257,22 @@ public class BookDetailController {
 		AuthorBookGateWay conn = new AuthorBookGateWay();
 		AuthorBook authBook = new AuthorBook();
 		
+		if(TempStorage.oneBook != null) {
 		// Get AuthorBook information
-		authBook.setAuthor(allAuthsCb.getSelectionModel().getSelectedItem());
-		authBook.setBook(TempStorage.oneBook);
-		authBook.setRoyalty(0.0); // default royalty of 0
+			authBook.setAuthor(allAuthsCb.getSelectionModel().getSelectedItem());
+			authBook.setBook(TempStorage.oneBook);
+			authBook.setRoyalty(0.0); // default royalty of 0
 		
 		// Update AuthorBook table with current book id and newly added author id and royalty
-		authBookConn.setConnection();
-		authBookConn.insertAuthor(authBook.getAuthor().getID(), authBook.getBook().getId(), new BigDecimal(authBook.getRoyalty()));
-		authBookConn.closeConnection();
+			authBookConn.setConnection();
+			authBookConn.insertAuthor(authBook.getAuthor().getID(), authBook.getBook().getId(), new BigDecimal(authBook.getRoyalty()));
+			authBookConn.closeConnection();
+			populateAuthorTable(); // re-populate the author table
+		}else {
+			AlertHelper.showWarningMessage("Error", "ERROR", "Please create the book first! Then edit the book from the table to add authors.");
+		}
 		
-		// once new author has been added, repopulate author table
-		populateAuthorTable();
+		//populateAuthorTable();
 	}
 	
 	// Whenever user highlights and clicks delete, delete specified author from authorBook table and view
@@ -303,17 +307,23 @@ public class BookDetailController {
 	}
 	
 	public void updateRoyaltyHandle() {
-		double value = Double.parseDouble(royalties.getText());
-		if(value >= 0 && value <= 1.0) {
-			obj.setRoyalty(value);
-			bookCon.setConnection();
-			bookCon.updateAuthBook(obj);
-			bookCon.closeConnection();
-			populateAuthorTable();
-		}else {
-			//some error alert stating to input number between 0 and 1
-		}
 		
+		if(!royalties.getText().isEmpty()) {
+			
+			double value = Double.parseDouble(royalties.getText());
+			if(value >= 0 && value <= 1.0) {
+				obj.setRoyalty(value);
+				bookCon.setConnection();
+				bookCon.updateAuthBook(obj);
+				bookCon.closeConnection();
+				populateAuthorTable();
+			}else {
+			//some error alert stating to input number between 0 and 1
+				AlertHelper.showWarningMessage("Error", "ERROR", "Please insert a value between 0 and 1.0!");
+			}
+		}else{
+			AlertHelper.showWarningMessage("Error", "ERROR", "Please select an author from the list.");
+		}
 		
 	}
 	
