@@ -25,7 +25,7 @@ public class BookModel {
 	private Publisher publisher;
 	private SimpleStringProperty isbn;
 	private Timestamp dateAdded;
-	
+	private int authorId;
 	
 	public BookModel() {
 		this.id = 0;
@@ -36,9 +36,16 @@ public class BookModel {
 		this.publisher = new Publisher();
 		this.isbn = new SimpleStringProperty();
 		this.dateAdded = new Timestamp(1);
-		
 	}
 	
+	public int getAuthorId() {
+		return authorId;
+	}
+
+	public void setAuthorId(int authorId) {
+		this.authorId = authorId;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -223,5 +230,9 @@ public class BookModel {
 		}
 		
 		return msg;
+	}
+	
+	public void getAuthors() {
+		
 	}
 }

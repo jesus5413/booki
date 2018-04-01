@@ -6014,6 +6014,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 18:37:23.277 DEBUG controller.AuthorTableViewController : Clicked George Martin
 18:37:29.836 ERROR controller.MainMenuController : Application has closed
+<<<<<<< HEAD
 21:29:16.204 DEBUG dataBase.AuthorTableGateWay : connection success
 
 21:29:16.256 DEBUG dataBase.AuthorTableGateWay : connection closed! 
@@ -6025,3 +6026,321 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 00:02:27.938 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
 00:44:22.865 ERROR controller.MainMenuController : Application has closed
+=======
+09:51:27.273 DEBUG dataBase.AuthorTableGateWay : connection success
+
+09:51:27.323 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+09:54:57.546 DEBUG dataBase.AuthorTableGateWay : connection success
+
+09:54:57.630 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+09:54:57.859 DEBUG dataBase.AuthorTableGateWay : connection success
+
+09:54:57.885 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:08:12.038 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:08:12.086 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:08:17.230 DEBUG controller.AuthorTableViewController : Clicked Fern Rent
+10:08:21.332 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:08:21.408 DEBUG dataBase.AuthorTableGateWay : update successful
+
+10:08:21.409 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:08:21.607 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:08:21.631 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:08:32.836 DEBUG controller.AuthorTableViewController : Clicked Fernandasd Renteria
+10:08:48.544 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:08:48.591 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:08:50.605 DEBUG controller.AuthorTableViewController : Clicked Fernandasd Renteria
+10:09:01.491 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:09:01.589 DEBUG dataBase.AuthorTableGateWay : update successful
+
+10:09:01.589 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:09:01.792 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:09:01.817 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:09:19.162 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:09:19.186 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:09:19.381 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:09:19.407 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:18:55.506 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:18:55.551 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:18:59.777 DEBUG controller.AuthorTableViewController : Clicked Alex Renteria
+10:19:04.677 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:19:04.724 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:19:06.114 DEBUG controller.AuthorTableViewController : Clicked Alex Renteria
+10:19:10.127 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:19:10.234 DEBUG dataBase.AuthorTableGateWay : update successful
+
+10:19:10.235 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:19:10.428 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:19:10.453 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:19:15.809 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:19:16.899 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+10:19:17.090 DEBUG dataBase.AuthorTableGateWay : connection success
+
+10:19:17.116 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+>>>>>>> branch 'fern1' of https://github.com/jesus5413/booki.git
+01:23:03.968 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:23:04.043 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:23:05.996 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+01:23:13.433 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:23:13.576 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:23:19.335 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:23:19.725 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:23:19.775 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:26:48.532 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:26:48.612 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:26:50.083 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+01:26:56.917 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:26:57.036 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:26:59.163 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:26:59.542 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:26:59.589 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:28:34.695 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:28:34.768 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:28:36.365 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+01:28:42.126 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:28:42.367 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:28:45.095 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:28:45.490 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:28:45.539 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:31:27.214 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:31:27.285 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:31:28.830 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+01:31:44.289 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:31:44.353 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:31:45.661 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+01:31:54.220 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:31:54.471 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:31:55.706 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:31:56.090 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:31:56.136 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:32:06.573 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+01:32:17.007 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:32:17.242 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:32:18.795 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:32:19.174 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:32:19.224 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:32:37.971 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+01:32:43.830 ERROR controller.MainMenuController : Application has closed
+01:39:32.719 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:39:32.791 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:39:34.043 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+01:39:35.529 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:39:35.578 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:40:05.259 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+01:40:10.804 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+01:40:22.167 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:40:22.217 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:40:48.172 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:40:48.283 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:40:48.662 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:40:48.726 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:40:51.327 DEBUG controller.AuthorTableViewController : Clicked jesus nieto
+01:40:52.750 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:40:52.797 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:41:07.222 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:41:07.461 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:41:08.709 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:41:09.105 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:41:09.158 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:41:10.569 DEBUG controller.AuthorTableViewController : Clicked jesus nieto
+01:41:12.010 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:41:12.056 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:41:19.052 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:41:19.303 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:41:21.277 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:41:21.655 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:41:21.704 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:41:23.235 DEBUG controller.AuthorTableViewController : Clicked jesus nieto
+01:41:24.472 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:41:24.517 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:41:30.013 ERROR controller.MainMenuController : Application has closed
+01:49:57.016 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:49:57.295 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:49:57.711 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:49:57.760 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:50:01.734 DEBUG controller.AuthorTableViewController : Clicked aaron nieto
+01:50:04.350 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:50:04.397 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:53:14.193 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:53:14.441 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:53:15.785 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:53:16.177 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:53:16.226 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:53:18.282 DEBUG controller.AuthorTableViewController : Clicked aaron nieto
+01:53:19.718 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:53:19.768 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:54:40.962 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:54:41.035 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:54:58.888 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:54:59.177 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:54:59.573 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:54:59.621 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:55:02.600 DEBUG controller.AuthorTableViewController : Clicked simonetta nieto
+01:55:04.093 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:55:04.140 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:55:22.906 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:55:23.151 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:55:25.863 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:55:26.236 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:55:26.284 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:55:27.670 DEBUG controller.AuthorTableViewController : Clicked simonetta cisneros
+01:55:29.147 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:55:29.193 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:56:18.037 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:56:18.110 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:56:19.403 DEBUG controller.AuthorTableViewController : Clicked simonetta cisneros
+01:56:23.893 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:56:24.139 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:56:25.130 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:56:25.496 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:56:25.546 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:56:27.584 DEBUG controller.AuthorTableViewController : Clicked simonetta nieto
+01:56:30.938 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:56:30.985 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:56:41.721 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:56:41.770 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:56:47.947 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:56:48.173 DEBUG dataBase.AuthorTableGateWay : update successful
+
+01:56:49.493 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:56:49.873 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:56:49.920 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:56:51.603 DEBUG controller.AuthorTableViewController : Clicked simonetta cisneros
+01:56:52.927 DEBUG dataBase.AuthorTableGateWay : connection success
+
+01:56:52.975 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+01:57:12.178 ERROR controller.MainMenuController : Application has closed

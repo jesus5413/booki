@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 import alert.AlertHelper;
 import exception.InvalidDoBException;
@@ -17,8 +18,17 @@ public class AuthorModel {
 	private SimpleStringProperty gender;
 	private SimpleStringProperty webSite;
 	private int ID;
+	private LocalDateTime lastModified;
 	
-	
+	// lastModified will be used to implement optimistic record locking on the db
+	public LocalDateTime getLastModified() {
+		return lastModified;
+	}
+
+	public void setLastModified(LocalDateTime lastModified) {
+		this.lastModified = lastModified;
+	}
+
 	public AuthorModel() {
 		this.ID = 0;
 		this.firstName = new SimpleStringProperty();
@@ -184,7 +194,7 @@ public class AuthorModel {
 			break;
 		case "last name":
 			oldValue = this.getLastName();
-			newValue = this.getLastName();
+			newValue = author.getLastName();
 			break;
 		case "date of birth":
 			oldDat = this.getDateOfBirth();
@@ -200,7 +210,7 @@ public class AuthorModel {
 		}
 		
 		msg = field + " changed from ";
-		if(newDate != null ) {
+		if(oldValue.isEmpty()) {
 			msg = msg + oldDat.toString() + " to " + newDate.toString();
 		}else {
 			msg = msg + oldValue + " to " + newValue;
