@@ -64,4 +64,21 @@ public class AuthorBookGateWay {
 			e.printStackTrace();
 		}
 	}
+	
+	public double getRoyalty(int bookId, int authId) {
+		try {
+			myStmt = conn.prepareStatement("select royalty from author_book where author_id = ? and book_id = ?");
+			myStmt.setInt(1,  authId);
+			myStmt.setInt(2, bookId);
+			rs = myStmt.executeQuery();
+			
+			while(rs.next()) {
+			return rs.getBigDecimal("royalty").doubleValue();
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
 }
