@@ -8896,7 +8896,160 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 15:24:07.050 DEBUG dataBase.BookTableGateWay : connection closed! 
 
 15:24:11.412 ERROR controller.MainMenuController : Application has closed
+<<<<<<< HEAD
+=======
+15:17:57.148 DEBUG dataBase.BookTableGateWay : connection success
+
+15:17:57.194 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:17:57.390 DEBUG dataBase.PublisherTableGateWay : connection success
+
+15:17:57.605 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+15:17:58.976 DEBUG controller.BookTableViewController : Clicked A time before mankind
+15:17:59.235 DEBUG dataBase.PublisherTableGateWay : connection success
+
+15:17:59.258 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+15:17:59.452 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:17:59.483 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:17:59.670 DEBUG dataBase.BookTableGateWay : connection success
+
+15:17:59.891 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:17:59.891 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:17:59.892 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:18:03.908 DEBUG dataBase.AuthorBookGateWay : connection success
+
+15:18:03.979 DEBUG dataBase.AuthorBookGateWay : connection closed! 
+
+15:18:04.170 DEBUG dataBase.BookAuditTrailGateWay : connection success
+
+15:18:04.242 DEBUG dataBase.BookAuditTrailGateWay : connection closed! 
+
+15:18:04.429 DEBUG dataBase.BookTableGateWay : connection success
+
+15:18:04.641 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:18:04.666 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:18:04.666 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:18:13.068 DEBUG dataBase.AuthorBookGateWay : connection success
+
+15:18:13.094 DEBUG dataBase.AuthorBookGateWay : connection closed! 
+
+15:18:13.274 DEBUG dataBase.BookTableGateWay : connection success
+
+15:18:13.326 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:18:13.512 DEBUG dataBase.BookAuditTrailGateWay : connection success
+
+15:18:13.585 DEBUG dataBase.BookAuditTrailGateWay : connection closed! 
+
+15:18:13.776 DEBUG dataBase.BookTableGateWay : connection success
+
+15:18:13.995 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:18:14.029 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:18:14.030 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:18:15.358 DEBUG dataBase.BookTableGateWay : connection success
+
+15:18:15.384 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+>>>>>>> branch 'fern1' of https://github.com/jesus5413/booki.git
+15:27:45.007 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:27:45.072 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:27:45.436 DEBUG dataBase.PublisherTableGateWay : connection success
+
+15:27:45.483 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+15:27:59.272 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:27:59.321 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:27:59.695 DEBUG dataBase.PublisherTableGateWay : connection success
+
+15:27:59.742 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+15:28:01.158 DEBUG dataBase.BookTableGateWay : connection success
+
+15:28:01.211 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:28:01.583 DEBUG dataBase.PublisherTableGateWay : connection success
+
+15:28:02.018 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+15:28:03.669 DEBUG controller.BookTableViewController : Clicked harry potter
+15:28:04.068 DEBUG dataBase.PublisherTableGateWay : connection success
+
+15:28:04.114 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+15:28:04.498 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:28:04.546 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:28:04.939 DEBUG dataBase.BookTableGateWay : connection success
+
+15:28:05.359 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:28:05.700 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:28:05.700 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:28:11.503 DEBUG dataBase.AuthorBookGateWay : connection success
+
+15:28:25.092 DEBUG dataBase.BookTableGateWay : connection success
+
+15:28:25.139 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:28:28.407 DEBUG dataBase.PublisherTableGateWay : connection success
+
+15:28:28.453 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+15:28:28.823 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:28:28.876 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:28:29.248 DEBUG dataBase.BookTableGateWay : connection success
+
+15:28:29.682 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:28:30.005 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:28:30.005 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:28:37.588 DEBUG dataBase.BookTableGateWay : connection success
+
+15:28:37.667 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:28:38.058 DEBUG dataBase.BookAuditTrailGateWay : connection success
+
+15:28:38.174 DEBUG dataBase.BookAuditTrailGateWay : connection closed! 
+
+15:28:38.549 DEBUG dataBase.BookTableGateWay : connection success
+
+15:28:38.983 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:28:39.319 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:28:39.320 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:28:41.046 DEBUG dataBase.BookTableGateWay : connection success
+
+15:28:41.099 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+=======
 >>>>>>> branch 'Jesus_Test' of git@github.com:jesus5413/booki.git
+<<<<<<< HEAD
 15:30:56.980 DEBUG dataBase.BookTableGateWay : connection success
 
 15:30:57.053 DEBUG dataBase.BookTableGateWay : connection closed! 
@@ -9027,3 +9180,57 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 15:32:13.771 DEBUG dataBase.BookTableGateWay : connection closed! 
 
+=======
+>>>>>>> branch 'fern1' of https://github.com/jesus5413/booki.git
+15:33:57.074 DEBUG dataBase.BookTableGateWay : connection success
+
+15:33:57.142 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:33:57.530 DEBUG dataBase.PublisherTableGateWay : connection success
+
+15:33:57.951 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+15:33:59.383 DEBUG controller.BookTableViewController : Clicked harry potter
+15:33:59.813 DEBUG dataBase.PublisherTableGateWay : connection success
+
+15:33:59.859 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+15:34:00.273 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:34:00.325 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:34:00.713 DEBUG dataBase.BookTableGateWay : connection success
+
+15:34:01.143 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:34:01.478 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:34:01.479 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:34:11.246 DEBUG dataBase.AuthorBookGateWay : connection success
+
+15:34:11.305 DEBUG dataBase.AuthorBookGateWay : connection closed! 
+
+15:34:11.680 DEBUG dataBase.BookTableGateWay : connection success
+
+15:34:11.760 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:34:12.132 DEBUG dataBase.BookAuditTrailGateWay : connection success
+
+15:34:12.251 DEBUG dataBase.BookAuditTrailGateWay : connection closed! 
+
+15:34:12.627 DEBUG dataBase.BookTableGateWay : connection success
+
+15:34:13.042 DEBUG dataBase.AuthorTableGateWay : connection success
+
+15:34:13.368 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+15:34:13.369 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:34:15.186 DEBUG dataBase.BookTableGateWay : connection success
+
+15:34:15.236 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+15:34:19.067 ERROR controller.MainMenuController : Application has closed
+>>>>>>> branch 'Jesus_Test' of git@github.com:jesus5413/booki.git
+14:15:38.749 ERROR controller.MainMenuController : Application has closed
