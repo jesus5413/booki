@@ -134,10 +134,10 @@ public class ExcelController {
 						Label sumroyalty = new Label(3, royaltyRow + incrementHelper , Double.toString(sumRoyalty));
 						sheet.addCell(sumroyalty);
 						sumRoyalty = 0;
-						royaltyRow += 10;
-						authorRow += 10;
-						isbnRow += 10;
-						row += 10;
+						royaltyRow += 7 + incrementHelper;
+						authorRow += 7 + incrementHelper;
+						isbnRow += 7 + incrementHelper;
+						row += 7 + incrementHelper;
 						incrementHelper = 0;
 					}
 				}
