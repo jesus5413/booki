@@ -60676,3 +60676,65 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 17:12:07.876 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
 17:12:14.185 ERROR controller.MainMenuController : Application has closed
+18:34:46.139 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:34:46.185 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:34:50.902 DEBUG dataBase.BookTableGateWay : connection success
+
+18:34:51.225 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:34:51.291 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:34:51.570 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:34:51.602 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:34:51.876 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:34:51.877 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:35:13.195 DEBUG dataBase.BookTableGateWay : connection success
+
+18:35:13.493 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:35:13.526 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:35:13.822 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:35:13.853 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:35:14.131 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:35:14.166 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:35:14.451 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:35:14.483 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:35:14.762 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:35:14.792 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:35:14.793 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+18:35:41.019 ERROR controller.MainMenuController : Application has closed
+18:41:21.611 DEBUG dataBase.PublisherTableGateWay : connection success
+
+18:41:21.660 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+18:41:27.049 DEBUG dataBase.BookTableGateWay : connection success
+
+18:41:27.392 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:41:27.478 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:41:27.752 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:41:27.783 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:41:28.075 DEBUG dataBase.AuthorTableGateWay : connection success
+
+18:41:28.076 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+18:41:32.830 ERROR controller.MainMenuController : Application has closed
