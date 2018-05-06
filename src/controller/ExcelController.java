@@ -59,6 +59,10 @@ public class ExcelController {
 		publisher.setConverter(new StringConverter<Publisher>() {
 		    @Override
 		    public String toString(Publisher object) {
+		    		if(object == null) {
+		    			object = pubList.get(pubList.size() - 1);
+		    		}
+		    		
 		        return object.getPublisherName().get();
 		    }
 
@@ -142,23 +146,12 @@ public class ExcelController {
 					}
 				}
 				
-				
-				
-				
 				bookCon.closeConnection();
-				
-				
-				
-		
-				
-				
-				
-				
 				excelDoc.setVisible(true);
 			}
 		}else {
-			System.out.println("please select a publisher name");
-			
+			publisher.getSelectionModel().selectLast();
+			saveHandle();
 		}
 	}
 	

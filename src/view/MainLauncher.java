@@ -33,6 +33,13 @@ import model.Publisher;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import java.util.Properties;
+import javafx.application.Platform;
+import auth.MyNameBeanRemote;
+
 /**
  * 
  * Assignment 4 by Jesus Nieto and Fernando Renteria 
@@ -44,6 +51,9 @@ public class MainLauncher extends Application{
 	private static Logger logger = LogManager.getLogger(MainLauncher.class);
 	public static Stage stage;
 	public static BorderPane mainPane;
+	
+	private static MyNameBeanRemote bean = null;
+	private static InitialContext context = null;
 	
 	/**
 	 * This function builds the scene to launch
@@ -73,6 +83,36 @@ public class MainLauncher extends Application{
 //	
 //	for(int i = 0; i < 10000; i++) {
 //		
+
+//		System.out.println(authorBookL.size());
+//		authorBookL.forEach((record) ->{
+//			System.out.println(record.getRoyalty());
+//		});
+		
+		// TEST
+//		Properties props = new Properties();
+//		//use the jboss factory for context to lookup the EJB remote methods 
+//		props.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
+//		//URL is the jboss server; port 8080 is jboss default for remote corba access 
+//		props.put(Context.PROVIDER_URL, "http-remoting://localhost:8080");
+//		//below statement triggers the creation of a EJBClientContext containing a EJBReceiver capable of handling the EJB invocations 		
+//		props.put("jboss.naming.client.ejb.context", "true");
+//		try {
+//			//create and save context as instance var
+//			context = new InitialContext(props);
+//			//grab ref to bean’s remote interface
+//			bean = (MyNameBeanRemote) context.lookup("MyEJB/MyNameBean!auth.MyNameBeanRemote");
+//			
+//			System.out.println(bean.getName());
+//		} catch (NamingException e) {
+//			e.printStackTrace();
+//			Platform.exit();
+//		}
+		
+		// ENDTEST
+		
+		
+
 //		BookModel bookModel = new BookModel();
 //		bookModel.setTitle("Book" + i + 5);
 //		bookModel.setAuthorId(1);
