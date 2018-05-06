@@ -26,6 +26,11 @@
                   <MenuItem fx:id="addBook" mnemonicParsing="false" onAction="#handleMenuAction" text="Add Book" />
               </items>
             </Menu>
+            <Menu mnemonicParsing="false" text="Excel">
+              <items>
+                <MenuItem fx:id="excel" mnemonicParsing="false" onAction="#handleMenuAction" text="Generate Report" />
+              </items>
+            </Menu>
         </menus>
       </MenuBar>
    </top>

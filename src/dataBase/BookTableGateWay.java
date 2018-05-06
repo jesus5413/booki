@@ -254,6 +254,35 @@ public class BookTableGateWay {
 		
 		return authBookList;
 	}
+	
+	
+	
+	public ObservableList<BookModel> getBooksByPubID(int pubID){
+		ObservableList<BookModel> bookList = FXCollections.observableArrayList();
+		try {
+			myStmt = conn.prepareStatement("select * from book where publisher_id = ?");
+			myStmt.setInt(1, pubID);
+			rs = myStmt.executeQuery();
+			while(rs.next()) {
+			// we'll make a new model and add it onto our list
+				BookModel book = new BookModel();
+				book.setId(rs.getInt("ID"));
+				book.setTitle(rs.getString("title"));
+	 			book.setSummary(rs.getString("summary"));
+				book.setYearPublished(rs.getInt("year_published"));
+				book.setPublisherId(rs.getInt("publisher_id"));
+				book.setIsbn(rs.getString("isbn"));
+				book.setDateAdded(rs.getTimestamp("date_added"));
+				bookList.add(book);	
+			}
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return bookList;
+	}
+	
 }
 
 

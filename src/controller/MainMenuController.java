@@ -28,6 +28,7 @@ public class MainMenuController{
 	@FXML private MenuItem addAuthor;
 	@FXML private MenuItem addBook;
 	@FXML private MenuItem bookTable;
+	@FXML private MenuItem excel;
 	
 	/**
 	 * function does the actions needed for the item choices
@@ -56,6 +57,11 @@ public class MainMenuController{
 			TempStorage.oneBook = null;
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			singleton.changeViews("t");	
+		}
+		if(event.getSource() == excel) {
+			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+			singleton.changeViews("e");	
+			
 		}
 		
 		
