@@ -34,22 +34,29 @@ public class BookTableViewController {
 	@FXML TableColumn<BookModel, String> ISBN;
 	@FXML TableColumn<BookModel, String> dateAdded;
 	ObservableList<BookModel> bookList = FXCollections.observableArrayList();
+	ObservableList<BookModel> bookList2 = FXCollections.observableArrayList();
 	@FXML public Button delete;
+	@FXML public Button next;
+	@FXML public Button prev;
+	@FXML public Button first;
+	@FXML public Button last;
+	
 	@FXML public TextField search;
 	
 	
 	public void initialize() {
 		getBook();
-		populateTable();
+		populateTable(0, 50);
 		searchHandle();
 	}
 	
-	public void populateTable() {
+	public void populateTable(int x, int y) {
+		
 		BookTableGateWay bookCon = new BookTableGateWay();
 		bookCon.setConnection();
-		bookList = bookCon.getBooks(); 
+		bookList = bookCon.getBooks(x, y); 
 		bookCon.closeConnection();
-		
+	
 		PublisherTableGateWay pubCon = new PublisherTableGateWay();
 		pubCon.setConnection();
 		for(int i = 0; i < bookList.size(); i++) {
@@ -88,6 +95,8 @@ public class BookTableViewController {
 					TempStorage.oneBook = rowData; // stores the data from the row into a temp storage object that will be used in the detail view
 					String currentItemSelected = TempStorage.oneBook.getTitle();
 					logger.debug("Clicked " + currentItemSelected);
+					BookTableGateWay.min = 0;
+					BookTableGateWay.max = 0;
 					ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			        singleton.changeViews("y");    
 				}
@@ -103,7 +112,7 @@ public class BookTableViewController {
 		connection.setConnection();
 		connection.deleteBook(book.getId());  
 		connection.closeConnection();
-		populateTable();
+		populateTable(0, 50);
 		searchHandle();
 		
 	}
@@ -133,6 +142,35 @@ public class BookTableViewController {
 		sortedBooks.comparatorProperty().bind(bookTable.comparatorProperty());
 		bookTable.setItems(sortedBooks);
 	}
+	
+	
+	public void nextHandle() {
+		populateTable(50, 0);
+		searchHandle();
+		
+	}
+	
+	public void prevHandle() {
+		populateTable(-50, 0);
+		searchHandle();
+	}
+	
+	public void firstHandle() {
+		BookTableGateWay.min = 0;
+		BookTableGateWay.max = 0;
+		populateTable(0, 50);
+		searchHandle();
+		
+	}
+	
+	public void lastHandle() {
+		BookTableGateWay.min = 0;
+		
+		populateTable(9966, 0);
+		searchHandle();
+		
+	}
+	
 }
 
 

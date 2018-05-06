@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import changeSingleton.ChangeViewsSingleton;
+import dataBase.BookTableGateWay;
 import dataBase.TempStorage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,6 +29,7 @@ public class MainMenuController{
 	@FXML private MenuItem addAuthor;
 	@FXML private MenuItem addBook;
 	@FXML private MenuItem bookTable;
+	@FXML private MenuItem excel;
 	
 	/**
 	 * function does the actions needed for the item choices
@@ -48,6 +50,8 @@ public class MainMenuController{
 			singleton.changeViews("b");		
 		}
 		if(event.getSource() == addBook) {
+			BookTableGateWay.min = 0;
+			BookTableGateWay.max = 0;
 			TempStorage.oneBook = null;
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			singleton.changeViews("y");	
@@ -56,6 +60,11 @@ public class MainMenuController{
 			TempStorage.oneBook = null;
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			singleton.changeViews("t");	
+		}
+		if(event.getSource() == excel) {
+			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
+			singleton.changeViews("e");	
+			
 		}
 		
 		

@@ -28,6 +28,8 @@ public class BookTableGateWay {
 	private Connection conn = null;
 	private PreparedStatement myStmt = null;
 	private ResultSet rs = null;
+	public static int min = 0;
+	public static int max = 0;
 	
 	public BookTableGateWay() {
 		
@@ -58,10 +60,14 @@ public class BookTableGateWay {
 		}
 	}
 	
-	public ObservableList<BookModel> getBooks(){
+	public ObservableList<BookModel> getBooks(int x, int y){
 		ObservableList<BookModel> bookList = FXCollections.observableArrayList();
 		try {
-			myStmt = conn.prepareStatement("select * from book");
+			min += x;
+			max += y;
+			myStmt = conn.prepareStatement("select * from book limit ? , ?");
+			myStmt.setInt(1, min);
+			myStmt.setInt(2, max);
 			rs = myStmt.executeQuery();
 			while(rs.next()) {
 			// we'll make a new model and add it onto our list
@@ -191,13 +197,14 @@ public class BookTableGateWay {
 	
 	public void saveBook(BookModel book) {
 		try {
-			String query = " insert into book (title, summary, year_published, publisher_id, isbn) values (? , ? , ? , ? , ?)";
+			String query = " insert into book (title, summary, year_published, publisher_id, isbn, author_id) values (? , ? , ? , ? , ?, ?)";
 			myStmt = conn.prepareStatement(query);
 			myStmt.setString(1, book.getTitle());
 			myStmt.setString(2, book.getSummary());
 			myStmt.setInt(3, book.getYearPublished());
 			myStmt.setInt(4, book.getPublisherId());
 			myStmt.setString(5, book.getIsbn());
+			myStmt.setInt(6, 1);
 			myStmt.execute();
 			
 			int id;
@@ -254,6 +261,37 @@ public class BookTableGateWay {
 		
 		return authBookList;
 	}
+	
+	
+	
+	public ObservableList<BookModel> getBooksByPubID(int pubID){
+		ObservableList<BookModel> bookList = FXCollections.observableArrayList();
+		try {
+			myStmt = conn.prepareStatement("select * from book where publisher_id = ? limit ?, ?");
+			myStmt.setInt(1, pubID);
+			myStmt.setInt(2, 0);
+			myStmt.setInt(3, 5);
+			rs = myStmt.executeQuery();
+			while(rs.next()) {
+			// we'll make a new model and add it onto our list
+				BookModel book = new BookModel();
+				book.setId(rs.getInt("ID"));
+				book.setTitle(rs.getString("title"));
+	 			book.setSummary(rs.getString("summary"));
+				book.setYearPublished(rs.getInt("year_published"));
+				book.setPublisherId(rs.getInt("publisher_id"));
+				book.setIsbn(rs.getString("isbn"));
+				book.setDateAdded(rs.getTimestamp("date_added"));
+				bookList.add(book);	
+			}
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return bookList;
+	}
+	
 }
 
 

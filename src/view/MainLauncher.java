@@ -1,13 +1,16 @@
 package view;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URL;
+import java.util.Random;
 
 // Assignment 1 by Jesus Nieto and Fernando Renteria 
 
 import com.sun.glass.ui.TouchInputSupport;
 import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
 
+import dataBase.AuthorBookGateWay;
 import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
@@ -72,14 +75,15 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {	
-		// TEST
-//		BookTableGateWay conn = new BookTableGateWay();
-//		conn.setConnection();
-//		BookModel book = new BookModel();
-//		book.setId(43);
-//		ObservableList<AuthorBook> authorBookL = conn.getAuthorsForBook(book);
-//		conn.closeConnection();
+//	BookTableGateWay bookCon = new BookTableGateWay();
+//	int array[] = {1, 7, 8, 9, 10};
+//	
+//	bookCon.setConnection();
+//	BigDecimal index = new BigDecimal(.09);
+//	
+//	for(int i = 0; i < 10000; i++) {
 //		
+<<<<<<< HEAD
 //		System.out.println(authorBookL.size());
 //		authorBookL.forEach((record) ->{
 //			System.out.println(record.getRoyalty());
@@ -108,7 +112,31 @@ public class MainLauncher extends Application{
 		// ENDTEST
 		
 		
+
+//		BookModel bookModel = new BookModel();
+//		bookModel.setTitle("Book" + i + 5);
+//		bookModel.setAuthorId(1);
+//		bookModel.setPublisherId(getRandom(array));
+//		bookModel.setIsbn("123456789");
+//		bookModel.setYearPublished(2000);
+//		bookModel.setSummary("A bunch of books");
+//		bookCon.saveBook(bookModel);
+//		
+//		AuthorBookGateWay authorBookGateWay = new AuthorBookGateWay();
+//		authorBookGateWay.setConnection();
+//		authorBookGateWay.insertAuthor(bookModel.getAuthorId(), 77 + i, index);
+//		authorBookGateWay.closeConnection();
+//		
+//		
+//	}
+//	
+//	bookCon.closeConnection();
 		launch(args);
+	}
+	
+	public static int getRandom(int[] array) {
+	    int rnd = new Random().nextInt(array.length);
+	    return array[rnd];
 	}
 	
 
