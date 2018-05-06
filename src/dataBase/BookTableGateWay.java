@@ -267,8 +267,10 @@ public class BookTableGateWay {
 	public ObservableList<BookModel> getBooksByPubID(int pubID){
 		ObservableList<BookModel> bookList = FXCollections.observableArrayList();
 		try {
-			myStmt = conn.prepareStatement("select * from book where publisher_id = ?");
+			myStmt = conn.prepareStatement("select * from book where publisher_id = ? limit ?, ?");
 			myStmt.setInt(1, pubID);
+			myStmt.setInt(2, 0);
+			myStmt.setInt(3, 5);
 			rs = myStmt.executeQuery();
 			while(rs.next()) {
 			// we'll make a new model and add it onto our list
