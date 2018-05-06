@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import changeSingleton.ChangeViewsSingleton;
+import dataBase.BookTableGateWay;
 import dataBase.TempStorage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,6 +50,8 @@ public class MainMenuController{
 			singleton.changeViews("b");		
 		}
 		if(event.getSource() == addBook) {
+			BookTableGateWay.min = 0;
+			BookTableGateWay.max = 0;
 			TempStorage.oneBook = null;
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			singleton.changeViews("y");	
