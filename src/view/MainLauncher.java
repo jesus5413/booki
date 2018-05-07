@@ -38,7 +38,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.util.Properties;
 import javafx.application.Platform;
-import auth.MyNameBeanRemote;
+//import auth.MyNameBeanRemote;
 
 /**
  * 
@@ -52,8 +52,8 @@ public class MainLauncher extends Application{
 	public static Stage stage;
 	public static BorderPane mainPane;
 	
-	private static MyNameBeanRemote bean = null;
-	private static InitialContext context = null;
+//	private static MyNameBeanRemote bean = null;
+//	private static InitialContext context = null;
 	
 	/**
 	 * This function builds the scene to launch
