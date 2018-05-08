@@ -9,6 +9,7 @@ import javax.swing.border.LineBorder;
 import com.sun.corba.se.spi.ior.Writeable;
 import com.sun.org.apache.xpath.internal.operations.And;
 
+import auth.SessSing;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
 import javafx.collections.FXCollections;
@@ -50,10 +51,16 @@ public class ExcelController {
 		pubCon.setConnection();
 		pubList = pubCon.getPublishers();
 		pubCon.closeConnection();
+		pubList.remove(0);
 		comboboxStringConverter();
 		
+		
+	
 		publisher.setItems(pubList);
 		
+		if(SessSing.getUsername().equalsIgnoreCase("sasquatch")) {
+			save.setDisable(true);
+		}	
 	}
 	
 	public void comboboxStringConverter() {

@@ -6,6 +6,7 @@ import org.omg.CORBA.PUBLIC_MEMBER;
 
 import com.sun.glass.events.MouseEvent;
 
+import auth.SessSing;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
 import dataBase.TempStorage;
@@ -34,10 +35,14 @@ public class AuthorTableViewController {
 	@FXML TableColumn<AuthorModel, String> website;
 	public Button delete;
 	
-	
 	public void initialize() {
 		getAuthor();
 		populateTable();
+		
+		// disable delete if Data Entry or Intern
+		if(SessSing.getUsername().equalsIgnoreCase("leroy") || SessSing.getUsername().equalsIgnoreCase("sasquatch")) {
+			delete.setDisable(true);
+		}
 	}
 	
 	public void populateTable() {

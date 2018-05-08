@@ -5,7 +5,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
    <top>
       <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
         <menus>
@@ -29,6 +29,12 @@
             <Menu mnemonicParsing="false" text="Excel">
               <items>
                 <MenuItem fx:id="excel" mnemonicParsing="false" onAction="#handleMenuAction" text="Generate Report" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="User">
+              <items>
+                <MenuItem fx:id="login" mnemonicParsing="false" onAction="#handleMenuAction" text="Login" />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#handleMenuAction" text="Logout" />
               </items>
             </Menu>
         </menus>

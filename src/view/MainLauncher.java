@@ -10,6 +10,7 @@ import java.util.Random;
 import com.sun.glass.ui.TouchInputSupport;
 import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
 
+import auth.SessSing;
 import dataBase.AuthorBookGateWay;
 import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
@@ -38,7 +39,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.util.Properties;
 import javafx.application.Platform;
-import auth.MyNameBeanRemote;
+//import auth.MyNameBeanRemote;
 
 /**
  * 
@@ -52,8 +53,8 @@ public class MainLauncher extends Application{
 	public static Stage stage;
 	public static BorderPane mainPane;
 	
-	private static MyNameBeanRemote bean = null;
-	private static InitialContext context = null;
+//	private static MyNameBeanRemote bean = null;
+//	private static InitialContext context = null;
 	
 	/**
 	 * This function builds the scene to launch
@@ -75,62 +76,6 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {	
-//	BookTableGateWay bookCon = new BookTableGateWay();
-//	int array[] = {1, 7, 8, 9, 10};
-//	
-//	bookCon.setConnection();
-//	BigDecimal index = new BigDecimal(.09);
-//	
-//	for(int i = 0; i < 10000; i++) {
-//		
-
-//		System.out.println(authorBookL.size());
-//		authorBookL.forEach((record) ->{
-//			System.out.println(record.getRoyalty());
-//		});
-		
-		// TEST
-//		Properties props = new Properties();
-//		//use the jboss factory for context to lookup the EJB remote methods 
-//		props.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
-//		//URL is the jboss server; port 8080 is jboss default for remote corba access 
-//		props.put(Context.PROVIDER_URL, "http-remoting://localhost:8080");
-//		//below statement triggers the creation of a EJBClientContext containing a EJBReceiver capable of handling the EJB invocations 		
-//		props.put("jboss.naming.client.ejb.context", "true");
-//		try {
-//			//create and save context as instance var
-//			context = new InitialContext(props);
-//			//grab ref to bean’s remote interface
-//			bean = (MyNameBeanRemote) context.lookup("MyEJB/MyNameBean!auth.MyNameBeanRemote");
-//			
-//			System.out.println(bean.getName());
-//		} catch (NamingException e) {
-//			e.printStackTrace();
-//			Platform.exit();
-//		}
-		
-		// ENDTEST
-		
-		
-
-//		BookModel bookModel = new BookModel();
-//		bookModel.setTitle("Book" + i + 5);
-//		bookModel.setAuthorId(1);
-//		bookModel.setPublisherId(getRandom(array));
-//		bookModel.setIsbn("123456789");
-//		bookModel.setYearPublished(2000);
-//		bookModel.setSummary("A bunch of books");
-//		bookCon.saveBook(bookModel);
-//		
-//		AuthorBookGateWay authorBookGateWay = new AuthorBookGateWay();
-//		authorBookGateWay.setConnection();
-//		authorBookGateWay.insertAuthor(bookModel.getAuthorId(), 77 + i, index);
-//		authorBookGateWay.closeConnection();
-//		
-//		
-//	}
-//	
-//	bookCon.closeConnection();
 		launch(args);
 	}
 	

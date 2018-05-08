@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import alert.AlertHelper;
+import auth.SessSing;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorBookGateWay;
 import dataBase.AuthorTableGateWay;
@@ -71,6 +72,7 @@ public class BookDetailController {
 		bookCon = new BookTableGateWay();
 		authBookConn = new AuthorBookGateWay();
 		auditConn = new BookAuditTrailGateWay();
+
 		setCellDataToTextField();
 		
 		if(TempStorage.oneBook != null) {
@@ -100,6 +102,13 @@ public class BookDetailController {
 			allAuthsCb.setItems(allAuthsList);
 		}
 		
+		// disable delete if Intern
+		if(SessSing.getUsername().equalsIgnoreCase("sasquatch")) {
+			delButton.setDisable(true);
+			addAuthButton.setDisable(true);
+			updateRoyalty.setDisable(true);
+			update.setDisable(true);
+		}		
 	}
 	
 	public void textFieldPlaceHolder() {

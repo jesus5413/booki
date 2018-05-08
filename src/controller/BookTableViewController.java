@@ -5,6 +5,10 @@ import org.apache.logging.log4j.Logger;
 
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
+import auth.AuthenticatorLocal;
+import auth.RBACPolicyAuthDemo;
+import auth.SessSing;
+import auth.Session;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
@@ -40,14 +44,17 @@ public class BookTableViewController {
 	@FXML public Button prev;
 	@FXML public Button first;
 	@FXML public Button last;
-	
 	@FXML public TextField search;
-	
 	
 	public void initialize() {
 		getBook();
 		populateTable(0, 50);
 		searchHandle();
+		
+		// disable delete if Data Entry or Intern
+		if(SessSing.getUsername().equalsIgnoreCase("leroy") || SessSing.getUsername().equalsIgnoreCase("sasquatch")) {
+			delete.setDisable(true);
+		}
 	}
 	
 	public void populateTable(int x, int y) {
