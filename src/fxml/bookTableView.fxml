@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookTableViewController">
@@ -24,9 +25,6 @@
         </columns>
       </TableView>
    </center>
-   <bottom>
-      <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteHandle" text="delete" BorderPane.alignment="CENTER" />
-   </bottom>
    <top>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -42,4 +40,15 @@
          </children>
       </GridPane>
    </top>
+   <bottom>
+      <Pane prefHeight="82.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="delete" layoutX="522.0" layoutY="27.0" mnemonicParsing="false" onAction="#deleteHandle" text="delete" />
+            <Button fx:id="next" layoutX="293.0" layoutY="28.0" mnemonicParsing="false" onAction="#nextHandle" text="Next" />
+            <Button fx:id="prev" layoutX="247.0" layoutY="28.0" mnemonicParsing="false" onAction="#prevHandle" text="Prev" />
+            <Button fx:id="first" layoutX="127.0" layoutY="28.0" mnemonicParsing="false" onAction="#firstHandle" text="First" />
+            <Button fx:id="last" layoutX="394.0" layoutY="28.0" mnemonicParsing="false" onAction="#lastHandle" text="Last" />
+         </children>
+      </Pane>
+   </bottom>
 </BorderPane>

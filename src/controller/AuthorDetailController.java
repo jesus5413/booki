@@ -9,6 +9,7 @@ import java.sql.Date;
 import java.time.ZoneId;
 
 import alert.AlertHelper;
+import auth.SessSing;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
 import dataBase.TempStorage;
@@ -34,7 +35,11 @@ public class AuthorDetailController {
 			ID.setText("");
 			save.setVisible(true);
 			update.setVisible(false);
-			
+		}
+		
+		// disable update if Intern
+		if(SessSing.getUsername().equalsIgnoreCase("sasquatch")) {
+			update.setDisable(true);
 		}
 	}
 	

@@ -1,13 +1,17 @@
 package view;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URL;
+import java.util.Random;
 
 // Assignment 1 by Jesus Nieto and Fernando Renteria 
 
 import com.sun.glass.ui.TouchInputSupport;
 import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
 
+import auth.SessSing;
+import dataBase.AuthorBookGateWay;
 import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
@@ -30,9 +34,16 @@ import model.Publisher;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import java.util.Properties;
+import javafx.application.Platform;
+//import auth.MyNameBeanRemote;
+
 /**
  * 
- * Assignment 4 by Jesus Nieto and Fernando Renteria 
+ * Assignment 5 by Jesus Nieto and Fernando Renteria 
  * @author jesusnieto
  *
  */
@@ -41,6 +52,9 @@ public class MainLauncher extends Application{
 	private static Logger logger = LogManager.getLogger(MainLauncher.class);
 	public static Stage stage;
 	public static BorderPane mainPane;
+	
+//	private static MyNameBeanRemote bean = null;
+//	private static InitialContext context = null;
 	
 	/**
 	 * This function builds the scene to launch
@@ -62,20 +76,12 @@ public class MainLauncher extends Application{
 	 * @param args
 	 */
 	public static void main(String[] args) {	
-		// TEST
-//		BookTableGateWay conn = new BookTableGateWay();
-//		conn.setConnection();
-//		BookModel book = new BookModel();
-//		book.setId(43);
-//		ObservableList<AuthorBook> authorBookL = conn.getAuthorsForBook(book);
-//		conn.closeConnection();
-//		
-//		System.out.println(authorBookL.size());
-//		authorBookL.forEach((record) ->{
-//			System.out.println(record.getRoyalty());
-//		});
-		// ENDTEST
 		launch(args);
+	}
+	
+	public static int getRandom(int[] array) {
+	    int rnd = new Random().nextInt(array.length);
+	    return array[rnd];
 	}
 	
 
