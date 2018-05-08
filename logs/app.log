@@ -62694,3 +62694,21 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 13:30:15.747 DEBUG client.EJBInvocationHandler : Calling invoke(module = /assignment5_ejb/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
 13:30:20.708 DEBUG client.EJBInvocationHandler : Calling invoke(module = /assignment5_ejb/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
 13:30:23.126 ERROR controller.MainMenuController : Application has closed
+13:33:34.074 INFO  controller.MainMenuController : userName is wilma, password is arugula
+13:33:34.078 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+13:33:34.078 INFO  controller.MainMenuController : session id is 1
+13:33:34.094 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+13:33:34.095 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+13:33:34.098 INFO  client.Version : WildFly Naming version 1.0.7.Final
+13:33:34.149 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+13:33:34.168 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+13:33:34.173 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+13:33:34.198 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+13:33:34.211 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@347a7f86
+13:33:34.211 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@170baf4e
+13:33:34.222 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+13:33:34.845 DEBUG client.EJBInvocationHandler : Calling invoke(module = /assignment5_ejb/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+13:33:34.868 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /assignment5_ejb
+13:33:34.956 DEBUG client.EJBInvocationHandler : Calling invoke(module = /assignment5_ejb/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+13:33:38.500 DEBUG client.EJBInvocationHandler : Calling invoke(module = /assignment5_ejb/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+13:33:41.632 ERROR controller.MainMenuController : Application has closed
