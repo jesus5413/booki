@@ -62650,3 +62650,47 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 13:15:04.620 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
 13:15:06.743 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
 13:15:09.710 ERROR controller.MainMenuController : Application has closed
+13:23:43.254 INFO  controller.MainMenuController : userName is wilma, password is arugula
+13:23:43.258 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+13:23:43.259 INFO  controller.MainMenuController : session id is 1
+13:23:43.275 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+13:23:43.277 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+13:23:43.282 INFO  client.Version : WildFly Naming version 1.0.7.Final
+13:23:43.335 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+13:23:43.355 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+13:23:43.360 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+13:23:43.384 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+13:23:43.396 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@63243708
+13:23:43.396 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@4c949bfb
+13:23:43.407 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+13:26:04.607 INFO  controller.MainMenuController : userName is wilma, password is arugula
+13:26:04.611 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+13:26:04.612 INFO  controller.MainMenuController : session id is 1
+13:26:04.626 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+13:26:04.627 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+13:26:04.631 INFO  client.Version : WildFly Naming version 1.0.7.Final
+13:26:04.684 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+13:26:04.704 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+13:26:04.709 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+13:26:04.733 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+13:26:04.748 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@15611096
+13:26:04.748 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@78da275
+13:26:04.758 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+13:30:14.883 INFO  controller.MainMenuController : userName is wilma, password is arugula
+13:30:14.887 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+13:30:14.888 INFO  controller.MainMenuController : session id is 1
+13:30:14.902 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+13:30:14.903 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+13:30:14.907 INFO  client.Version : WildFly Naming version 1.0.7.Final
+13:30:14.958 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+13:30:14.976 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+13:30:14.981 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+13:30:15.006 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+13:30:15.022 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@40daeb80
+13:30:15.022 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@55cd346d
+13:30:15.034 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+13:30:15.633 DEBUG client.EJBInvocationHandler : Calling invoke(module = /assignment5_ejb/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+13:30:15.658 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /assignment5_ejb
+13:30:15.747 DEBUG client.EJBInvocationHandler : Calling invoke(module = /assignment5_ejb/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+13:30:20.708 DEBUG client.EJBInvocationHandler : Calling invoke(module = /assignment5_ejb/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+13:30:23.126 ERROR controller.MainMenuController : Application has closed

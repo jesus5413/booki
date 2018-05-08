@@ -27,7 +27,7 @@ public class SessSing {
 			//create and save context as instance var
 			context = new InitialContext(props);
 			//grab ref to bean’s remote interface
-			bean = (ServerSessionRemote) context.lookup("MyEJB/ServerSession!auth.ServerSessionRemote");
+			bean = (ServerSessionRemote) context.lookup("assignment5_ejb/ServerSession!auth.ServerSessionRemote");
 		} catch (NamingException e) {
 			e.printStackTrace();
 			Platform.exit();
