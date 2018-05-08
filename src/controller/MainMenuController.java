@@ -14,6 +14,7 @@ import auth.AuthenticatorLocal;
 import auth.LoginDialog;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.BookTableGateWay;
+import dataBase.SessionGateway;
 import dataBase.TempStorage;
 import exception.LoginException;
 import javafx.event.ActionEvent;
@@ -45,6 +46,7 @@ public class MainMenuController{
 	
 	int sessionId;
 	AuthenticatorLocal auth = new AuthenticatorLocal();
+	SessionGateway session = new SessionGateway();
 	
 	/**
 	 * function does the actions needed for the item choices
@@ -87,6 +89,10 @@ public class MainMenuController{
 		}
 		if(event.getSource() == logout) {
 			sessionId = Authenticator.INVALID_SESSION;
+			
+			session.setConnection();
+			session.removeSession(sessionId);
+			session.closeConnection();
 			
 			//restrict access to GUI controls based on current login session
 			updateGUIAccess();
@@ -133,7 +139,6 @@ public class MainMenuController{
 			byte[] hash = digest.digest(pw.getBytes(StandardCharsets.UTF_8));
 			pwHash = Base64.getEncoder().encodeToString(hash);
 		} catch (NoSuchAlgorithmException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
@@ -146,6 +151,10 @@ public class MainMenuController{
 			sessionId = auth.loginSha256(userName, pwHash);
 			
 			logger.info("session id is " + sessionId);
+			
+			session.setConnection();
+			session.insertSession(sessionId, userName);
+			session.closeConnection();
 			
 		} catch (LoginException e) {
 			//else display login failure

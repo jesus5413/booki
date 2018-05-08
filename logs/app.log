@@ -61299,3 +61299,398 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 21:07:19.017 DEBUG dataBase.PublisherTableGateWay : connection closed! 
 
+21:28:01.371 INFO  controller.MainMenuController : userName is wilma, password is arugula
+21:28:01.375 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+21:28:01.377 INFO  controller.MainMenuController : session id is 1
+21:28:02.060 DEBUG dataBase.SessionGateway : connection success
+
+21:28:02.182 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:28:12.025 DEBUG dataBase.SessionGateway : connection success
+
+21:28:12.101 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:28:24.548 INFO  controller.MainMenuController : userName is wilma, password is arugula
+21:28:24.549 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+21:28:24.550 INFO  controller.MainMenuController : session id is 2
+21:28:24.856 DEBUG dataBase.SessionGateway : connection success
+
+21:28:24.953 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:28:27.731 ERROR controller.MainMenuController : Application has closed
+21:30:24.760 INFO  controller.MainMenuController : userName is wilma, password is arugula
+21:30:24.765 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+21:30:24.766 INFO  controller.MainMenuController : session id is 1
+21:30:25.456 DEBUG dataBase.SessionGateway : connection success
+
+21:30:25.564 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:30:34.599 DEBUG dataBase.SessionGateway : connection success
+
+21:30:34.694 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:40:26.621 INFO  controller.MainMenuController : userName is wilma, password is arugula
+21:40:26.625 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+21:40:26.626 INFO  controller.MainMenuController : session id is 1
+21:40:27.543 DEBUG dataBase.SessionGateway : connection success
+
+21:40:27.662 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:40:40.037 DEBUG dataBase.SessionGateway : connection success
+
+21:40:40.142 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:43:36.522 INFO  controller.MainMenuController : userName is leroywipeout, password is 
+21:43:36.527 INFO  controller.MainMenuController : sha256 hash of password is 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+21:43:46.153 INFO  controller.MainMenuController : userName is leroy, password is wipeout
+21:43:46.154 INFO  controller.MainMenuController : sha256 hash of password is G7qJt9G2d2OG+frjsGnEntrCFuLAep8zZZENZbdIFrY=
+21:43:46.156 INFO  controller.MainMenuController : session id is 1
+21:43:46.820 DEBUG dataBase.SessionGateway : connection success
+
+21:43:46.952 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:43:49.001 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:43:49.062 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:43:56.543 DEBUG dataBase.BookTableGateWay : connection success
+
+21:43:56.588 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:43:56.900 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:43:58.606 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:43:58.921 DEBUG dataBase.SessionGateway : connection success
+
+21:43:58.955 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:45:13.068 INFO  controller.MainMenuController : userName is leroy, password is wipeout
+21:45:13.072 INFO  controller.MainMenuController : sha256 hash of password is G7qJt9G2d2OG+frjsGnEntrCFuLAep8zZZENZbdIFrY=
+21:45:13.073 INFO  controller.MainMenuController : session id is 1
+21:45:13.825 DEBUG dataBase.SessionGateway : connection success
+
+21:45:13.930 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:45:16.198 DEBUG dataBase.BookTableGateWay : connection success
+
+21:45:16.265 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:45:16.613 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:45:18.427 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:45:18.763 DEBUG dataBase.SessionGateway : connection success
+
+21:45:18.804 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:45:21.799 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:45:21.835 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:45:24.002 DEBUG dataBase.SessionGateway : connection success
+
+21:45:24.095 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:45:29.388 INFO  controller.MainMenuController : userName is wilma, password is arugula
+21:45:29.389 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+21:45:29.389 INFO  controller.MainMenuController : session id is 2
+21:45:29.682 DEBUG dataBase.SessionGateway : connection success
+
+21:45:29.771 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:45:31.346 DEBUG dataBase.BookTableGateWay : connection success
+
+21:45:31.397 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:45:31.703 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:45:35.621 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:45:35.929 DEBUG dataBase.SessionGateway : connection success
+
+21:45:35.959 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:45:38.978 DEBUG dataBase.SessionGateway : connection success
+
+21:45:39.073 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:45:52.661 INFO  controller.MainMenuController : userName is sasquatch, password is jerky
+21:45:52.663 INFO  controller.MainMenuController : sha256 hash of password is TmBboZu5eBoq8PKwQla3rxstmSOj2fkYN/M6/uE7JOg=
+21:45:52.664 INFO  controller.MainMenuController : session id is 1
+21:45:54.544 DEBUG dataBase.SessionGateway : connection success
+
+21:45:54.642 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:45:57.001 DEBUG dataBase.BookTableGateWay : connection success
+
+21:45:57.077 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:45:58.449 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:46:00.226 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:46:00.572 DEBUG dataBase.SessionGateway : connection success
+
+21:46:00.605 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:47:31.682 INFO  controller.MainMenuController : userName is leroy, password is wipeout
+21:47:31.687 INFO  controller.MainMenuController : sha256 hash of password is G7qJt9G2d2OG+frjsGnEntrCFuLAep8zZZENZbdIFrY=
+21:47:31.688 INFO  controller.MainMenuController : session id is 1
+21:47:33.145 DEBUG dataBase.SessionGateway : connection success
+
+21:47:33.452 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:47:35.523 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:47:35.608 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:47:35.957 DEBUG dataBase.SessionGateway : connection success
+
+21:47:35.990 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:49:30.925 INFO  controller.MainMenuController : userName is wilma, password is arugula
+21:49:30.929 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+21:49:30.931 INFO  controller.MainMenuController : session id is 1
+21:49:31.645 DEBUG dataBase.SessionGateway : connection success
+
+21:49:31.768 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:49:34.424 DEBUG dataBase.BookTableGateWay : connection success
+
+21:49:34.491 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:49:34.808 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:49:37.242 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:49:37.573 DEBUG dataBase.SessionGateway : connection success
+
+21:49:37.608 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:49:47.721 DEBUG controller.BookTableViewController : Clicked Harry Potter Sorcerer Stone
+21:49:48.110 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:49:48.158 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:49:48.472 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:49:48.517 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:49:48.820 DEBUG dataBase.BookTableGateWay : connection success
+
+21:49:49.166 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:49:49.279 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:49:49.280 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:49:49.282 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+21:49:52.788 DEBUG controller.BookTableViewController : Clicked A time before mankind
+21:49:53.132 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:49:53.160 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:49:53.462 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:49:53.494 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:49:53.804 DEBUG dataBase.BookTableGateWay : connection success
+
+21:49:54.122 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:49:54.164 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:49:54.166 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:49:54.167 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+21:50:24.307 INFO  controller.MainMenuController : userName is wilma, password is arugula
+21:50:24.310 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+21:50:24.311 INFO  controller.MainMenuController : session id is 1
+21:50:24.961 DEBUG dataBase.SessionGateway : connection success
+
+21:50:25.069 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:50:28.093 DEBUG dataBase.BookTableGateWay : connection success
+
+21:50:28.177 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:50:29.010 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:50:34.096 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:50:34.429 DEBUG dataBase.SessionGateway : connection success
+
+21:50:34.470 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:50:35.773 DEBUG controller.BookTableViewController : Clicked Harry Potter Sorcerer Stone
+21:50:36.236 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:50:36.277 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:50:36.601 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:50:36.638 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:50:36.965 DEBUG dataBase.BookTableGateWay : connection success
+
+21:50:37.327 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:50:37.431 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:50:37.432 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:53:27.705 INFO  controller.MainMenuController : userName is sasquatch, password is jerky
+21:53:27.708 INFO  controller.MainMenuController : sha256 hash of password is TmBboZu5eBoq8PKwQla3rxstmSOj2fkYN/M6/uE7JOg=
+21:53:27.710 INFO  controller.MainMenuController : session id is 1
+21:53:28.385 DEBUG dataBase.SessionGateway : connection success
+
+21:53:28.510 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:53:31.054 DEBUG dataBase.BookTableGateWay : connection success
+
+21:53:31.105 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:53:31.418 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:53:33.168 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:53:33.459 DEBUG dataBase.SessionGateway : connection success
+
+21:53:33.491 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:53:34.633 DEBUG controller.BookTableViewController : Clicked A series of unfortunat events
+21:53:35.031 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:53:35.066 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:53:35.349 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:53:35.406 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:53:35.726 DEBUG dataBase.BookTableGateWay : connection success
+
+21:53:36.093 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:53:36.149 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:53:36.150 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:53:36.506 DEBUG dataBase.SessionGateway : connection success
+
+21:53:36.545 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:54:09.481 INFO  controller.MainMenuController : userName is sasquatch, password is jerky
+21:54:09.484 INFO  controller.MainMenuController : sha256 hash of password is TmBboZu5eBoq8PKwQla3rxstmSOj2fkYN/M6/uE7JOg=
+21:54:09.485 INFO  controller.MainMenuController : session id is 1
+21:54:10.387 DEBUG dataBase.SessionGateway : connection success
+
+21:54:10.504 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:54:13.641 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:54:13.692 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:54:13.995 DEBUG dataBase.SessionGateway : connection success
+
+21:54:14.028 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:54:15.322 DEBUG controller.AuthorTableViewController : Clicked Fernandoo Renteria
+21:55:28.411 INFO  controller.MainMenuController : userName is sasquatch, password is jerky
+21:55:28.414 INFO  controller.MainMenuController : sha256 hash of password is TmBboZu5eBoq8PKwQla3rxstmSOj2fkYN/M6/uE7JOg=
+21:55:28.415 INFO  controller.MainMenuController : session id is 1
+21:55:29.095 DEBUG dataBase.SessionGateway : connection success
+
+21:55:29.202 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:55:32.203 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:55:32.290 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:55:32.632 DEBUG dataBase.SessionGateway : connection success
+
+21:55:32.678 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:55:33.896 DEBUG controller.AuthorTableViewController : Clicked George Martin
+21:55:33.967 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+21:55:37.040 DEBUG controller.AuthorTableViewController : Clicked zsdf sdzf
+21:55:37.079 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+21:55:40.659 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+21:55:40.696 ERROR changeSingleton.ChangeViewsSingleton : Error when trying to change views
+21:56:32.257 INFO  controller.MainMenuController : userName is sasquatch, password is jerky
+21:56:32.260 INFO  controller.MainMenuController : sha256 hash of password is TmBboZu5eBoq8PKwQla3rxstmSOj2fkYN/M6/uE7JOg=
+21:56:32.261 INFO  controller.MainMenuController : session id is 1
+21:56:32.958 DEBUG dataBase.SessionGateway : connection success
+
+21:56:33.076 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:56:35.422 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:56:35.471 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:56:35.756 DEBUG dataBase.SessionGateway : connection success
+
+21:56:35.791 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:56:37.089 DEBUG controller.AuthorTableViewController : Clicked Fernando Rent
+21:56:37.787 DEBUG dataBase.SessionGateway : connection success
+
+21:56:37.822 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:56:43.663 DEBUG dataBase.BookTableGateWay : connection success
+
+21:56:43.716 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:56:44.016 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:56:45.849 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:56:46.147 DEBUG dataBase.SessionGateway : connection success
+
+21:56:46.183 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:56:48.223 DEBUG dataBase.SessionGateway : connection success
+
+21:56:48.325 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:56:52.964 INFO  controller.MainMenuController : userName is wilma, password is arugula
+21:56:52.965 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+21:56:52.966 INFO  controller.MainMenuController : session id is 2
+21:56:53.289 DEBUG dataBase.SessionGateway : connection success
+
+21:56:53.393 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:56:54.475 DEBUG controller.BookTableViewController : Clicked Storm of Swords
+21:56:54.875 DEBUG dataBase.PublisherTableGateWay : connection success
+
+21:56:54.911 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+21:56:55.232 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:56:55.275 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:56:55.652 DEBUG dataBase.BookTableGateWay : connection success
+
+21:56:56.034 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:56:56.149 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:56:56.150 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+21:56:56.447 DEBUG dataBase.SessionGateway : connection success
+
+21:56:56.483 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:57:01.090 DEBUG dataBase.AuthorTableGateWay : connection success
+
+21:57:01.138 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+21:57:01.517 DEBUG dataBase.SessionGateway : connection success
+
+21:57:01.547 DEBUG dataBase.SessionGateway : connection closed! 
+
+21:57:02.370 DEBUG controller.AuthorTableViewController : Clicked aaron nieto
+21:57:02.714 DEBUG dataBase.SessionGateway : connection success
+
+21:57:02.750 DEBUG dataBase.SessionGateway : connection closed! 
+

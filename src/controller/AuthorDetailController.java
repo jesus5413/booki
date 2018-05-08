@@ -11,6 +11,7 @@ import java.time.ZoneId;
 import alert.AlertHelper;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
+import dataBase.SessionGateway;
 import dataBase.TempStorage;
 import javafx.fxml.FXML;
 
@@ -26,6 +27,9 @@ public class AuthorDetailController {
 	public Button save;
 	public Button auditTrail;
 	
+	SessionGateway sessGate;
+	String username;
+	
 	public void initialize() {
 		if(TempStorage.oneAuthor != null) {
 			save.setVisible(false);
@@ -34,7 +38,15 @@ public class AuthorDetailController {
 			ID.setText("");
 			save.setVisible(true);
 			update.setVisible(false);
-			
+		}
+		
+		// disable delete if Intern
+		sessGate = new SessionGateway();
+		sessGate.setConnection();
+		username = sessGate.checkPerms();
+		sessGate.closeConnection();
+		if(username.equalsIgnoreCase("sasquatch")) {
+			update.setDisable(true);
 		}
 	}
 	

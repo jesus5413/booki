@@ -12,6 +12,7 @@ import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
+import dataBase.SessionGateway;
 import dataBase.TempStorage;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -46,16 +47,22 @@ public class BookTableViewController {
 	@FXML public TextField search;
 	
 	AuthenticatorLocal auth;
+	SessionGateway sessGate = new SessionGateway();
+	String username;
 	
 	public void initialize() {
 		getBook();
 		populateTable(0, 50);
 		searchHandle();
-		auth = new AuthenticatorLocal();
 		
-		if(auth.hasAccess(Session.nextId, RBACPolicyAuthDemo.CAN_ACCESS_CHOICE_1)) {
+		sessGate.setConnection();
+		username = sessGate.checkPerms();
+		sessGate.closeConnection();
+		
+		// disable delete if Data Entry or Intern
+		if(username.equalsIgnoreCase("leroy") || username.equalsIgnoreCase("sasquatch")) {
 			delete.setDisable(true);
-		}	
+		}
 	}
 	
 	public void populateTable(int x, int y) {

@@ -8,6 +8,7 @@ import com.sun.glass.events.MouseEvent;
 
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
+import dataBase.SessionGateway;
 import dataBase.TempStorage;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -34,10 +35,23 @@ public class AuthorTableViewController {
 	@FXML TableColumn<AuthorModel, String> website;
 	public Button delete;
 	
+	SessionGateway sessGate;
+	String username;
 	
 	public void initialize() {
 		getAuthor();
 		populateTable();
+		
+		sessGate = new SessionGateway();
+		
+		sessGate.setConnection();
+		username = sessGate.checkPerms();
+		sessGate.closeConnection();
+		
+		// disable delete if Data Entry or Intern
+		if(username.equalsIgnoreCase("leroy") || username.equalsIgnoreCase("sasquatch")) {
+			delete.setDisable(true);
+		}
 	}
 	
 	public void populateTable() {
