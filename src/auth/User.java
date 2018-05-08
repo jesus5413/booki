@@ -1,5 +1,10 @@
 package auth;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+
 //import misc.CryptoStuff;
 
 public class User {
@@ -10,8 +15,17 @@ public class User {
 	public User(String login, String pw, String userName) {
 		this.login = login;
 		this.userName = userName;
-		//passwordHash = CryptoStuff.sha256(pw);
 		passwordHash = "Nope";
+		
+		MessageDigest digest;
+		try {
+			digest = MessageDigest.getInstance("SHA-256");
+			byte[] hash = digest.digest(pw.getBytes(StandardCharsets.UTF_8));
+			passwordHash = Base64.getEncoder().encodeToString(hash);
+		} catch (NoSuchAlgorithmException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 	public String getLogin() {

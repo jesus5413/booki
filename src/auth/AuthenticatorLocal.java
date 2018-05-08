@@ -15,7 +15,7 @@ import exception.LoginException;
  *
  */
 public class AuthenticatorLocal extends Authenticator {
-	private ABACPolicyAuthDemo accessPolicy;
+	private RBACPolicyAuthDemo accessPolicy;
 	
 	/**
 	 * fake server session states
@@ -33,30 +33,28 @@ public class AuthenticatorLocal extends Authenticator {
 		credentials = new ArrayList<User>();
 		
 		//create a default ABAC policy and add some permissions for user bob
-		accessPolicy = new ABACPolicyAuthDemo();
+		accessPolicy = new RBACPolicyAuthDemo();
 
 		//create bob as valid user
 		//NOTE: we don't store the user's password in our credential store
 		//User hashes the password in its constructor
-		User u = new User("bob", "1234", "Bob the User");
+		User u = new User("wilma", "arugula", "Administrator");
 		credentials.add(u);
 		//bob can access everything
 		accessPolicy.createSimpleUserACLEntry(u.getLogin(), true, true, true);
 
 		//create sue as valid user
-		u = new User("sue", "5678", "Sue the User");
+		u = new User("leroy", "wipeout", "Data Entry");
 		credentials.add(u);
 		//sue can access choices 1 and 2
 		accessPolicy.createSimpleUserACLEntry(u.getLogin(), true, true, false);
 
 		//create sue as valid user
-		u = new User("ragnar", "xxxx", "Ragnar the User");
+		u = new User("sasquatch", "jerky", "Intern");
 		credentials.add(u);
 		//ragnar can only access choice 3
 		accessPolicy.createSimpleUserACLEntry(u.getLogin(), false, false, true);
 		
-		u = new User("abc", "efg", "New User");
-		credentials.add(u);
 		//ragnar can only access choice 3
 		accessPolicy.createSimpleUserACLEntry(u.getLogin(), false, true, false);
 	}

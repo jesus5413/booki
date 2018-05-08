@@ -61145,3 +61145,21 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 19:28:24.725 INFO  controller.MainMenuController : userName is fers, password is wer
 19:28:24.731 INFO  controller.MainMenuController : sha256 hash of password is notReally
+19:38:55.489 INFO  controller.MainMenuController : userName is wilma, password is arugula
+19:38:55.494 INFO  controller.MainMenuController : sha256 hash of password is notReally
+19:47:42.315 INFO  controller.MainMenuController : userName is wilma, password is arugula
+19:47:42.331 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+19:48:25.612 INFO  controller.MainMenuController : userName is wilma, password is arugula
+19:48:25.623 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+19:50:34.117 INFO  controller.MainMenuController : userName is wilma, password is arugula
+19:50:34.129 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+19:51:53.044 INFO  controller.MainMenuController : userName is wilma, password is arugula
+19:51:53.056 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+19:52:37.979 INFO  controller.MainMenuController : userName is wilma, password is arugula
+19:52:37.992 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+19:56:19.928 INFO  controller.MainMenuController : userName is wilma, password is arugula
+19:56:19.931 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+19:56:19.933 INFO  controller.MainMenuController : session id is 1
+19:58:10.274 INFO  controller.MainMenuController : userName is wilma, password is arugula
+19:58:10.278 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+19:58:10.280 INFO  controller.MainMenuController : session id is 1

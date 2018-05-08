@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import exception.LoginException;
 
-public class ABACPolicyAuthDemo {
+public class RBACPolicyAuthDemo {
 	//fine-grained functional access
 	public static final String CAN_ACCESS_CHOICE_1 = "choice1";
 	public static final String CAN_ACCESS_CHOICE_2 = "choice2";
@@ -15,7 +15,7 @@ public class ABACPolicyAuthDemo {
 	 */
 	private HashMap<String, HashMap<String, Boolean>> acl;
 	
-	public ABACPolicyAuthDemo() {
+	public RBACPolicyAuthDemo() {
 		//create default fall-through policy where person has no access
 		acl = new HashMap<String, HashMap<String, Boolean>>();
 		

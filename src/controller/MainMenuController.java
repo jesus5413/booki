@@ -1,6 +1,10 @@
 package controller;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
 import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -76,42 +80,7 @@ public class MainMenuController{
 			singleton.changeViews("e");		
 		}
 		if(event.getSource() == login) {
-			Pair<String, String> creds = LoginDialog.showLoginDialog();
-			if(creds == null) { //canceled
-				return;
-			}
-			
-			String userName = creds.getKey();
-			String pw = creds.getValue();
-			
-			logger.info("userName is " + userName + ", password is " + pw);
-			
-			//hash password
-			//String pwHash = CryptoStuff.sha256(pw);
-			String pwHash = "notReally";
-			
-			logger.info("sha256 hash of password is " + pwHash);
-			
-			//send login and hashed pw to authenticator
-			try {
-				//if get session id back, then replace current session
-				sessionId = auth.loginSha256(userName, pwHash);
-				sessionId = 1;
-				
-				logger.info("session id is " + sessionId);
-				
-			} catch (LoginException e) {
-				//else display login failure
-				Alert alert = new Alert(AlertType.WARNING);
-				alert.getButtonTypes().clear();
-				ButtonType buttonTypeOne = new ButtonType("OK");
-				alert.getButtonTypes().setAll(buttonTypeOne);
-				alert.setTitle("Login Failed");
-				alert.setHeaderText("The user name and password you provided do not match stored credentials.");
-				alert.showAndWait();
-
-				return;
-			}
+			authenticate();
 		}
 		if(event.getSource() == logout) {
 			System.out.println("logout");
@@ -131,5 +100,52 @@ public class MainMenuController{
 	 */
 	public void initialize() {
 		menuBar.setFocusTraversable(true);
+	}
+	
+	public void authenticate() {
+		Pair<String, String> creds = LoginDialog.showLoginDialog();
+		if(creds == null) { //canceled
+			return;
+		}
+		
+		String userName = creds.getKey();
+		String pw = creds.getValue();
+		
+		logger.info("userName is " + userName + ", password is " + pw);
+		
+		//hash password
+		String pwHash = "Not done";
+		MessageDigest digest;
+		try {
+			digest = MessageDigest.getInstance("SHA-256");
+			byte[] hash = digest.digest(pw.getBytes(StandardCharsets.UTF_8));
+			pwHash = Base64.getEncoder().encodeToString(hash);
+		} catch (NoSuchAlgorithmException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		logger.info("sha256 hash of password is " + pwHash);
+		
+		//send login and hashed pw to authenticator
+		try {
+			//if get session id back, then replace current session
+			System.out.println(sessionId);
+			sessionId = auth.loginSha256(userName, pwHash);
+			
+			logger.info("session id is " + sessionId);
+			
+		} catch (LoginException e) {
+			//else display login failure
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.getButtonTypes().clear();
+			ButtonType buttonTypeOne = new ButtonType("OK");
+			alert.getButtonTypes().setAll(buttonTypeOne);
+			alert.setTitle("Login Failed");
+			alert.setHeaderText("The user name and password you provided do not match stored credentials.");
+			alert.showAndWait();
+
+			return;
+		}
 	}
 }
