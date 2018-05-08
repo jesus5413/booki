@@ -12,9 +12,9 @@ import org.apache.logging.log4j.Logger;
 import auth.Authenticator;
 import auth.AuthenticatorLocal;
 import auth.LoginDialog;
+import auth.SessSing;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.BookTableGateWay;
-import dataBase.SessionGateway;
 import dataBase.TempStorage;
 import exception.LoginException;
 import javafx.event.ActionEvent;
@@ -46,7 +46,6 @@ public class MainMenuController{
 	
 	int sessionId;
 	AuthenticatorLocal auth = new AuthenticatorLocal();
-	SessionGateway session = new SessionGateway();
 	
 	/**
 	 * function does the actions needed for the item choices
@@ -89,10 +88,7 @@ public class MainMenuController{
 		}
 		if(event.getSource() == logout) {
 			sessionId = Authenticator.INVALID_SESSION;
-			
-			session.setConnection();
-			session.removeSession(sessionId);
-			session.closeConnection();
+			SessSing.setId(sessionId);
 			
 			//restrict access to GUI controls based on current login session
 			updateGUIAccess();
@@ -152,9 +148,9 @@ public class MainMenuController{
 			
 			logger.info("session id is " + sessionId);
 			
-			session.setConnection();
-			session.insertSession(sessionId, userName);
-			session.closeConnection();
+			SessSing s = SessSing.getInstance();
+			s.setId(sessionId);
+			s.setUsername(userName);
 			
 		} catch (LoginException e) {
 			//else display login failure

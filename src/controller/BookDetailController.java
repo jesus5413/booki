@@ -5,13 +5,13 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import alert.AlertHelper;
+import auth.SessSing;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorBookGateWay;
 import dataBase.AuthorTableGateWay;
 import dataBase.BookAuditTrailGateWay;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
-import dataBase.SessionGateway;
 import dataBase.TempStorage;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -65,9 +65,6 @@ public class BookDetailController {
 	BookTableGateWay bookCon;
 	AuthorBookGateWay authBookConn;
 	BookAuditTrailGateWay auditConn;
-	SessionGateway sessGate;
-	
-	String username;
 	
 	public void initialize() {
 		authConn = new AuthorTableGateWay();
@@ -75,7 +72,7 @@ public class BookDetailController {
 		bookCon = new BookTableGateWay();
 		authBookConn = new AuthorBookGateWay();
 		auditConn = new BookAuditTrailGateWay();
-		sessGate = new SessionGateway();
+
 		setCellDataToTextField();
 		
 		if(TempStorage.oneBook != null) {
@@ -105,15 +102,12 @@ public class BookDetailController {
 			allAuthsCb.setItems(allAuthsList);
 		}
 		
-		sessGate.setConnection();
-		username = sessGate.checkPerms();
-		sessGate.closeConnection();
-		
 		// disable delete if Intern
-		if(username.equalsIgnoreCase("sasquatch")) {
+		if(SessSing.getUsername().equalsIgnoreCase("sasquatch")) {
 			delButton.setDisable(true);
 			addAuthButton.setDisable(true);
 			updateRoyalty.setDisable(true);
+			update.setDisable(true);
 		}		
 	}
 	

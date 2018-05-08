@@ -7,12 +7,12 @@ import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 import auth.AuthenticatorLocal;
 import auth.RBACPolicyAuthDemo;
+import auth.SessSing;
 import auth.Session;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
-import dataBase.SessionGateway;
 import dataBase.TempStorage;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -46,21 +46,13 @@ public class BookTableViewController {
 	@FXML public Button last;
 	@FXML public TextField search;
 	
-	AuthenticatorLocal auth;
-	SessionGateway sessGate = new SessionGateway();
-	String username;
-	
 	public void initialize() {
 		getBook();
 		populateTable(0, 50);
 		searchHandle();
 		
-		sessGate.setConnection();
-		username = sessGate.checkPerms();
-		sessGate.closeConnection();
-		
 		// disable delete if Data Entry or Intern
-		if(username.equalsIgnoreCase("leroy") || username.equalsIgnoreCase("sasquatch")) {
+		if(SessSing.getUsername().equalsIgnoreCase("leroy") || SessSing.getUsername().equalsIgnoreCase("sasquatch")) {
 			delete.setDisable(true);
 		}
 	}

@@ -8,6 +8,7 @@ import javax.swing.border.LineBorder;
 
 import com.sun.corba.se.spi.ior.Writeable;
 
+import auth.SessSing;
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
 import javafx.collections.FXCollections;
@@ -53,6 +54,9 @@ public class ExcelController {
 		
 		publisher.setItems(pubList);
 		
+		if(SessSing.getUsername().equalsIgnoreCase("sasquatch")) {
+			save.setDisable(true);
+		}	
 	}
 	
 	public void comboboxStringConverter() {
