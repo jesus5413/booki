@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import auth.Authenticator;
 import auth.AuthenticatorLocal;
 import auth.LoginDialog;
 import changeSingleton.ChangeViewsSingleton;
@@ -52,7 +53,6 @@ public class MainMenuController{
 	 * @throws IOException
 	 */
 	@FXML private void handleMenuAction(ActionEvent event) throws IOException{
-		
 		if(event.getSource() == authorTable) {
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
 			singleton.changeViews("z");
@@ -81,9 +81,15 @@ public class MainMenuController{
 		}
 		if(event.getSource() == login) {
 			authenticate();
+			
+			//restrict access to GUI controls based on current login session
+			updateGUIAccess();
 		}
 		if(event.getSource() == logout) {
-			System.out.println("logout");
+			sessionId = Authenticator.INVALID_SESSION;
+			
+			//restrict access to GUI controls based on current login session
+			updateGUIAccess();
 		}
 		if(event.getSource() == exit) {
 			TempStorage.oneBook = null;
@@ -100,6 +106,12 @@ public class MainMenuController{
 	 */
 	public void initialize() {
 		menuBar.setFocusTraversable(true);
+		
+		if(sessionId == Authenticator.INVALID_SESSION) {
+			setToDisable(true);
+		}else {
+			setToDisable(false);
+		}
 	}
 	
 	public void authenticate() {
@@ -147,5 +159,33 @@ public class MainMenuController{
 
 			return;
 		}
+	}
+	
+	private void updateGUIAccess() {
+		//if logged in, login should be disabled
+		if(sessionId == Authenticator.INVALID_SESSION) {
+			login.setDisable(false);
+			setToDisable(true);
+		}else {
+			login.setDisable(true);
+			setToDisable(false);
+		}
+		
+		//if not logged in, logout should be disabled
+		if(sessionId == Authenticator.INVALID_SESSION) {
+			logout.setDisable(true);
+			setToDisable(true);
+		}else {
+			logout.setDisable(false);
+			setToDisable(false);
+		}
+	}
+	
+	private void setToDisable(boolean disable) {
+		authorTable.setDisable(disable);
+		addAuthor.setDisable(disable);
+		addBook.setDisable(disable);
+		bookTable.setDisable(disable);
+		excel.setDisable(disable);
 	}
 }

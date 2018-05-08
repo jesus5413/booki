@@ -5,6 +5,9 @@ import org.apache.logging.log4j.Logger;
 
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
+import auth.AuthenticatorLocal;
+import auth.RBACPolicyAuthDemo;
+import auth.Session;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.AuthorTableGateWay;
 import dataBase.BookTableGateWay;
@@ -40,14 +43,19 @@ public class BookTableViewController {
 	@FXML public Button prev;
 	@FXML public Button first;
 	@FXML public Button last;
-	
 	@FXML public TextField search;
 	
+	AuthenticatorLocal auth;
 	
 	public void initialize() {
 		getBook();
 		populateTable(0, 50);
 		searchHandle();
+		auth = new AuthenticatorLocal();
+		
+		if(auth.hasAccess(Session.nextId, RBACPolicyAuthDemo.CAN_ACCESS_CHOICE_1)) {
+			delete.setDisable(true);
+		}	
 	}
 	
 	public void populateTable(int x, int y) {

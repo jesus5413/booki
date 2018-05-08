@@ -35,28 +35,25 @@ public class AuthenticatorLocal extends Authenticator {
 		//create a default ABAC policy and add some permissions for user bob
 		accessPolicy = new RBACPolicyAuthDemo();
 
-		//create bob as valid user
+		//create Wilma as valid user
 		//NOTE: we don't store the user's password in our credential store
 		//User hashes the password in its constructor
 		User u = new User("wilma", "arugula", "Administrator");
 		credentials.add(u);
-		//bob can access everything
+		//Wilma can access everything
 		accessPolicy.createSimpleUserACLEntry(u.getLogin(), true, true, true);
 
-		//create sue as valid user
+		//create Leroy as valid user
 		u = new User("leroy", "wipeout", "Data Entry");
 		credentials.add(u);
-		//sue can access choices 1 and 2
+		// Leroy can't delete authors or books
 		accessPolicy.createSimpleUserACLEntry(u.getLogin(), true, true, false);
 
-		//create sue as valid user
+		//create Sasquatch as valid user
 		u = new User("sasquatch", "jerky", "Intern");
 		credentials.add(u);
-		//ragnar can only access choice 3
+		// Sasquatch can't change data
 		accessPolicy.createSimpleUserACLEntry(u.getLogin(), false, false, true);
-		
-		//ragnar can only access choice 3
-		accessPolicy.createSimpleUserACLEntry(u.getLogin(), false, true, false);
 	}
 		
 	/**
