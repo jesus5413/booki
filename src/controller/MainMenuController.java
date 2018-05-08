@@ -4,14 +4,19 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import auth.AuthenticatorLocal;
+import auth.LoginDialog;
 import changeSingleton.ChangeViewsSingleton;
 import dataBase.BookTableGateWay;
 import dataBase.TempStorage;
+import exception.LoginException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-
+import javafx.scene.control.Alert.AlertType;
+import javafx.util.Pair;
 
 /**
  * this is the main menu controller 
@@ -30,6 +35,11 @@ public class MainMenuController{
 	@FXML private MenuItem addBook;
 	@FXML private MenuItem bookTable;
 	@FXML private MenuItem excel;
+	@FXML private MenuItem login;
+	@FXML private MenuItem logout;
+	
+	int sessionId;
+	AuthenticatorLocal auth = new AuthenticatorLocal();
 	
 	/**
 	 * function does the actions needed for the item choices
@@ -63,17 +73,54 @@ public class MainMenuController{
 		}
 		if(event.getSource() == excel) {
 			ChangeViewsSingleton singleton = ChangeViewsSingleton.getInstance();
-			singleton.changeViews("e");	
-			
+			singleton.changeViews("e");		
 		}
-		
-		
+		if(event.getSource() == login) {
+			Pair<String, String> creds = LoginDialog.showLoginDialog();
+			if(creds == null) { //canceled
+				return;
+			}
+			
+			String userName = creds.getKey();
+			String pw = creds.getValue();
+			
+			logger.info("userName is " + userName + ", password is " + pw);
+			
+			//hash password
+			//String pwHash = CryptoStuff.sha256(pw);
+			String pwHash = "notReally";
+			
+			logger.info("sha256 hash of password is " + pwHash);
+			
+			//send login and hashed pw to authenticator
+			try {
+				//if get session id back, then replace current session
+				sessionId = auth.loginSha256(userName, pwHash);
+				sessionId = 1;
+				
+				logger.info("session id is " + sessionId);
+				
+			} catch (LoginException e) {
+				//else display login failure
+				Alert alert = new Alert(AlertType.WARNING);
+				alert.getButtonTypes().clear();
+				ButtonType buttonTypeOne = new ButtonType("OK");
+				alert.getButtonTypes().setAll(buttonTypeOne);
+				alert.setTitle("Login Failed");
+				alert.setHeaderText("The user name and password you provided do not match stored credentials.");
+				alert.showAndWait();
+
+				return;
+			}
+		}
+		if(event.getSource() == logout) {
+			System.out.println("logout");
+		}
 		if(event.getSource() == exit) {
 			TempStorage.oneBook = null;
 			logger.error("Application has closed");
 			System.exit(0);
 		}
-		
 	}
 	
 	/**

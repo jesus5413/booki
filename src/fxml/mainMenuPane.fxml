@@ -33,8 +33,8 @@
             </Menu>
             <Menu mnemonicParsing="false" text="User">
               <items>
-                <MenuItem fx:id="login" mnemonicParsing="false" text="Login" />
-                  <MenuItem fx:id="logout" mnemonicParsing="false" text="Logout" />
+                <MenuItem fx:id="login" mnemonicParsing="false" onAction="#handleMenuAction" text="Login" />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#handleMenuAction" text="Logout" />
               </items>
             </Menu>
         </menus>
