@@ -61233,3 +61233,50 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 18:45:37.937 DEBUG dataBase.BookTableGateWay : connection closed! 
 
 18:45:59.971 ERROR controller.MainMenuController : Application has closed
+20:12:03.461 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:12:03.583 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:12:10.918 DEBUG dataBase.BookTableGateWay : connection success
+
+20:12:11.704 DEBUG dataBase.AuthorTableGateWay : connection success
+
+20:12:11.838 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+20:12:12.587 DEBUG dataBase.AuthorTableGateWay : connection success
+
+20:12:12.662 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+20:12:13.459 DEBUG dataBase.AuthorTableGateWay : connection success
+
+20:12:13.460 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+20:12:49.514 DEBUG dataBase.PublisherTableGateWay : connection success
+
+20:12:49.566 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+20:13:08.374 DEBUG dataBase.BookTableGateWay : connection success
+
+20:13:09.307 DEBUG dataBase.AuthorTableGateWay : connection success
+
+20:13:09.425 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+20:13:10.315 DEBUG dataBase.AuthorTableGateWay : connection success
+
+20:13:10.392 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+20:13:10.977 DEBUG dataBase.AuthorTableGateWay : connection success
+
+20:13:11.159 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+20:13:11.572 DEBUG dataBase.AuthorTableGateWay : connection success
+
+20:13:11.606 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+20:13:12.187 DEBUG dataBase.AuthorTableGateWay : connection success
+
+20:13:12.222 DEBUG dataBase.AuthorTableGateWay : connection closed! 
+
+20:13:12.223 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+20:13:40.372 ERROR controller.MainMenuController : Application has closed

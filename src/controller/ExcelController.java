@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import javax.swing.border.LineBorder;
 
 import com.sun.corba.se.spi.ior.Writeable;
+import com.sun.org.apache.xpath.internal.operations.And;
 
 import dataBase.BookTableGateWay;
 import dataBase.PublisherTableGateWay;
