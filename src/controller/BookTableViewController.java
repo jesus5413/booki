@@ -49,6 +49,7 @@ public class BookTableViewController {
 	public void initialize() {
 		getBook();
 		populateTable(0, 50);
+		prev.setDisable(true);
 		searchHandle();
 		
 		// disable delete if Data Entry or Intern
@@ -152,17 +153,21 @@ public class BookTableViewController {
 	
 	
 	public void nextHandle() {
+		prev.setDisable(false);
 		populateTable(50, 0);
 		searchHandle();
 		
 	}
 	
 	public void prevHandle() {
+		next.setDisable(false);
 		populateTable(-50, 0);
 		searchHandle();
 	}
 	
 	public void firstHandle() {
+		prev.setDisable(true);
+		next.setDisable(false);
 		BookTableGateWay.min = 0;
 		BookTableGateWay.max = 0;
 		populateTable(0, 50);
@@ -171,6 +176,8 @@ public class BookTableViewController {
 	}
 	
 	public void lastHandle() {
+		next.setDisable(true);
+		prev.setDisable(false);
 		BookTableGateWay.min = 0;
 		
 		populateTable(9966, 0);

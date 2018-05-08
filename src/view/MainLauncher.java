@@ -43,7 +43,7 @@ import javafx.application.Platform;
 
 /**
  * 
- * Assignment 4 by Jesus Nieto and Fernando Renteria 
+ * Assignment 5 by Jesus Nieto and Fernando Renteria 
  * @author jesusnieto
  *
  */

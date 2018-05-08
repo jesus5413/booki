@@ -62368,3 +62368,227 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 12:34:12.825 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
 12:34:17.752 ERROR controller.MainMenuController : Application has closed
+12:42:04.860 INFO  controller.MainMenuController : userName is wilma, password is arugula
+12:42:04.864 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+12:42:04.865 INFO  controller.MainMenuController : session id is 1
+12:42:04.878 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+12:42:04.879 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+12:42:04.883 INFO  client.Version : WildFly Naming version 1.0.7.Final
+12:42:04.936 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+12:42:04.957 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+12:42:04.962 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+12:42:04.988 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+12:42:05.001 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@59415fb7
+12:42:05.001 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@5fe24b03
+12:42:05.011 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+12:42:05.629 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:42:05.653 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+12:42:05.742 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:42:09.443 DEBUG dataBase.BookTableGateWay : connection success
+
+12:42:09.501 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:42:09.925 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:42:12.250 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:42:12.254 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:42:12.259 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:42:17.389 DEBUG dataBase.BookTableGateWay : connection success
+
+12:42:17.435 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:42:17.737 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:42:20.337 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:42:23.215 DEBUG dataBase.BookTableGateWay : connection success
+
+12:42:23.336 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:42:23.745 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:42:26.047 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:42:32.496 DEBUG dataBase.BookTableGateWay : connection success
+
+12:42:32.564 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:42:32.867 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:42:35.360 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:42:38.183 ERROR controller.MainMenuController : Application has closed
+12:43:59.870 INFO  controller.MainMenuController : userName is wilma, password is arugula
+12:43:59.874 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+12:43:59.874 INFO  controller.MainMenuController : session id is 1
+12:43:59.888 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+12:43:59.889 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+12:43:59.893 INFO  client.Version : WildFly Naming version 1.0.7.Final
+12:43:59.944 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+12:43:59.963 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+12:43:59.968 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+12:43:59.992 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+12:44:00.008 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@3efc4a3e
+12:44:00.008 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@170baf4e
+12:44:00.018 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+12:44:00.550 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:44:00.573 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+12:44:00.592 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:44:08.003 DEBUG dataBase.BookTableGateWay : connection success
+
+12:44:08.070 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:44:08.468 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:44:10.917 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:44:10.921 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:44:10.926 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:44:14.414 DEBUG dataBase.BookTableGateWay : connection success
+
+12:44:14.458 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:44:14.855 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:44:17.559 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:44:20.585 DEBUG dataBase.BookTableGateWay : connection success
+
+12:44:20.624 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:44:21.411 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:44:24.488 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:44:31.283 DEBUG dataBase.BookTableGateWay : connection success
+
+12:44:31.348 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:44:31.792 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:44:34.474 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:45:24.625 DEBUG dataBase.BookTableGateWay : connection success
+
+12:45:24.687 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:45:25.163 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:45:28.242 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:45:33.477 ERROR controller.MainMenuController : Application has closed
+12:46:33.727 INFO  controller.MainMenuController : userName is wilma, password is arugula
+12:46:33.731 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+12:46:33.732 INFO  controller.MainMenuController : session id is 1
+12:46:33.746 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+12:46:33.747 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+12:46:33.750 INFO  client.Version : WildFly Naming version 1.0.7.Final
+12:46:33.801 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+12:46:33.824 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+12:46:33.829 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+12:46:33.853 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+12:46:33.866 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@788df047
+12:46:33.866 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@22b8f776
+12:46:33.876 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+12:46:34.413 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:46:34.434 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+12:46:34.453 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:47:01.949 DEBUG dataBase.BookTableGateWay : connection success
+
+12:47:02.090 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:47:02.572 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:47:04.910 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:47:04.914 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:47:04.918 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:47:08.908 DEBUG dataBase.BookTableGateWay : connection success
+
+12:47:08.998 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:47:09.344 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:47:11.450 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:47:14.551 DEBUG dataBase.BookTableGateWay : connection success
+
+12:47:14.611 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:47:14.934 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:47:16.983 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:47:18.616 DEBUG dataBase.BookTableGateWay : connection success
+
+12:47:18.686 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:47:18.995 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:47:21.252 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:47:22.520 DEBUG dataBase.BookTableGateWay : connection success
+
+12:47:22.643 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:47:23.024 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:47:25.383 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:47:32.706 DEBUG dataBase.BookTableGateWay : connection success
+
+12:47:32.781 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:47:33.138 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:47:35.647 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:47:41.218 DEBUG dataBase.BookTableGateWay : connection success
+
+12:47:41.320 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:47:41.662 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:47:43.657 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:47:50.886 DEBUG dataBase.BookTableGateWay : connection success
+
+12:47:50.934 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:47:51.299 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:47:53.552 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:48:08.335 DEBUG dataBase.BookTableGateWay : connection success
+
+12:48:08.394 DEBUG dataBase.BookTableGateWay : connection closed! 
+
+12:48:08.701 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:48:11.002 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:50:39.221 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:50:46.458 ERROR controller.MainMenuController : Application has closed
+12:51:48.737 INFO  controller.MainMenuController : userName is wilma, password is arugula
+12:51:48.741 INFO  controller.MainMenuController : sha256 hash of password is YOqmZrhQz6l5tvd0H79gqk0Rc8c9ZmMGmzAbzkS3fw4=
+12:51:48.742 INFO  controller.MainMenuController : session id is 1
+12:51:48.756 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+12:51:48.757 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+12:51:48.760 INFO  client.Version : WildFly Naming version 1.0.7.Final
+12:51:48.812 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+12:51:48.832 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+12:51:48.836 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+12:51:48.860 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+12:51:48.875 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@a681059
+12:51:48.875 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@6970252d
+12:51:48.885 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+12:51:49.501 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:51:49.527 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+12:51:49.621 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:51:52.466 DEBUG dataBase.PublisherTableGateWay : connection success
+
+12:51:52.527 DEBUG dataBase.PublisherTableGateWay : connection closed! 
+
+12:51:52.527 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/ServerSession, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+12:52:00.046 ERROR controller.MainMenuController : Application has closed
